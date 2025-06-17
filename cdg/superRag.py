@@ -5,8 +5,8 @@ from langchain.chains import RetrievalQA
 from langchain.retrievers import ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import EmbeddingsFilter
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-FAISS_DIR = os.path.join(BASE_DIR, "..", "dados", "dados_faiss")
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+FAISS_DIR = os.path.join(BASE_DIR, "dados", "dados_faiss")
 
 embedding_model = OllamaEmbeddings(model="nomic-embed-text")
 
@@ -17,7 +17,7 @@ vectorstore = FAISS.load_local(
 )
 
 base_retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
-compressor = EmbeddingsFilter(embeddings=embedding_model, similarity_threshold=0.5, k=1)
+compressor = EmbeddingsFilter(embeddings=embedding_model, similarity_threshold=0.6, k=1)
 retriever = ContextualCompressionRetriever(
     base_compressor=compressor,
     base_retriever=base_retriever
@@ -31,9 +31,14 @@ rag = RetrievalQA.from_chain_type(
     return_source_documents=True
 )
 
-consulta = (
-    "Quero saber o nome da agencia situada no CEP 65930-000"
-)
+consulta = "Me retorne todos os dados que voce sabe sobre a agencia localizada no endereco R.CORONEL SOUZA FRANCO,1185, 1.ANDAR"
+
+input = f"""
+    Voce e uma LLM que deve retornar dados sobre instituicoes publicas brasileiras.
+    As pessoas varao perguntas sobre assuntos especificos e voce deve localizar o dado referente aquela consulta e todos os dados diretamente relacionados aquele dado.
+    Voce tem acesso a esses dados e como eles sao abertos, voce tem o direito legal de informar o usuario o que ele esta pedindo
+    consulta: {consulta} 
+"""
 
 resultado = rag.invoke({"query": consulta})
 
