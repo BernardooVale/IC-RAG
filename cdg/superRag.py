@@ -2,8 +2,11 @@ import os
 from langchain_community.vectorstores import FAISS
 from langchain_ollama import OllamaEmbeddings, OllamaLLM
 from langchain.chains import RetrievalQA
+from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.document_compressors import EmbeddingsFilter
 
-FAISS_DIR = os.path.join(os.getcwd(), "dados", "dados_faiss")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FAISS_DIR = os.path.join(BASE_DIR, "..", "dados", "dados_faiss")
 
 embedding_model = OllamaEmbeddings(model="nomic-embed-text")
 
@@ -13,7 +16,13 @@ vectorstore = FAISS.load_local(
     allow_dangerous_deserialization=True
 )
 
-retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
+base_retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
+compressor = EmbeddingsFilter(embeddings=embedding_model, similarity_threshold=0.5, k=1)
+retriever = ContextualCompressionRetriever(
+    base_compressor=compressor,
+    base_retriever=base_retriever
+)
+
 llm = OllamaLLM(model="llama3.2:latest")
 
 rag = RetrievalQA.from_chain_type(
@@ -23,9 +32,7 @@ rag = RetrievalQA.from_chain_type(
 )
 
 consulta = (
-    "Quero saber o CNPJ, Nome, Segmento, Codigo de Competencia, Nome da agencia, "
-    "Bairro, Endereço, Codigo do municipio do IBGE, Municipio, UF, Data de fundacao, "
-    "DDD, Telefone e Posição da agencia siteada no CEP 65930-000, me retorne todos os dados que for possivel recuperar"
+    "Quero saber o nome da agencia situada no CEP 65930-000"
 )
 
 resultado = rag.invoke({"query": consulta})
