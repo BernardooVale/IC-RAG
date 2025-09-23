@@ -1,17 +1,18 @@
 from agente_bd import agenteBd
 from agente_chat import agenteChat
 from langchain_ollama import ChatOllama
+import re
 
 # config inicial ================================================================================
 def cofre():
     msgMestra = """
         Você agirá como um agente de decisão.
-        Sua tarefa é escolher **apenas um número** de acordo com a mensagem do usuário.
+        Sua tarefa é escolher apenas um número de acordo com a mensagem do usuário.
         Números válidos:
         0 → Conversa normal
         1 → Consulta sobre agências bancárias
 
-        IMPORTANTE: Responda **apenas com o número**, sem explicações.
+        IMPORTANTE: Responda apenas com o número, sem explicações.
     """
 
     modeloBd = ChatOllama(model="llama3.2:latest", base_url="http://localhost:11434")       # LLM proprio para escrita de consultas SQL
@@ -20,13 +21,11 @@ def cofre():
     agente_bd = agenteBd(modeloBd)
     agente_chat = agenteChat(modeloChat, agente_bd, msgMestra)
 
-    entrada = "Boa tarde, tudo bem?"
+    entrada = "Quantas agencias existem no estado de Sao Paulo?"
 
     while not entrada.strip().lower().startswith("sair"):
         
-        #
-        # Talvez tenha que traduzir a entrada, mas teoricamente a LLM faz isso com maestria
-        #
+        entrada = re.sub(r"[^a-zA-Z0-9\s]", "", entrada)
         
         agente_chat.controleResposta(entrada)
         

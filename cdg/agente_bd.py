@@ -32,24 +32,26 @@ class agenteBd:
             Gere um comando em SQL que visa resolver essa questao: {msgUsuario}
             O comando ira rodar em uma base de dados representada abaixo:
             
-            CREATE TABLE agencias_bancarias (
-                nomeIf VARCHAR(255),
-                segmento VARCHAR(100),
-                codigoCompe VARCHAR(5),
-                nomeAgencia VARCHAR(255),
-                endereco VARCHAR(255),
-                bairro VARCHAR(100),
-                cep VARCHAR(9),
-                municipioIbge VARCHAR(7),
-                municipio VARCHAR(100),
-                uf CHAR(2),
-                dataInicio DATE,
-                telefone VARCHAR(11),
-                posicao DATE,
-                cnpj VARCHAR(16) PRIMARY KEY
-            );
+            CREATE OR REPLACE VIEW agencias_view AS
+            SELECT
+                CnpjBase || CnpjSequencial || CnpjDv AS cnpj,
+                NomeIf,
+                Segmento,
+                CodigoCompe,
+                NomeAgencia,
+                Endereco || ' ' || Numero || ' ' || Complemento AS endereco,
+                Bairro,
+                Cep,
+                MunicipioIbge,
+                Municipio,
+                UF,
+                DataInicio,
+                DDD || ' ' || Telefone AS telefone,
+                Posicao
+            FROM agenciasBancariasBacen;
             
             Retorne apenas o comando em SQL, sem aspas ou identificação, ou seja apenas o que estiver entre "select" e ";"
+            Sempre use operadores LIKE '%valor%' em vez de igualdade.
         """
         
         retorno = self.modelo.invoke(msg)
@@ -61,6 +63,7 @@ class agenteBd:
         query = None
         if match:
             query = match.group(1) + ";"   # pega o texto da captura
+            query = re.sub(r"=\s*'([^']+)'", r"LIKE '%\1%'", query)
             print("Query extraída:", query)
 
         print("===========================")

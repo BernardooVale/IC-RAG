@@ -82,6 +82,43 @@ def padroniza_endereco(endereco: str) -> str:
     # Caixa alta para todo o endereço
     return endereco.upper()
 
+def padronizaUF(uf):
+    
+    nomeEstados = {
+        "AC": "Acre AC",
+        "AL": "Alagoas AL",
+        "AP": "Amapa AP",
+        "AM": "Amazonas AM",
+        "BA": "Bahia BA",
+        "CE": "Ceara CE",
+        "DF": "Distrito Federal DF",
+        "ES": "Espirito Santo ES",
+        "GO": "Goias GO",
+        "MA": "Maranhao MA",
+        "MT": "Mato Grosso MT",
+        "MS": "Mato Grosso do Sul",
+        "MG": "Minas Gerais MG",
+        "PA": "Para PA",
+        "PB": "Paraiba PB",
+        "PR": "Parana PR",
+        "PE": "Pernambuco PB",
+        "PI": "Piaui PI",
+        "RJ": "Rio de Janeiro RJ",
+        "RN": "Rio Grande do Norte RN",
+        "RS": "Rio Grande do Sul RS",
+        "RO": "Rondonia RO",
+        "RR": "Roraima RR",
+        "SC": "Santa Catarina SC",
+        "SP": "Sao Paulo SP",
+        "SE": "Sergipe SE",
+        "TO": "Tocantins TO"
+    }
+    
+    return nomeEstados[uf].upper()
+
+def padronizaCEP(cep: str):
+    return cep.replace("-", "")
+
 def add_agencia(agencia: dict):
     
     # Inserir no banco
@@ -143,8 +180,97 @@ def teste():
     for row in rows:
         print(row)
 
+def criaTabelaInicial():
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS agenciasBancariasBacen (
+            CnpjBase VARCHAR(20),
+            CnpjSequencial VARCHAR(20),
+            CnpjDv VARCHAR(5),
+            NomeIf TEXT,
+            Segmento TEXT,
+            CodigoCompe VARCHAR(10),
+            NomeAgencia TEXT,
+            Endereco TEXT,
+            Numero TEXT,
+            Complemento TEXT,
+            Bairro TEXT,
+            Cep VARCHAR(20),
+            MunicipioIbge VARCHAR(20),
+            Municipio TEXT,
+            UF TEXT,
+            DataInicio DATE,
+            DDD VARCHAR(5),
+            Telefone VARCHAR(20),
+            Posicao DATE
+        );
+    """)
+    
+def add10PrimeirasAgenciasOriginais():
+    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname("cdg"), ".."))
+    JSON_DIR = os.path.join(BASE_DIR, "IC", "IC-RAG", "dados", "bruto", "agencias.jsonl")
+    
+    json_data = []
+    with open(JSON_DIR, "r", encoding="utf-8") as f:
+        for i, line in enumerate(f):
+            if i >= 10:
+                break
+            json_data.append(json.loads(line))
+            
+    for item in json_data:
+        cur.execute("""
+        INSERT INTO agenciasBancariasBacen (
+            CnpjBase, CnpjSequencial, CnpjDv, NomeIf, Segmento, CodigoCompe,
+            NomeAgencia, Endereco, Numero, Complemento, Bairro, Cep,
+            MunicipioIbge, Municipio, UF, DataInicio, DDD, Telefone,
+            Posicao
+        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        """, (
+            item.get("CnpjBase"),
+            item.get("CnpjSequencial"),
+            item.get("CnpjDv"),
+            item.get("NomeIf"),
+            item.get("Segmento"),
+            item.get("CodigoCompe"),
+            item.get("NomeAgencia"),
+            padroniza_endereco(item.get("Endereco")),
+            item.get("Numero"),
+            item.get("Complemento"),
+            item.get("Bairro"),
+            padronizaCEP(item.get("Cep")),
+            item.get("MunicipioIbge"),
+            item.get("Municipio"),
+            padronizaUF(item.get("UF")),
+            format_data_escrita(item.get("DataInicio")),
+            item.get("DDD"),
+            item.get("Telefone"),
+            format_data_escrita(item.get("Posicao")),
+        ))
+
+def criaViewAgenciasBacen():
+    cur.execute("""
+        CREATE OR REPLACE VIEW agencias_view AS
+        SELECT
+            CnpjBase || CnpjSequencial || CnpjDv AS cnpj,
+            NomeIf,
+            Segmento,
+            CodigoCompe,
+            NomeAgencia,
+            Endereco || ' ' || Numero || ' ' || Complemento AS endereco,
+            Bairro,
+            Cep,
+            MunicipioIbge,
+            Municipio,
+            UF,
+            DataInicio,
+            DDD || ' ' || Telefone AS telefone,
+            Posicao
+        FROM agenciasBancariasBacen;
+    """)
+
 def funcoes():
-    inclui_10_primeiras_agencias()
+    criaTabelaInicial()
+    add10PrimeirasAgenciasOriginais()
+    criaViewAgenciasBacen()
 
 funcoes() # adicione as chamadas de funcao na funcao funcoes
 
