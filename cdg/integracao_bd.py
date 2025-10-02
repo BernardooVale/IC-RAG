@@ -1,25 +1,113 @@
-import psycopg2
-from dotenv import load_dotenv
+from psycopg2.extensions import cursor, connection
 import os
 import json
 from datetime import datetime
 import re
 
-load_dotenv()
-senha = os.getenv("SENHA_DB")
+class integracaoBD:
+    
+    def __init__(self, conexao: connection):
+        self.conexao: connection = conexao
+        self.cur:cursor = conexao.cursor()
+        
+    def criaTabelasEmbeddings(self):
+        
+        self.cur.execute("CREATE EXTENSION IF NOT EXISTS vector;")
+        self.cur.execute("""
+            CREATE TABLE IF NOT EXISTS schema_embeddings (
+                id SERIAL PRIMARY KEY,
+                table_name VARCHAR(255) NOT NULL,
+                description TEXT,
+                api TEXT,
+                embedding VECTOR(768)  -- embeddinggemma
+            );
+        """)
+        
+        self.conexao.commit()
+        
+    def addTabelaEmbedding(self, tabela, embedding):
+        
+        self.cur.execute("""
+            INSERT INTO schema_embeddings (table_name, description, api, embedding)
+            VALUES (%s, %s, %s, %s)
+            """, (tabela["nome"], tabela["desc"], tabela["api"], embedding)
+        )
+        
+        self.conexao.commit()
+        
+    def retTabelasEmbedding(self, max_tabelas: int, embed):
+        
+        self.cur.execute("""
+            SELECT api, description
+            FROM schema_embeddings
+            ORDER BY embedding <-> %s::vector
+            LIMIT %s;
+        """, (embed, max_tabelas))
+        
+        return self.cur.fetchall()
+    
+    def criaTabelaTemp(self, query: str):
+        
+        self.cur.execute(query)
+        self.conexao.commit()
+    
+    def retPK(self, nomeTabela:str):
+            query = """
+                SELECT a.attname
+                FROM pg_index i
+                JOIN pg_attribute a ON a.attrelid = i.indrelid
+                                AND a.attnum = ANY(i.indkey)
+                WHERE i.indrelid = %s::regclass
+                AND i.indisprimary;
+            """
+            self.cur.execute(query, (nomeTabela,))
+            result = self.cur.fetchall()
+            
+            if not result:
+                raise ValueError(f"Tabela {nomeTabela} não possui chave primária.")
+            
+            return [row[0] for row in result]  # pode ter mais de uma PK
+    
+    def populaTabelaTemp(self, nome_tabela: str, dados: dict):
+        
+        if not dados:
+            raise ValueError("O dicionário de dados está vazio.")
 
-conexao = psycopg2.connect(
-    host = "localhost",
-    dbname = "ic",
-    user = "postgres",
-    password=senha, # senha do banco de dados que vc criar
-    port = 5432
-)
+        colunas = ", ".join(dados.keys())                  # col1, col2, col3
+        placeholders = ", ".join(["%s"] * len(dados))      # %s, %s, %s
+        valores = tuple(dados.values())                    # (valor1, valor2, valor3)
 
-cur = conexao.cursor()
+        pks = self.retPK(nome_tabela)
+        pk_clause = ", ".join(pks)
+        updates = ", ".join([f"{col} = EXCLUDED.{col}" for col in dados.keys() if col not in pks])
 
-# config inicial acima
-# ===========================================================================
+        query = f"INSERT INTO {nome_tabela} ({colunas}) VALUES ({placeholders}) ON CONFLICT ({pk_clause}) DO UPDATE SET {updates}"
+
+        self.cur.execute(query, valores)
+        self.conexao.commit()
+    
+    def executaQuery(self, query:str):
+        
+        self.cur.execute(query)
+        colunas = [desc[0] for desc in self.cur.description]
+        linhas = self.cur.fetchall()
+        # transforma tuplas em dicts
+        return [dict(zip(colunas, linha)) for linha in linhas]
+    
+    def fecharCursor(self):
+        self.cur.close()
+        
+    def apagaTabelas(self, nomeTabela):
+        self.cur.execute(f"drop table {nomeTabela}")
+        self.conexao.commit()
+
+# ===================================================
+#
+#   Desculpe o transtorno, estamos em obras
+#
+# ====================================================
+
+cur = None # debug
 
 def criaTabela_agenciasBacen():
     cur.execute("""
@@ -40,84 +128,6 @@ def criaTabela_agenciasBacen():
             cnpj VARCHAR(16) PRIMARY KEY
         );
     """)
-
-def format_data_escrita(data_str):
-    return datetime.strptime(data_str, "%d/%m/%Y").date() if data_str else None
-
-
-def padroniza_endereco(endereco: str) -> str:
-    if not endereco:
-        return endereco
-
-    endereco = endereco.strip()
-
-    # Caminho 1: abreviação sem espaço
-    endereco = re.sub(
-        r'^av\.(?=\w)',  # av. seguido de letra
-        'AVENIDA ',
-        endereco,
-        flags=re.IGNORECASE
-    )
-    endereco = re.sub(
-        r'^r\.(?=\w)',  # r. seguido de letra
-        'RUA ',
-        endereco,
-        flags=re.IGNORECASE
-    )
-
-    # Caminho 2: abreviação ou palavra normal seguida de espaço
-    endereco = re.sub(
-        r'^(av\.?|avenida)\s+',  # av., avenida seguidos de espaço
-        'AVENIDA ',
-        endereco,
-        flags=re.IGNORECASE
-    )
-    endereco = re.sub(
-        r'^(r\.?|rua)\s+',  # r., rua seguidos de espaço
-        'RUA ',
-        endereco,
-        flags=re.IGNORECASE
-    )
-
-    # Caixa alta para todo o endereço
-    return endereco.upper()
-
-def padronizaUF(uf):
-    
-    nomeEstados = {
-        "AC": "Acre AC",
-        "AL": "Alagoas AL",
-        "AP": "Amapa AP",
-        "AM": "Amazonas AM",
-        "BA": "Bahia BA",
-        "CE": "Ceara CE",
-        "DF": "Distrito Federal DF",
-        "ES": "Espirito Santo ES",
-        "GO": "Goias GO",
-        "MA": "Maranhao MA",
-        "MT": "Mato Grosso MT",
-        "MS": "Mato Grosso do Sul",
-        "MG": "Minas Gerais MG",
-        "PA": "Para PA",
-        "PB": "Paraiba PB",
-        "PR": "Parana PR",
-        "PE": "Pernambuco PB",
-        "PI": "Piaui PI",
-        "RJ": "Rio de Janeiro RJ",
-        "RN": "Rio Grande do Norte RN",
-        "RS": "Rio Grande do Sul RS",
-        "RO": "Rondonia RO",
-        "RR": "Roraima RR",
-        "SC": "Santa Catarina SC",
-        "SP": "Sao Paulo SP",
-        "SE": "Sergipe SE",
-        "TO": "Tocantins TO"
-    }
-    
-    return nomeEstados[uf].upper()
-
-def padronizaCEP(cep: str):
-    return cep.replace("-", "")
 
 def add_agencia(agencia: dict):
     
@@ -205,15 +215,13 @@ def criaTabelaInicial():
         );
     """)
     
-def add10PrimeirasAgenciasOriginais():
+def addAgenciasOriginais():
     BASE_DIR = os.path.abspath(os.path.join(os.path.dirname("cdg"), ".."))
     JSON_DIR = os.path.join(BASE_DIR, "IC", "IC-RAG", "dados", "bruto", "agencias.jsonl")
     
     json_data = []
     with open(JSON_DIR, "r", encoding="utf-8") as f:
         for i, line in enumerate(f):
-            if i >= 10:
-                break
             json_data.append(json.loads(line))
             
     for item in json_data:
@@ -266,17 +274,3 @@ def criaViewAgenciasBacen():
             Posicao
         FROM agenciasBancariasBacen;
     """)
-
-def funcoes():
-    criaTabelaInicial()
-    add10PrimeirasAgenciasOriginais()
-    criaViewAgenciasBacen()
-
-funcoes() # adicione as chamadas de funcao na funcao funcoes
-
-# ===========================================================================
-# finaliza operacoes
-conexao.commit()
-
-cur.close()
-conexao.close()

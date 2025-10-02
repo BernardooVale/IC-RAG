@@ -1,43 +1,53 @@
-from agente_bd import agenteBd
+from agente_bd import agenteBD
 from agente_chat import agenteChat
+from integracao_bd import integracaoBD
+
 from langchain_ollama import ChatOllama
 import re
+from dotenv import load_dotenv
+import os
+import psycopg2
+
+# conexao BD ====================================================================================
+
+load_dotenv()
+senha = os.getenv("SENHA_DB")
+
+conexao = psycopg2.connect(
+    host = "localhost",
+    dbname = "postgres",
+    user = "postgres",
+    password=senha, # senha do banco de dados que vc criar
+    port = 5433
+)
 
 # config inicial ================================================================================
-def cofre():
-    msgMestra = """
-        Você agirá como um agente de decisão.
-        Sua tarefa é escolher apenas um número de acordo com a mensagem do usuário.
-        Números válidos:
-        0 → Conversa normal
-        1 → Consulta sobre agências bancárias
 
-        IMPORTANTE: Responda apenas com o número, sem explicações.
-    """
+modeloBd = ChatOllama(model="llama3.2:latest", base_url="http://localhost:11434")   # LLM proprio para escrita de consultas SQL
+modeloChat = ChatOllama(model="qwen2:7b", base_url="http://localhost:11434")        # LLM de conversa
+modeloEmbedding = "embeddinggemma:latest"                                           # LLM para gerar embeddings
 
-    modeloBd = ChatOllama(model="llama3.2:latest", base_url="http://localhost:11434")       # LLM proprio para escrita de consultas SQL
-    modeloChat = ChatOllama(model="qwen2:7b", base_url="http://localhost:11434") # LLM de conversa
+integracaoBd = integracaoBD(conexao)
+agente_bd = agenteBD(modeloBd, integracaoBd)
+agente_chat = agenteChat(modeloChat, agente_bd, modeloEmbedding, integracaoBd)
 
-    agente_bd = agenteBd(modeloBd)
-    agente_chat = agenteChat(modeloChat, agente_bd, msgMestra)
+# sistema ============================================================================
 
-    entrada = "Quantas agencias existem no estado de Sao Paulo?"
+entrada = "Quantas agencias existem no estado de Sao Paulo?"
 
-    while not entrada.strip().lower().startswith("sair"):
-        
-        entrada = re.sub(r"[^a-zA-Z0-9\s]", "", entrada)
-        
-        agente_chat.controleResposta(entrada)
-        
-        entrada = input("Escreva sua pergunta: ") # proxima pergunta
-        
-    print("debug")
+while not entrada.strip().lower().startswith("sair"):
     
-def testeBd():
+    entrada = re.sub(r"[^a-zA-Z0-9\s]", "", entrada)
     
-    modeloBd = ChatOllama(model="llama3.2:latest", base_url="http://localhost:11434")
-    agente_bd = agenteBd(modeloBd)
+    agente_chat.controleResposta(entrada)
+    
+    entrada = input("Escreva sua pergunta: ") # proxima pergunta
+    
+print("debug")
 
-    agente_bd.controleConsulta("Please get me the data of the bank with this CNPJ 00000000/7686-42", "1")
-    
-cofre()
+# finalizacao do sistema ==========================================================================================
+conexao.commit()
+
+agente_chat.apagaTabelas()
+integracaoBd.fecharCursor()
+conexao.close()
