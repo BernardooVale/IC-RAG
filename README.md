@@ -28,7 +28,7 @@ IC-RAG
 └── requirements.txt
 ```
 
-### 📦 Descrição das pastas
+### 📦 Descrição das pastas e arquivos
 
 - **`prod/`**  
   Versão preparada para **ambiente de produção**, com código ajustado para o contexto real de execução e acesso ao banco de dados.  
@@ -51,9 +51,10 @@ IC-RAG
 
 Certifique-se de ter o **Python 3.10+** instalado, e depois execute no diretório IC-RAG:
 
-```bash
-pip install -r requirements.txt
-```
+| Sistema Operacional | Criar venv | Ativar venv | Instalar bibliotecas |
+|:--------------------|:----------:|:-----------:|:---------------------:|
+| Windows | `py -m venv venv` | `.\venv\Scripts\activate` | `pip install -r requirements.txt` |
+| Mac/Linux | `python3 -m venv venv` | `source venv/bin/activate` | `pip install -r requirements.txt` |
 
 ---
 
