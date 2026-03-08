@@ -10,9 +10,12 @@
         "results"
     ],
     "3": [
-        "queueDuration",
-        "queryDuration",
-        "results"
+        "success",
+        "data",
+        "count",
+        "query",
+        "offset",
+        "limit"
     ],
     "4": [
         "queueDuration",
@@ -25,9 +28,12 @@
         "results"
     ],
     "6": [
-        "queueDuration",
-        "queryDuration",
-        "results"
+        "success",
+        "data",
+        "count",
+        "query",
+        "offset",
+        "limit"
     ],
     "7": [
         "queueDuration",
@@ -45,14 +51,20 @@
         "results"
     ],
     "10": [
-        "queueDuration",
-        "queryDuration",
-        "results"
+        "success",
+        "data",
+        "count",
+        "query",
+        "offset",
+        "limit"
     ],
     "11": [
-        "queueDuration",
-        "queryDuration",
-        "results"
+        "success",
+        "data",
+        "count",
+        "query",
+        "offset",
+        "limit"
     ],
     "12": [
         "queueDuration",
@@ -65,29 +77,44 @@
         "results"
     ],
     "14": [
-        "queueDuration",
-        "queryDuration",
-        "results"
+        "success",
+        "data",
+        "count",
+        "query",
+        "offset",
+        "limit"
     ],
     "15": [
-        "queueDuration",
-        "queryDuration",
-        "results"
+        "success",
+        "data",
+        "count",
+        "query",
+        "offset",
+        "limit"
     ],
     "16": [
-        "queueDuration",
-        "queryDuration",
-        "results"
+        "success",
+        "data",
+        "count",
+        "query",
+        "offset",
+        "limit"
     ],
     "17": [
-        "queueDuration",
-        "queryDuration",
-        "results"
+        "success",
+        "data",
+        "count",
+        "query",
+        "offset",
+        "limit"
     ],
     "18": [
-        "queueDuration",
-        "queryDuration",
-        "results"
+        "success",
+        "data",
+        "count",
+        "query",
+        "offset",
+        "limit"
     ],
     "19": [
         "queueDuration",
@@ -234,8 +261,30 @@
         "cnpj",
         "razao_social",
         "nome_fantasia",
-        "classificacao_sigla",
         "ativa",
+        "email",
+        "site",
+        "representante_nome",
+        "representante_cargo",
+        "autorizacao_funcionamento_em",
+        "concessao_registro_definitivo_em",
+        "registrada_em",
+        "classificacao_sigla",
+        "classificacao_nome",
+        "segmentacao_sigla",
+        "segmentacao_nome",
+        "endereco_logradouro",
+        "endereco_numero",
+        "endereco_complemento",
+        "endereco_bairro",
+        "endereco_cep",
+        "endereco_municipio_codigo",
+        "endereco_municipio_nome",
+        "endereco_uf_sigla",
+        "endereco_valido",
+        "telefone_ddd",
+        "telefone_numero",
+        "fax_ddd",
         "_links"
     ],
     "46": [
@@ -295,23 +344,48 @@
         "nome",
         "versao"
     ],
-    "52": [],
-    "53": [],
-    "54": [],
-    "55": [],
-    "56": [],
+    "52": [
+        "titulo",
+        "id"
+    ],
+    "53": [
+        "id",
+        "titulo"
+    ],
+    "54": [
+        "titulo",
+        "id"
+    ],
+    "55": [
+        "id",
+        "titulo"
+    ],
+    "56": [
+        "titulo",
+        "id"
+    ],
     "57": [
         "id",
         "titulo"
     ],
-    "60": [],
+    "60": [
+        "id",
+        "tipo",
+        "tema_id",
+        "subTemas",
+        "titulo",
+        "imagem"
+    ],
     "61": [
         "id",
         "titulo",
         "imagem",
         "tipo"
     ],
-    "64": [],
+    "64": [
+        "titulo",
+        "id"
+    ],
     "65": [
         "id",
         "titulo"
@@ -959,20 +1033,29 @@
         "value"
     ],
     "80": [
-        "@odata.context",
-        "value"
+        "id",
+        "nome",
+        "agregados"
     ],
     "81": [
         "@odata.context",
         "value"
     ],
     "82": [
-        "@odata.context",
-        "value"
+        "id",
+        "nome",
+        "URL",
+        "pesquisa",
+        "assunto",
+        "periodicidade",
+        "nivelTerritorial",
+        "variaveis",
+        "classificacoes"
     ],
     "83": [
-        "@odata.context",
-        "value"
+        "id",
+        "literals",
+        "modificacao"
     ],
     "84": [
         "@odata.context",
@@ -983,39 +1066,52 @@
     "248": [],
     "249": [],
     "250": [
-        "items"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "251": [
-        "items"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "253": [
-        "items"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "254": [
-        "items"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "255": [
-        "items"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "256": [
-        "id_pleito",
-        "tipo_interessado",
-        "interessado",
-        "cod_ibge",
-        "uf",
-        "num_pvl",
-        "status",
-        "num_processo",
-        "data_protocolo",
-        "tipo_operacao",
-        "finalidade",
-        "tipo_credor",
-        "credor",
-        "moeda",
-        "valor",
-        "pvl_assoc_divida",
-        "pvl_contratado_credor",
-        "data_status"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "257": [
         "id_pleito",
@@ -1032,38 +1128,36 @@
         "indicador_div_moeda_estrang"
     ],
     "258": [
-        "id_pleito",
-        "num_pvl",
-        "num_processo",
-        "indicador_liberacoes",
-        "ano",
-        "liberacoes_operacoes_sfn",
-        "liberacoes_aro",
-        "liberacoes_demais",
-        "liberacoes_total"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "259": [
-        "id_pleito",
-        "moeda",
-        "taxa_cambio",
-        "data_taxa_cambio"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "260": [
-        "id_pleito",
-        "num_pvl",
-        "num_processo",
-        "ano",
-        "operacao_pleiteada",
-        "demais_operacoes"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "261": [
-        "id_pleito",
-        "num_pvl",
-        "num_processo",
-        "data_base",
-        "status",
-        "data_status",
-        "situacao_ente"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "262": [
         "id_pleito",
@@ -1084,129 +1178,76 @@
         "liberacoes_pvl_nao_contratado"
     ],
     "263": [
-        "esfera",
-        "demonstrativo",
-        "anexo"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "264": [
-        "cod_ibge",
-        "ente",
-        "capital",
-        "regiao",
-        "uf",
-        "esfera",
-        "an_exercicio",
-        "populacao",
-        "co_cnpj"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "265": [
-        "exercicio",
-        "cod_ibge",
-        "populacao",
-        "instituicao",
-        "entregavel",
-        "periodo",
-        "periodicidade",
-        "status_relatorio",
-        "data_status",
-        "forma_envio",
-        "tipo_relatorio"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "266": [
-        "exercicio",
-        "demonstrativo",
-        "periodo",
-        "periodicidade",
-        "instituicao",
-        "cod_ibge",
-        "uf",
-        "populacao",
-        "anexo",
-        "rotulo",
-        "coluna",
-        "cod_conta",
-        "conta",
-        "valor"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "267": [
-        "exercicio",
-        "periodo",
-        "periodicidade",
-        "instituicao",
-        "cod_ibge",
-        "uf",
-        "co_poder",
-        "populacao",
-        "anexo",
-        "rotulo",
-        "coluna",
-        "cod_conta",
-        "conta",
-        "valor"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "268": [
-        "items"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "269": [
-        "tipo_matriz",
-        "cod_ibge",
-        "classe_conta",
-        "conta_contabil",
-        "poder_orgao",
-        "financeiro_permanente",
-        "ano_fonte_recursos",
-        "fonte_recursos",
-        "exercicio",
-        "mes_referencia",
-        "divida_consolidada",
-        "data_referencia",
-        "entrada_msc",
-        "valor",
-        "natureza_conta",
-        "tipo_valor"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "270": [
-        "tipo_matriz",
-        "cod_ibge",
-        "classe_conta",
-        "conta_contabil",
-        "poder_orgao",
-        "ano_fonte_recursos",
-        "fonte_recursos",
-        "funcao",
-        "subfuncao",
-        "exercicio",
-        "mes_referencia",
-        "educacao_saude",
-        "data_referencia",
-        "entrada_msc",
-        "natureza_despesa",
-        "ano_inscricao",
-        "natureza_receita",
-        "valor",
-        "natureza_conta",
-        "tipo_valor"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "271": [
-        "tipo_matriz",
-        "cod_ibge",
-        "classe_conta",
-        "conta_contabil",
-        "poder_orgao",
-        "ano_fonte_recursos",
-        "fonte_recursos",
-        "funcao",
-        "subfuncao",
-        "exercicio",
-        "mes_referencia",
-        "educacao_saude",
-        "data_referencia",
-        "entrada_msc",
-        "natureza_despesa",
-        "ano_inscricao",
-        "valor",
-        "natureza_conta",
-        "tipo_valor"
+        "items",
+        "hasMore",
+        "limit",
+        "offset",
+        "count",
+        "links"
     ],
     "272": [],
     "273": [],
@@ -1256,7 +1297,8 @@
         "codigo_atividade_ensino_unidade",
         "codigo_natureza_organizacao_unidade",
         "codigo_nivel_hierarquia_unidade",
-        "codigo_esfera_administrativa_unidade"
+        "codigo_esfera_administrativa_unidade",
+        "data_atualizacao"
     ],
     "278": [],
     "279": [],
@@ -2278,16 +2320,31 @@
         "_links"
     ],
     "406": [
-        "data"
+        "data",
+        "totalRegistros",
+        "totalPaginas",
+        "numeroPagina",
+        "paginasRestantes",
+        "empty"
     ],
     "407": [
-        "data"
+        "data",
+        "totalRegistros",
+        "totalPaginas",
+        "numeroPagina",
+        "paginasRestantes",
+        "empty"
     ],
     "408": [
         "data"
     ],
     "409": [
-        "data"
+        "data",
+        "totalRegistros",
+        "totalPaginas",
+        "numeroPagina",
+        "paginasRestantes",
+        "empty"
     ],
     "410": [
         "data",
@@ -2414,15 +2471,8 @@
         "links"
     ],
     "428": [
-        "id",
-        "uri",
-        "nome",
-        "siglaPartido",
-        "uriPartido",
-        "siglaUf",
-        "idLegislatura",
-        "urlFoto",
-        "email"
+        "dados",
+        "links"
     ],
     "429": [
         "dados",
@@ -2753,11 +2803,8 @@
         "links"
     ],
     "517": [
-        "status",
-        "title",
-        "detail",
-        "instance",
-        "code"
+        "dados",
+        "links"
     ],
     "518": [
         "dados",
@@ -2807,7 +2854,15 @@
     ],
     "526": [],
     "527": [],
-    "528": [],
+    "528": [
+        "id",
+        "dataInicioOcupacao",
+        "valorPagoMes",
+        "cargo",
+        "permissionario",
+        "pessoaPermissionario",
+        "orgaoPermissionario"
+    ],
     "529": [
         "Erro na API"
     ],
@@ -2815,7 +2870,10 @@
     "531": [
         "Erro na API"
     ],
-    "532": [],
+    "532": [
+        "remuneracoesDTO",
+        "servidor"
+    ],
     "533": [
         "qntPessoas",
         "qntVinculos",
@@ -2831,7 +2889,10 @@
         "codOrgaoSuperiorExercicioSiape",
         "nomOrgaoSuperiorExercicioSiape"
     ],
-    "534": [],
+    "534": [
+        "codigoFuncaoCargo",
+        "descricaoFuncaoCargo"
+    ],
     "535": [
         "cpf",
         "nome",
@@ -2844,41 +2905,282 @@
         "dt_fim_exercicio",
         "dt_fim_carencia"
     ],
-    "536": [],
-    "537": [],
-    "538": [],
-    "539": [],
-    "540": [],
-    "541": [],
-    "542": [],
-    "543": [],
-    "544": [],
-    "545": [],
-    "546": [],
+    "536": [
+        "id",
+        "dataReferencia",
+        "tipo",
+        "quantidadeBeneficiados",
+        "valor",
+        "municipio"
+    ],
+    "537": [
+        "id",
+        "dataMesReferencia",
+        "dataSaque",
+        "portaria",
+        "dataEmissaoParcela",
+        "situacao",
+        "pessoaSeguroDefeso",
+        "rgp",
+        "valor",
+        "parcela",
+        "municipio"
+    ],
+    "538": [
+        "id",
+        "dataMesReferencia",
+        "dataSaque",
+        "portaria",
+        "dataEmissaoParcela",
+        "situacao",
+        "pessoaSeguroDefeso",
+        "rgp",
+        "valor",
+        "parcela",
+        "municipio"
+    ],
+    "539": [
+        "id",
+        "dataReferencia",
+        "tipo",
+        "quantidadeBeneficiados",
+        "valor",
+        "municipio"
+    ],
+    "540": [
+        "id",
+        "dataMesReferencia",
+        "valor",
+        "beneficiarioSafra",
+        "municipio"
+    ],
+    "541": [
+        "id",
+        "dataMesReferencia",
+        "valor",
+        "beneficiarioSafra",
+        "municipio"
+    ],
+    "542": [
+        "id",
+        "dataReferencia",
+        "tipo",
+        "quantidadeBeneficiados",
+        "valor",
+        "municipio"
+    ],
+    "543": [
+        "id",
+        "dataMesReferencia",
+        "beneficiarioPeti",
+        "dataDisponibilizacaoRecurso",
+        "situacao",
+        "valor",
+        "municipio"
+    ],
+    "544": [
+        "id",
+        "dataMesReferencia",
+        "beneficiarioPeti",
+        "dataDisponibilizacaoRecurso",
+        "situacao",
+        "valor",
+        "municipio"
+    ],
+    "545": [
+        "id",
+        "dataReferencia",
+        "tipo",
+        "quantidadeBeneficiados",
+        "valor",
+        "municipio"
+    ],
+    "546": [
+        "concedidoJudicialmente",
+        "id",
+        "dataMesReferencia",
+        "menor16anos",
+        "beneficiario",
+        "dataMesCompetencia",
+        "valor",
+        "municipio"
+    ],
     "547": [],
     "548": [],
     "549": [],
     "550": [],
-    "551": [],
-    "552": [],
-    "553": [],
-    "554": [],
-    "555": [],
-    "556": [],
-    "557": [],
-    "558": [],
-    "559": [],
-    "560": [],
-    "561": [],
-    "562": [],
-    "563": [],
-    "564": [],
+    "551": [
+        "id",
+        "dataMesReferencia",
+        "quantidadeDependentes",
+        "dataMesCompetencia",
+        "valor",
+        "titularBolsaFamilia",
+        "municipio"
+    ],
+    "552": [
+        "id",
+        "dataMesReferencia",
+        "quantidadeDependentes",
+        "dataMesCompetencia",
+        "valor",
+        "titularBolsaFamilia",
+        "municipio"
+    ],
+    "553": [
+        "id",
+        "dataReferencia",
+        "tipo",
+        "quantidadeBeneficiados",
+        "valor",
+        "municipio"
+    ],
+    "554": [
+        "id",
+        "enquadramentoAuxilioEmergencial",
+        "numeroParcela",
+        "mesDisponibilizacao",
+        "responsavelAuxilioEmergencial",
+        "beneficiario",
+        "situacaoAuxilioEmergencial",
+        "valor",
+        "municipio"
+    ],
+    "555": [
+        "id",
+        "enquadramentoAuxilioEmergencial",
+        "numeroParcela",
+        "mesDisponibilizacao",
+        "responsavelAuxilioEmergencial",
+        "beneficiario",
+        "situacaoAuxilioEmergencial",
+        "valor",
+        "municipio"
+    ],
+    "556": [
+        "id",
+        "dataMesReferencia",
+        "valorSaque",
+        "dataSaque",
+        "dataMesCompetencia",
+        "beneficiarioAuxilioBrasil",
+        "municipio"
+    ],
+    "557": [
+        "id",
+        "dataMesReferencia",
+        "valorSaque",
+        "dataSaque",
+        "dataMesCompetencia",
+        "beneficiarioAuxilioBrasil",
+        "municipio"
+    ],
+    "558": [
+        "id",
+        "dataReferencia",
+        "tipo",
+        "quantidadeBeneficiados",
+        "valor",
+        "municipio"
+    ],
+    "559": [
+        "razaoSocial",
+        "descricaoBeneficioFiscal",
+        "valorRenunciado",
+        "cnpj",
+        "cnaeCodigoClasse",
+        "codigoIBGE",
+        "cnaeCodigoGrupo",
+        "descricaoFundamentoLegal",
+        "uf",
+        "tributo",
+        "cnaeCodigoSubClasse",
+        "tipoRenuncia",
+        "nomeFantasia",
+        "formaTributacao",
+        "cnaeNomeClasse",
+        "ano",
+        "cnaeDivisao",
+        "municipio"
+    ],
+    "560": [
+        "beneficioFiscal",
+        "tipoEntidade",
+        "cnpj",
+        "cnaeCodigoClasse",
+        "cnaeCodigoGrupo",
+        "uf",
+        "codigoIBGEMunicipio",
+        "cnaeCodigoSubClasse",
+        "nomeFantasia",
+        "cnaeNomeClasse",
+        "beneficiario",
+        "cnaeDivisao",
+        "municipio"
+    ],
+    "561": [
+        "beneficioFiscal",
+        "fundamentoLegal",
+        "cnpj",
+        "fruicaoVigente",
+        "dataInicioFruicao",
+        "cnaeCodigoGrupo",
+        "cnaeCodigoClasse",
+        "uf",
+        "codigoIBGEMunicipio",
+        "dataFimFruicao",
+        "cnaeCodigoSubClasse",
+        "descricao",
+        "nomeFantasia",
+        "cnaeNomeClasse",
+        "beneficiario",
+        "cnaeDivisao",
+        "municipio"
+    ],
+    "562": [
+        "descricao",
+        "codigo"
+    ],
+    "563": [
+        "descricao",
+        "codigo"
+    ],
+    "564": [
+        "id",
+        "serie",
+        "dataEmissao",
+        "cnpjFornecedor",
+        "dataTipoEventoMaisRecente",
+        "codigoOrgaoSuperiorDestinatario",
+        "valorNotaFiscal",
+        "chaveNotaFiscal",
+        "orgaoSuperiorDestinatario",
+        "municipioFornecedor",
+        "numero",
+        "nomeFornecedor",
+        "orgaoDestinatario",
+        "tipoEventoMaisRecente",
+        "codigoOrgaoDestinatario"
+    ],
     "565": [
         "notaFiscalDTO",
         "itensNotaFiscal",
         "eventosNotaFiscal"
     ],
-    "566": [],
+    "566": [
+        "id",
+        "licitacao",
+        "modalidadeLicitacao",
+        "dataReferencia",
+        "instrumentoLegal",
+        "dataAbertura",
+        "dataPublicacao",
+        "unidadeGestora",
+        "dataResultadoCompra",
+        "valor",
+        "situacaoCompra",
+        "municipio"
+    ],
     "567": [
         "id",
         "licitacao",
@@ -2893,14 +3195,87 @@
         "municipio",
         "unidadeGestora"
     ],
-    "568": [],
-    "569": [],
-    "570": [],
-    "571": [],
+    "568": [
+        "descricaoPoder",
+        "nome",
+        "orgaoVinculado",
+        "orgaoMaximo",
+        "codigo"
+    ],
+    "569": [
+        "id",
+        "licitacao",
+        "modalidadeLicitacao",
+        "dataReferencia",
+        "instrumentoLegal",
+        "dataAbertura",
+        "dataPublicacao",
+        "unidadeGestora",
+        "dataResultadoCompra",
+        "valor",
+        "situacaoCompra",
+        "municipio"
+    ],
+    "570": [
+        "id",
+        "licitacao",
+        "modalidadeLicitacao",
+        "dataReferencia",
+        "instrumentoLegal",
+        "dataAbertura",
+        "dataPublicacao",
+        "unidadeGestora",
+        "dataResultadoCompra",
+        "valor",
+        "situacaoCompra",
+        "municipio"
+    ],
+    "571": [
+        "tipoParticipante",
+        "nome",
+        "cpfCnpj",
+        "idParticipante"
+    ],
     "572": [],
-    "573": [],
-    "574": [],
-    "575": [],
+    "573": [
+        "descUnidadeFornecimento",
+        "quantidade",
+        "tipoPessoa",
+        "idVencedor",
+        "nome",
+        "descComplementarItemCompra",
+        "codigoItemCompra",
+        "numero",
+        "descricao",
+        "valor",
+        "cpfCnpjVencedor"
+    ],
+    "574": [
+        "empenhoResumido",
+        "empenho",
+        "observacao",
+        "valor",
+        "dataEmissao"
+    ],
+    "575": [
+        "id",
+        "objeto",
+        "fundamentoLegal",
+        "unidadeGestoraCompras",
+        "valorInicialCompra",
+        "dataFimVigencia",
+        "valorFinalCompra",
+        "situacaoContrato",
+        "dataInicioVigencia",
+        "modalidadeCompra",
+        "fornecedor",
+        "dataAssinatura",
+        "compra",
+        "dataPublicacaoDOU",
+        "numero",
+        "unidadeGestora",
+        "numeroProcesso"
+    ],
     "576": [
         "codigoEmenda",
         "ano",
@@ -2918,18 +3293,155 @@
         "valorRestoCancelado",
         "valorRestoPago"
     ],
-    "577": [],
-    "578": [],
-    "579": [],
-    "580": [],
-    "581": [],
-    "582": [],
-    "583": [],
-    "584": [],
-    "585": [],
+    "577": [
+        "especieTipo",
+        "fase",
+        "data",
+        "codigoDocumento",
+        "tipoEmenda",
+        "codigoDocumentoResumido"
+    ],
+    "578": [
+        "id",
+        "descricao"
+    ],
+    "579": [
+        "nomeUG",
+        "anoMes",
+        "siglaUFPessoa",
+        "codigoOrgaoSuperior",
+        "tipoPessoa",
+        "codigoPessoa",
+        "municipioPessoa",
+        "codigoOrgao",
+        "nomeOrgaoSuperior",
+        "nomePessoa",
+        "valor",
+        "nomeOrgao",
+        "codigoUG"
+    ],
+    "580": [
+        "liquidado",
+        "empenhado",
+        "codigoOrgao",
+        "orgaoSuperior",
+        "orgao",
+        "ano",
+        "codigoOrgaoSuperior",
+        "pago"
+    ],
+    "581": [
+        "liquidado",
+        "empenhado",
+        "funcao",
+        "acao",
+        "subfuncao",
+        "pago",
+        "codigoSubfuncao",
+        "ano",
+        "programa",
+        "codigoFuncao",
+        "codigoPrograma",
+        "codigoAcao"
+    ],
+    "582": [
+        "codigoFuncao",
+        "liquidado",
+        "empenhado",
+        "codigoSubfuncao",
+        "codigoModalidadeDespesa",
+        "codigoPrograma",
+        "codigoAcao",
+        "codigoGrupoDespesa",
+        "modalidadeDespesa",
+        "funcao",
+        "planoOrcamentario",
+        "acao",
+        "idPlanoOrcamentario",
+        "subfuncao",
+        "programa",
+        "elementoDespesa",
+        "codigoElementoDespesa",
+        "codigoPlanoOrcamentario",
+        "grupoDespesa",
+        "ano",
+        "pago"
+    ],
+    "583": [
+        "id",
+        "numAno",
+        "descPOIdAcompanhamento",
+        "codigoPrograma",
+        "codUnidadeOrcamentaria",
+        "codPOIdAcompanhamento",
+        "descricao",
+        "codigoSubFuncao",
+        "codigoFuncao",
+        "codigo",
+        "codigoAcao"
+    ],
+    "584": [
+        "codigoItemEmpenho",
+        "descricaoSubelemento",
+        "sequencial",
+        "codigoSubelemento",
+        "valorAtual",
+        "descricao"
+    ],
+    "585": [
+        "data",
+        "quantidade",
+        "operacao",
+        "valorTotal",
+        "valorUnitario"
+    ],
     "586": [],
-    "587": [],
-    "588": [],
+    "587": [
+        "subitem",
+        "empenhoResumido",
+        "empenho",
+        "valorRestoInscrito",
+        "valorLiquidado",
+        "valorRestoPago",
+        "valorPago",
+        "valorRestoCancelado"
+    ],
+    "588": [
+        "data",
+        "documentoResumido",
+        "especie",
+        "observacao",
+        "ug",
+        "favorecidoListaFaturas",
+        "codigoOrgaoSuperior",
+        "uo",
+        "fase",
+        "modalidade",
+        "favorecido",
+        "ufFavorecido",
+        "grupo",
+        "elemento",
+        "funcao",
+        "codigoUg",
+        "acao",
+        "planoOrcamentario",
+        "subfuncao",
+        "nomeFavorecido",
+        "orgaoSuperior",
+        "favorecidoIntermediario",
+        "codigoUo",
+        "localizadorGasto",
+        "subTitulo",
+        "valor",
+        "programa",
+        "numeroProcesso",
+        "codigoFavorecido",
+        "autor",
+        "codigoOrgao",
+        "orgao",
+        "categoria",
+        "documento"
+    ],
     "589": [
         "data",
         "documento",
@@ -2966,15 +3478,176 @@
         "favorecidoIntermediario",
         "favorecidoListaFaturas"
     ],
-    "590": [],
-    "591": [],
+    "590": [
+        "fase",
+        "data",
+        "documentoResumido",
+        "favorecido",
+        "especie",
+        "orgaoSuperior",
+        "orgaoVinculado",
+        "unidadeGestora",
+        "valor",
+        "elementoDespesa",
+        "documento"
+    ],
+    "591": [
+        "data",
+        "documentoResumido",
+        "especie",
+        "observacao",
+        "ug",
+        "favorecidoListaFaturas",
+        "codigoOrgaoSuperior",
+        "uo",
+        "fase",
+        "modalidade",
+        "favorecido",
+        "ufFavorecido",
+        "grupo",
+        "elemento",
+        "funcao",
+        "codigoUg",
+        "acao",
+        "planoOrcamentario",
+        "subfuncao",
+        "nomeFavorecido",
+        "orgaoSuperior",
+        "favorecidoIntermediario",
+        "codigoUo",
+        "localizadorGasto",
+        "subTitulo",
+        "valor",
+        "programa",
+        "numeroProcesso",
+        "codigoFavorecido",
+        "autor",
+        "codigoOrgao",
+        "orgao",
+        "categoria",
+        "documento"
+    ],
     "592": [],
-    "593": [],
-    "594": [],
-    "595": [],
-    "596": [],
-    "597": [],
-    "598": [],
+    "593": [
+        "codigoFuncao",
+        "liquidado",
+        "empenhado",
+        "codigoSubfuncao",
+        "codigoModalidadeDespesa",
+        "codigoPrograma",
+        "codigoAcao",
+        "codigoGrupoDespesa",
+        "modalidadeDespesa",
+        "funcao",
+        "idPlanoOrcamentario",
+        "acao",
+        "planoOrcamentario",
+        "subfuncao",
+        "mesAno",
+        "programa",
+        "elementoDespesa",
+        "codigoElementoDespesa",
+        "codigoPlanoOrcamentario",
+        "grupoDespesa",
+        "pago"
+    ],
+    "594": [
+        "valorContrapartida",
+        "dataConclusao",
+        "dataUltimaLiberacao",
+        "dataReferencia",
+        "localidadePessoa",
+        "valorDaUltimaLiberacao",
+        "dataFinalVigencia",
+        "unidadeGestora",
+        "dataPublicacao",
+        "subfuncao",
+        "tipoInstrumento",
+        "valorLiberado",
+        "municipioConvenente",
+        "valor",
+        "numeroProcesso",
+        "id",
+        "dataInicioVigencia",
+        "dimConvenio",
+        "orgao",
+        "situacao",
+        "convenente"
+    ],
+    "595": [
+        "id",
+        "descricao",
+        "codigo"
+    ],
+    "596": [
+        "valorContrapartida",
+        "dataConclusao",
+        "dataUltimaLiberacao",
+        "dataReferencia",
+        "localidadePessoa",
+        "valorDaUltimaLiberacao",
+        "dataFinalVigencia",
+        "unidadeGestora",
+        "dataPublicacao",
+        "subfuncao",
+        "tipoInstrumento",
+        "valorLiberado",
+        "municipioConvenente",
+        "valor",
+        "numeroProcesso",
+        "id",
+        "dataInicioVigencia",
+        "dimConvenio",
+        "orgao",
+        "situacao",
+        "convenente"
+    ],
+    "597": [
+        "valorContrapartida",
+        "dataConclusao",
+        "dataUltimaLiberacao",
+        "dataReferencia",
+        "localidadePessoa",
+        "valorDaUltimaLiberacao",
+        "dataFinalVigencia",
+        "unidadeGestora",
+        "dataPublicacao",
+        "subfuncao",
+        "tipoInstrumento",
+        "valorLiberado",
+        "municipioConvenente",
+        "valor",
+        "numeroProcesso",
+        "id",
+        "dataInicioVigencia",
+        "dimConvenio",
+        "orgao",
+        "situacao",
+        "convenente"
+    ],
+    "598": [
+        "valorContrapartida",
+        "dataConclusao",
+        "dataUltimaLiberacao",
+        "dataReferencia",
+        "localidadePessoa",
+        "valorDaUltimaLiberacao",
+        "dataFinalVigencia",
+        "unidadeGestora",
+        "dataPublicacao",
+        "subfuncao",
+        "tipoInstrumento",
+        "valorLiberado",
+        "municipioConvenente",
+        "valor",
+        "numeroProcesso",
+        "id",
+        "dataInicioVigencia",
+        "dimConvenio",
+        "orgao",
+        "situacao",
+        "convenente"
+    ],
     "599": [
         "id",
         "dataReferencia",
@@ -2998,11 +3671,35 @@
         "valorDaUltimaLiberacao",
         "numeroProcesso"
     ],
-    "600": [],
+    "600": [
+        "id",
+        "objeto",
+        "fundamentoLegal",
+        "unidadeGestoraCompras",
+        "valorInicialCompra",
+        "dataFimVigencia",
+        "valorFinalCompra",
+        "situacaoContrato",
+        "dataInicioVigencia",
+        "modalidadeCompra",
+        "fornecedor",
+        "dataAssinatura",
+        "compra",
+        "dataPublicacaoDOU",
+        "numero",
+        "unidadeGestora",
+        "numeroProcesso"
+    ],
     "601": [],
     "602": [],
     "603": [],
-    "604": [],
+    "604": [
+        "quantidade",
+        "numero",
+        "descComplementarItemCompra",
+        "descricao",
+        "valor"
+    ],
     "605": [
         "id",
         "numero",
@@ -3022,7 +3719,13 @@
         "valorInicialCompra",
         "valorFinalCompra"
     ],
-    "606": [],
+    "606": [
+        "empenhoResumido",
+        "empenho",
+        "observacao",
+        "valor",
+        "dataEmissao"
+    ],
     "607": [],
     "608": [],
     "609": [],
@@ -3048,7 +3751,14 @@
         "abrangenciaDefinidaDecisaoJudicial",
         "informacoesAdicionaisDoOrgaoSancionador"
     ],
-    "611": [],
+    "611": [
+        "id",
+        "dataReferencia",
+        "pessoaJuridica",
+        "orgaoSuperior",
+        "convenio",
+        "motivo"
+    ],
     "612": [
         "id",
         "dataReferencia",
@@ -3099,7 +3809,20 @@
         "abrangenciaDefinidaDecisaoJudicial",
         "informacoesAdicionaisDoOrgaoSancionador"
     ],
-    "615": [],
+    "615": [
+        "id",
+        "pessoa",
+        "fundamentacao",
+        "orgaoLotacao",
+        "dataReferencia",
+        "dataPublicacao",
+        "ufLotacaoPessoa",
+        "tipoPunicao",
+        "cargoComissao",
+        "punicao",
+        "codigoCargoComissao",
+        "cargoEfetivo"
+    ],
     "616": [
         "id",
         "dataPublicacao",
@@ -3132,7 +3855,16 @@
         "sancoes",
         "quantidade"
     ],
-    "619": [],
+    "619": [
+        "id",
+        "estabelecimento",
+        "portador",
+        "valorTransacao",
+        "dataTransacao",
+        "mesExtrato",
+        "unidadeGestora",
+        "tipoCartao"
+    ],
     "620": [
         "id",
         "titulo",
@@ -3162,14 +3894,42 @@
     "621": [],
     "622": [],
     "623": [],
-    "624": [],
+    "624": [
+        "dataAtualizacao",
+        "id",
+        "title",
+        "nome",
+        "nomeOrganizacao"
+    ],
     "625": [],
     "626": [],
     "627": [],
     "628": [],
     "629": [],
     "630": [],
-    "631": [],
+    "631": [
+        "quantidadeOrganizacoes",
+        "nameIcone",
+        "usuarioSegueTema",
+        "packageCount",
+        "imageDisplayUrl",
+        "icone",
+        "state",
+        "packages",
+        "users",
+        "tags",
+        "numFollowers",
+        "name",
+        "foto",
+        "iconeDisplayUrl",
+        "numReusos",
+        "displayName",
+        "description",
+        "id",
+        "title",
+        "atributos",
+        "nameFoto"
+    ],
     "632": [],
     "633": [
         "id",
@@ -3188,18 +3948,211 @@
         "@odata.context",
         "value"
     ],
-    "909": [],
-    "910": [],
-    "911": [],
+    "909": [
+        "id",
+        "isAtualizado",
+        "title",
+        "ultimaAlteracaoMetadados",
+        "nome",
+        "ultimaAtualizacaoDados",
+        "catalogacao",
+        "nomeOrganizacao"
+    ],
+    "910": [
+        "id",
+        "descricao"
+    ],
+    "911": [
+        "id",
+        "descricao"
+    ],
     "912": [],
-    "759": [],
-    "760": [],
-    "761": [],
-    "762": [],
+    "759": [
+        "dataCalculoAltitude",
+        "itinerario",
+        "longitudeGMS",
+        "datumGravidade",
+        "codigoEstacao",
+        "sigmaLongitude",
+        "observacao",
+        "altitudeOrtometrica",
+        "dataCalculoCoordenada",
+        "numeroGeopotencial",
+        "sistemaReferenciaCoordenada",
+        "nomeEstacao",
+        "longitude",
+        "dataVisita",
+        "fonteCoordenada",
+        "sigmaLatitude",
+        "latitude",
+        "fonteAltitude",
+        "latitudeGMS",
+        "sigmaAltitude",
+        "idAjusteRN",
+        "dataMedicaoAltitude",
+        "municipio",
+        "tipoLocal",
+        "notaAjusteRN",
+        "altitudeNormal",
+        "dataCalculoGravidade",
+        "datumAltitude",
+        "descricaoEstacao",
+        "tipoEstacao",
+        "localizacao",
+        "sigmaAltitudeGeometrica",
+        "altitudeGeometrica",
+        "fonteAltitudeGeometrica",
+        "codigoEstacaoMaterializada",
+        "dataMedicaoCoordenada",
+        "dataMedicaoGravidade",
+        "tema",
+        "situacao",
+        "inscricaoChapa",
+        "valorGravidade"
+    ],
+    "760": [
+        "dataCalculoAltitude",
+        "itinerario",
+        "longitudeGMS",
+        "datumGravidade",
+        "codigoEstacao",
+        "sigmaLongitude",
+        "observacao",
+        "altitudeOrtometrica",
+        "dataCalculoCoordenada",
+        "numeroGeopotencial",
+        "sistemaReferenciaCoordenada",
+        "nomeEstacao",
+        "longitude",
+        "dataVisita",
+        "fonteCoordenada",
+        "sigmaLatitude",
+        "latitude",
+        "fonteAltitude",
+        "latitudeGMS",
+        "sigmaAltitude",
+        "idAjusteRN",
+        "dataMedicaoAltitude",
+        "municipio",
+        "tipoLocal",
+        "notaAjusteRN",
+        "altitudeNormal",
+        "dataCalculoGravidade",
+        "datumAltitude",
+        "descricaoEstacao",
+        "tipoEstacao",
+        "localizacao",
+        "sigmaAltitudeGeometrica",
+        "altitudeGeometrica",
+        "fonteAltitudeGeometrica",
+        "codigoEstacaoMaterializada",
+        "dataMedicaoCoordenada",
+        "dataMedicaoGravidade",
+        "tema",
+        "situacao",
+        "inscricaoChapa",
+        "valorGravidade"
+    ],
+    "761": [
+        "dataCalculoAltitude",
+        "itinerario",
+        "longitudeGMS",
+        "datumGravidade",
+        "codigoEstacao",
+        "sigmaLongitude",
+        "observacao",
+        "altitudeOrtometrica",
+        "dataCalculoCoordenada",
+        "numeroGeopotencial",
+        "sistemaReferenciaCoordenada",
+        "nomeEstacao",
+        "longitude",
+        "dataVisita",
+        "fonteCoordenada",
+        "sigmaLatitude",
+        "latitude",
+        "fonteAltitude",
+        "latitudeGMS",
+        "sigmaAltitude",
+        "idAjusteRN",
+        "dataMedicaoAltitude",
+        "municipio",
+        "tipoLocal",
+        "notaAjusteRN",
+        "altitudeNormal",
+        "dataCalculoGravidade",
+        "datumAltitude",
+        "descricaoEstacao",
+        "tipoEstacao",
+        "localizacao",
+        "sigmaAltitudeGeometrica",
+        "altitudeGeometrica",
+        "fonteAltitudeGeometrica",
+        "codigoEstacaoMaterializada",
+        "dataMedicaoCoordenada",
+        "dataMedicaoGravidade",
+        "tema",
+        "situacao",
+        "inscricaoChapa",
+        "valorGravidade"
+    ],
+    "762": [
+        "dataCalculoAltitude",
+        "itinerario",
+        "longitudeGMS",
+        "datumGravidade",
+        "codigoEstacao",
+        "sigmaLongitude",
+        "observacao",
+        "altitudeOrtometrica",
+        "dataCalculoCoordenada",
+        "numeroGeopotencial",
+        "sistemaReferenciaCoordenada",
+        "nomeEstacao",
+        "longitude",
+        "dataVisita",
+        "fonteCoordenada",
+        "sigmaLatitude",
+        "latitude",
+        "fonteAltitude",
+        "latitudeGMS",
+        "sigmaAltitude",
+        "idAjusteRN",
+        "dataMedicaoAltitude",
+        "municipio",
+        "tipoLocal",
+        "notaAjusteRN",
+        "altitudeNormal",
+        "dataCalculoGravidade",
+        "datumAltitude",
+        "descricaoEstacao",
+        "tipoEstacao",
+        "localizacao",
+        "sigmaAltitudeGeometrica",
+        "altitudeGeometrica",
+        "fonteAltitudeGeometrica",
+        "codigoEstacaoMaterializada",
+        "dataMedicaoCoordenada",
+        "dataMedicaoGravidade",
+        "tema",
+        "situacao",
+        "inscricaoChapa",
+        "valorGravidade"
+    ],
     "763": [],
-    "764": [],
-    "765": [],
-    "766": [],
+    "764": [
+        "descricaoTipoLocal",
+        "codigoTipoLocal"
+    ],
+    "765": [
+        "codigoSituacao",
+        "descricaoSituacao"
+    ],
+    "766": [
+        "codigoTipoEstacao",
+        "siglaTipoEstacao",
+        "descricaoTipoEstacao"
+    ],
     "767": [
         "count",
         "page",
@@ -3232,37 +4185,108 @@
         "grupo",
         "observacoes"
     ],
-    "771": [],
-    "772": [],
+    "771": [
+        "observacoes",
+        "id",
+        "grupo",
+        "descricao"
+    ],
+    "772": [
+        "observacoes",
+        "id",
+        "grupo",
+        "descricao"
+    ],
     "773": [
         "id",
         "descricao",
         "secao",
         "observacoes"
     ],
-    "774": [],
-    "775": [],
-    "776": [],
-    "777": [],
+    "774": [
+        "observacoes",
+        "id",
+        "secao",
+        "descricao"
+    ],
+    "775": [
+        "observacoes",
+        "id",
+        "secao",
+        "descricao"
+    ],
+    "776": [
+        "observacoes",
+        "id",
+        "divisao",
+        "descricao"
+    ],
+    "777": [
+        "observacoes",
+        "id",
+        "divisao",
+        "descricao"
+    ],
     "778": [
         "id",
         "descricao",
         "divisao",
         "observacoes"
     ],
-    "779": [],
+    "779": [
+        "observacoes",
+        "id",
+        "divisao",
+        "descricao"
+    ],
     "780": [],
     "781": [
         "id",
         "descricao",
         "observacoes"
     ],
-    "782": [],
-    "783": [],
-    "784": [],
-    "785": [],
-    "786": [],
-    "787": [],
+    "782": [
+        "observacoes",
+        "id",
+        "atividades",
+        "classe",
+        "descricao"
+    ],
+    "783": [
+        "observacoes",
+        "id",
+        "atividades",
+        "classe",
+        "descricao"
+    ],
+    "784": [
+        "observacoes",
+        "id",
+        "atividades",
+        "classe",
+        "descricao"
+    ],
+    "785": [
+        "observacoes",
+        "id",
+        "atividades",
+        "classe",
+        "descricao"
+    ],
+    "786": [
+        "observacoes",
+        "id",
+        "atividades",
+        "classe",
+        "descricao"
+    ],
+    "787": [
+        "id",
+        "descricao",
+        "classe",
+        "atividades",
+        "observacoes"
+    ],
     "788": [],
     "789": [
         "fator_conversao",
@@ -3278,95 +4302,302 @@
         "long",
         "modelo"
     ],
-    "791": [],
+    "791": [
+        "fator_conversao",
+        "modelo",
+        "long",
+        "incerteza",
+        "lat"
+    ],
     "792": [],
-    "793": [],
-    "794": [],
-    "795": [],
-    "796": [],
-    "797": [],
+    "793": [
+        "id",
+        "nome",
+        "municipio"
+    ],
+    "794": [
+        "id",
+        "nome",
+        "municipio"
+    ],
+    "795": [
+        "id",
+        "nome",
+        "municipio"
+    ],
+    "796": [
+        "id",
+        "nome",
+        "municipio"
+    ],
+    "797": [
+        "id",
+        "nome",
+        "municipio"
+    ],
     "798": [],
-    "799": [],
-    "800": [],
-    "801": [],
-    "802": [],
-    "803": [],
+    "799": [
+        "id",
+        "nome",
+        "municipio"
+    ],
+    "800": [
+        "id",
+        "nome",
+        "municipio"
+    ],
+    "801": [
+        "id",
+        "nome",
+        "municipio"
+    ],
+    "802": [
+        "id",
+        "UF",
+        "nome"
+    ],
+    "803": [
+        "id",
+        "UF",
+        "nome"
+    ],
     "804": [
         "id",
         "nome",
         "UF"
     ],
-    "805": [],
-    "806": [],
-    "807": [],
-    "808": [],
+    "805": [
+        "id",
+        "UF",
+        "nome"
+    ],
+    "806": [
+        "id",
+        "nome",
+        "mesorregiao"
+    ],
+    "807": [
+        "id",
+        "nome",
+        "mesorregiao"
+    ],
+    "808": [
+        "id",
+        "nome",
+        "mesorregiao"
+    ],
     "809": [
         "id",
         "nome",
         "mesorregiao"
     ],
-    "810": [],
+    "810": [
+        "id",
+        "nome",
+        "mesorregiao"
+    ],
     "811": [],
-    "812": [],
-    "813": [],
-    "814": [],
+    "812": [
+        "regiao-imediata",
+        "id",
+        "microrregiao",
+        "nome"
+    ],
+    "813": [
+        "regiao-imediata",
+        "id",
+        "microrregiao",
+        "nome"
+    ],
+    "814": [
+        "regiao-imediata",
+        "id",
+        "microrregiao",
+        "nome"
+    ],
     "815": [
         "id",
         "nome",
         "microrregiao",
         "regiao-imediata"
     ],
-    "816": [],
-    "817": [],
-    "818": [],
+    "816": [
+        "regiao-imediata",
+        "id",
+        "microrregiao",
+        "nome"
+    ],
+    "817": [
+        "regiao-imediata",
+        "id",
+        "microrregiao",
+        "nome"
+    ],
+    "818": [
+        "regiao-imediata",
+        "id",
+        "microrregiao",
+        "nome"
+    ],
     "819": [],
-    "820": [],
-    "821": [],
+    "820": [
+        "id",
+        "regiao-intermediaria",
+        "sub-regiao",
+        "nome"
+    ],
+    "821": [
+        "id",
+        "sigla",
+        "nome"
+    ],
     "822": [
         "id",
         "sigla",
         "nome"
     ],
-    "823": [],
-    "824": [],
+    "823": [
+        "id",
+        "regiao-intermediaria",
+        "nome"
+    ],
+    "824": [
+        "id",
+        "regiao-intermediaria",
+        "nome"
+    ],
     "825": [
         "id",
         "nome",
         "regiao-intermediaria"
     ],
-    "826": [],
-    "827": [],
-    "828": [],
-    "829": [],
-    "830": [],
-    "831": [],
+    "826": [
+        "id",
+        "regiao-intermediaria",
+        "nome"
+    ],
+    "827": [
+        "id",
+        "regiao-intermediaria",
+        "nome"
+    ],
+    "828": [
+        "id",
+        "municipios",
+        "nome"
+    ],
+    "829": [
+        "id",
+        "municipios",
+        "nome"
+    ],
+    "830": [
+        "id",
+        "UF",
+        "nome"
+    ],
+    "831": [
+        "id",
+        "UF",
+        "nome"
+    ],
     "832": [
         "id",
         "nome",
         "UF"
     ],
-    "833": [],
-    "834": [],
-    "835": [],
-    "836": [],
-    "837": [],
-    "838": [],
-    "839": [],
-    "840": [],
-    "841": [],
-    "842": [],
+    "833": [
+        "id",
+        "UF",
+        "nome"
+    ],
+    "834": [
+        "id",
+        "sub-regioes-metropolitanas",
+        "UF",
+        "nome",
+        "municipios"
+    ],
+    "835": [
+        "id",
+        "sub-regioes-metropolitanas",
+        "UF",
+        "nome",
+        "municipios"
+    ],
+    "836": [
+        "id",
+        "sub-regioes-metropolitanas",
+        "UF",
+        "nome",
+        "municipios"
+    ],
+    "837": [
+        "id",
+        "sub-regioes-metropolitanas",
+        "UF",
+        "nome",
+        "municipios"
+    ],
+    "838": [
+        "distrito",
+        "id",
+        "nome"
+    ],
+    "839": [
+        "distrito",
+        "id",
+        "nome"
+    ],
+    "840": [
+        "distrito",
+        "id",
+        "nome"
+    ],
+    "841": [
+        "distrito",
+        "id",
+        "nome"
+    ],
+    "842": [
+        "distrito",
+        "id",
+        "nome"
+    ],
     "843": [],
-    "844": [],
-    "845": [],
-    "846": [],
-    "847": [],
+    "844": [
+        "distrito",
+        "id",
+        "nome"
+    ],
+    "845": [
+        "distrito",
+        "id",
+        "nome"
+    ],
+    "846": [
+        "distrito",
+        "id",
+        "nome"
+    ],
+    "847": [
+        "regiao",
+        "id",
+        "sigla",
+        "nome"
+    ],
     "848": [
         "id",
         "sigla",
         "nome",
         "regiao"
     ],
-    "849": [],
+    "849": [
+        "regiao",
+        "id",
+        "sigla",
+        "nome"
+    ],
     "866": [
         "situacao_ingles",
         "categoria_ingles",
@@ -3390,14 +4621,56 @@
         "periodicidade_divulgacao",
         "classificacoes_tematicas"
     ],
-    "867": [],
-    "868": [],
-    "869": [],
-    "870": [],
+    "867": [
+        "mes",
+        "ordem_periodo",
+        "nome_ocorrencia_ingles",
+        "ano",
+        "nome_ocorrencia"
+    ],
+    "868": [
+        "periodicidade_divulgacao",
+        "nome",
+        "situacao",
+        "classificacoes_tematicas",
+        "categoria",
+        "nome_ingles",
+        "periodicidade_coleta",
+        "codigo"
+    ],
+    "869": [
+        "sexo",
+        "res",
+        "nome",
+        "localidade"
+    ],
+    "870": [
+        "sexo",
+        "res",
+        "localidade"
+    ],
     "871": [],
-    "872": [],
-    "873": [],
-    "874": [],
+    "872": [
+        "id",
+        "unidade",
+        "indicador"
+    ],
+    "873": [
+        "series",
+        "id",
+        "unidade",
+        "indicador"
+    ],
+    "874": [
+        "id",
+        "unidades-monetarias",
+        "linguas",
+        "historico",
+        "nome",
+        "governo",
+        "localizacao",
+        "area"
+    ],
     "875": [
         "statusCode",
         "message"
@@ -3406,8 +4679,21 @@
         "statusCode",
         "message"
     ],
-    "877": [],
-    "878": [],
+    "877": [
+        "nota",
+        "periodo",
+        "fonte",
+        "publicacao",
+        "versao"
+    ],
+    "878": [
+        "id",
+        "nome",
+        "observacao",
+        "contexto",
+        "descricao",
+        "periodos"
+    ],
     "879": [
         "id",
         "nome",
@@ -3445,16 +4731,53 @@
         "message"
     ],
     "887": [],
-    "888": [],
-    "889": [],
-    "890": [],
+    "888": [
+        "catId",
+        "id",
+        "path",
+        "alias",
+        "tipo",
+        "catTitle",
+        "parentCatId",
+        "titulo",
+        "parentCatTitle",
+        "sigla"
+    ],
+    "889": [
+        "catId",
+        "id",
+        "path",
+        "alias",
+        "tipo",
+        "catTitle",
+        "parentCatId",
+        "titulo",
+        "parentCatTitle",
+        "sigla"
+    ],
+    "890": [
+        "catId",
+        "id",
+        "path",
+        "alias",
+        "tipo",
+        "catTitle",
+        "parentCatId",
+        "titulo",
+        "parentCatTitle",
+        "sigla"
+    ],
     "891": [],
     "892": [
         "origem",
         "resultado",
         "tipo_conversao"
     ],
-    "893": [],
+    "893": [
+        "tipo_conversao",
+        "resultado",
+        "origem"
+    ],
     "894": [
         "origem",
         "resultado",
@@ -3480,10 +4803,45 @@
     "899": [],
     "900": [],
     "901": [],
-    "902": [],
-    "903": [],
-    "904": [],
-    "905": [],
-    "906": [],
-    "907": []
+    "902": [
+        "siglaMaregrafo",
+        "idUHSLC",
+        "idPSMSL",
+        "dataInicialOperacao",
+        "nomeMaregrafo",
+        "lat",
+        "lon",
+        "local",
+        "urlRelatorio",
+        "idGLOSS",
+        "siglaUF"
+    ],
+    "903": [
+        "unidadeMedida",
+        "codigoSensor",
+        "descricaoSensor",
+        "nomeSensor"
+    ],
+    "904": [
+        "dtHrPrevisao",
+        "previsao"
+    ],
+    "905": [
+        "encoder",
+        "dtHrLeitura",
+        "radar"
+    ],
+    "906": [
+        "direcaoVento",
+        "dtHrLeitura",
+        "pressaoAtm",
+        "precipitacao",
+        "temperaturaExt",
+        "velocidadeVento",
+        "umidadeExt"
+    ],
+    "907": [
+        "siglaMaregrafo",
+        "dados"
+    ]
 }

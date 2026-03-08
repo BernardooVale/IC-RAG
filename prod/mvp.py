@@ -16,7 +16,7 @@ agente_chat = agenteChat(modeloChat, modeloClass, modeloEmbedding, integracaoBd)
 
 # sistema ============================================================================
 
-entrada = "Onde posso encontrar a taxa Selic"
+entrada = input("Escreva sua pergunta: ")
 
 while not entrada.strip().lower().startswith("sair"):
     
@@ -25,8 +25,6 @@ while not entrada.strip().lower().startswith("sair"):
     t1 = time.time()
     agente_chat.controleResposta(entrada)
     print(f"Tempo total: {time.time()  - t1}")
-    
-    entrada = input("Escreva sua pergunta: ") # proxima pergunta
     
 print("Fim")
 # finalizacao do sistema ==========================================================================================

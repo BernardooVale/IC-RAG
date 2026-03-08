@@ -1,132 +1,201 @@
-1 - () - 249
-2 - ('@odata.context', 'value') - 161
-3 - ('dados', 'links') - 85
+1 - ('@odata.context', 'value') - 158
+2 - () - 90
+3 - ('dados', 'links') - 87
 4 - ('_links', '_embedded', 'count', 'offset') - 53
-5 - ('queueDuration', 'queryDuration', 'results') - 36
-6 - ('statusCode', 'message') - 9
-7 - ('items',) - 6
-8 - ('conteudo',) - 4
-9 - ('id', 'descricao', '_links') - 4
-10 - ('_links', '_embedded') - 4
-11 - ('data',) - 4
-12 - ('codigo', 'descricao', '_links') - 3
-13 - ('status', 'title', 'detail', 'instance', 'code') - 3
-14 - ('count', 'page', 'totalPages', 'nextPage', 'previousPage', 'showingFrom', 'showingTo', 'items') - 3
-15 - ('origem', 'resultado', 'tipo_conversao') - 3
-16 - ('size', 'total_elements', 'total_pages', 'page', 'page_elements', 'content', '_links') - 2
-17 - ('id', 'titulo') - 2
-18 - ('co_servico', 'co_conjunto_materiais', 'no_servico', 'no_conjunto_materiais', 'ds_detalhada', 'qt_material_alt', 'no_unidade_medida', 'vr_estimado', 'no_marca_material', 'ds_tipo_fornecedor_vencedor', 'nu_cpf_vencedor', 'nu_cnpj_vencedor', 'fornecedor', '_links') - 2
-19 - ('codigo', 'descricao', 'codigo_grupo', '_links') - 2
-20 - ('count', '_embedded', 'total', '_links') - 2
-21 - ('Erro na API',) - 2
-22 - ('id', 'dataReferencia', 'dataInicioSancao', 'dataFimSancao', 'dataPublicacaoSancao', 'dataTransitadoJulgado', 'dataOrigemInformacao', 'tipoSancao', 'fonteSancao', 'fundamentacao', 'orgaoSancionador', 'sancionado', 'pessoa', 'textoPublicacao', 'linkPublicacao', 'detalhamentoPublicacao', 'numeroProcesso', 'abrangenciaDefinidaDecisaoJudicial', 'informacoesAdicionaisDoOrgaoSancionador') - 2
-23 - ('id', 'dataInicioAcordo', 'dataFimAcordo', 'orgaoResponsavel', 'situacaoAcordo', 'sancoes', 'quantidade') - 2
-24 - ('id', 'descricao', 'grupo', 'observacoes') - 2
-25 - ('fator_conversao', 'incerteza', 'lat', 'long', 'modelo') - 2
-26 - ('id', 'nome', 'UF') - 2
-27 - ('queueDuration', 'queryDurAction', 'results') - 1
-28 - ('nr_cnpj_entidade', 'sg_uf', 'no_ente', 'nr_notificacao', 'no_tipo_documento', 'no_item_analise', 'no_situacao_item_analise', 'dt_notificao', 'dt_preclusao', 'dt_resposta', 'nr_prazo_resposta') - 1
-29 - ('id', 'nome', 'agregados') - 1
-30 - ('id', 'nome', 'nivel') - 1
-31 - ('id', 'nome', 'URL', 'pesquisa', 'assunto', 'periodicidade', 'nivelTerritorial', 'variaveis') - 1
-32 - ('id', 'literals', 'modificacao') - 1
-33 - ('id', 'variavel', 'unidade', 'resultados') - 1
-34 - ('registro_ans', 'cnpj', 'razao_social', 'nome_fantasia', 'classificacao_sigla', 'ativa', '_links') - 1
-35 - ('registro_ans', 'cnpj', 'razao_social', 'nome_fantasia', 'ativa', 'representante_nome', 'representante_cargo', 'autorizacao_funcionamento_em', 'concessao_registro_definitivo_em', 'registrada_em', 'descredenciada_em', 'descredenciamento_motivo', 'classificacao_sigla', 'classificacao_nome', 'endereco_logradouro', 'endereco_numero', 'endereco_complemento', 'endereco_bairro', 'endereco_cep', 'endereco_municipio_codigo', 'endereco_municipio_nome', 'endereco_uf_sigla', 'endereco_valido', 'telefone_ddd', 'telefone_numero', 'fax_ddd', '_links') - 1
-36 - ('sigla', 'nome', '_links') - 1
-37 - ('nome', 'versao') - 1
-38 - ('id', 'titulo', 'imagem', 'tipo') - 1
-39 - ('codigo', 'mensagem') - 1
-40 - ('id_pleito', 'tipo_interessado', 'interessado', 'cod_ibge', 'uf', 'num_pvl', 'status', 'num_processo', 'data_protocolo', 'tipo_operacao', 'finalidade', 'tipo_credor', 'credor', 'moeda', 'valor', 'pvl_assoc_divida', 'pvl_contratado_credor', 'data_status') - 1
-41 - ('id_pleito', 'num_pvl', 'num_processo', 'indicador_liberacoes', 'ano', 'divida_consolidada_amortizacao', 'divida_consolidada_encargos', 'operacoes_contratadas_amortizacao', 'operacoes_contratadas_encargos', 'total_amorizacao', 'total_encargos', 'indicador_div_moeda_estrang') - 1
-42 - ('id_pleito', 'num_pvl', 'num_processo', 'indicador_liberacoes', 'ano', 'liberacoes_operacoes_sfn', 'liberacoes_aro', 'liberacoes_demais', 'liberacoes_total') - 1
-43 - ('id_pleito', 'moeda', 'taxa_cambio', 'data_taxa_cambio') - 1
-44 - ('id_pleito', 'num_pvl', 'num_processo', 'ano', 'operacao_pleiteada', 'demais_operacoes') - 1
-45 - ('id_pleito', 'num_pvl', 'num_processo', 'data_base', 'status', 'data_status', 'situacao_ente') - 1
-46 - ('id_pleito', 'num_pvl', 'num_processo', 'sn_pvl_tramitacao_deferido', 'pleito_nao_contratado', 'num_pvl_nao_contratado', 'num_processo_nao_contratado', 'moeda_pvl_nao_contratado', 'valor_pvl_nao_contratado', 'status_pvl_nao_contratado', 'ano_pvl_nao_contratado', 'contrapartida_pvl_nao_contratado', 'liberacao_pvl_nao_contratado', 'amortizacao_pvl_nao_contratado', 'encargos_pvl_nao_contratado', 'liberacoes_pvl_nao_contratado') - 1
-47 - ('esfera', 'demonstrativo', 'anexo') - 1
-48 - ('cod_ibge', 'ente', 'capital', 'regiao', 'uf', 'esfera', 'an_exercicio', 'populacao', 'co_cnpj') - 1
-49 - ('exercicio', 'cod_ibge', 'populacao', 'instituicao', 'entregavel', 'periodo', 'periodicidade', 'status_relatorio', 'data_status', 'forma_envio', 'tipo_relatorio') - 1
-50 - ('exercicio', 'demonstrativo', 'periodo', 'periodicidade', 'instituicao', 'cod_ibge', 'uf', 'populacao', 'anexo', 'rotulo', 'coluna', 'cod_conta', 'conta', 'valor') - 1
-51 - ('exercicio', 'periodo', 'periodicidade', 'instituicao', 'cod_ibge', 'uf', 'co_poder', 'populacao', 'anexo', 'rotulo', 'coluna', 'cod_conta', 'conta', 'valor') - 1
-52 - ('tipo_matriz', 'cod_ibge', 'classe_conta', 'conta_contabil', 'poder_orgao', 'financeiro_permanente', 'ano_fonte_recursos', 'fonte_recursos', 'exercicio', 'mes_referencia', 'divida_consolidada', 'data_referencia', 'entrada_msc', 'valor', 'natureza_conta', 'tipo_valor') - 1
-53 - ('tipo_matriz', 'cod_ibge', 'classe_conta', 'conta_contabil', 'poder_orgao', 'ano_fonte_recursos', 'fonte_recursos', 'funcao', 'subfuncao', 'exercicio', 'mes_referencia', 'educacao_saude', 'data_referencia', 'entrada_msc', 'natureza_despesa', 'ano_inscricao', 'natureza_receita', 'valor', 'natureza_conta', 'tipo_valor') - 1
-54 - ('tipo_matriz', 'cod_ibge', 'classe_conta', 'conta_contabil', 'poder_orgao', 'ano_fonte_recursos', 'fonte_recursos', 'funcao', 'subfuncao', 'exercicio', 'mes_referencia', 'educacao_saude', 'data_referencia', 'entrada_msc', 'natureza_despesa', 'ano_inscricao', 'valor', 'natureza_conta', 'tipo_valor') - 1
-55 - ('tipos_unidade',) - 1
-56 - ('codigo_tipo_unidade', 'descricao_tipo_unidade') - 1
-57 - ('estabelecimentos',) - 1
-58 - ('codigo_cnes', 'numero_cnpj_entidade', 'nome_razao_social', 'nome_fantasia', 'natureza_organizacao_entidade', 'tipo_gestao', 'descricao_nivel_hierarquia', 'descricao_esfera_administrativa', 'codigo_tipo_unidade', 'codigo_cep_estabelecimento', 'endereco_estabelecimento', 'numero_estabelecimento', 'bairro_estabelecimento', 'numero_telefone_estabelecimento', 'latitude_estabelecimento_decimo_grau', 'longitude_estabelecimento_decimo_grau', 'endereco_email_estabelecimento', 'numero_cnpj', 'codigo_identificador_turno_atendimento', 'descricao_turno_atendimento', 'estabelecimento_faz_atendimento_ambulatorial_sus', 'codigo_estabelecimento_saude', 'codigo_uf', 'codigo_municipio', 'descricao_natureza_juridica_estabelecimento', 'codigo_motivo_desabilitacao_estabelecimento', 'estabelecimento_possui_centro_cirurgico', 'estabelecimento_possui_centro_obstetrico', 'estabelecimento_possui_centro_neonatal', 'estabelecimento_possui_atendimento_hospitalar', 'estabelecimento_possui_servico_apoio', 'estabelecimento_possui_atendimento_ambulatorial', 'codigo_atividade_ensino_unidade', 'codigo_natureza_organizacao_unidade', 'codigo_nivel_hierarquia_unidade', 'codigo_esfera_administrativa_unidade') - 1
-59 - ('estados_nutricionais',) - 1
-60 - ('took', 'timed_out', '_shards', 'hits') - 1
-61 - ('identificador', 'uasg', 'modalidade_licitacao', 'numero_aviso_licitacao', 'codigo_contrato', 'licitacao_associada', 'origem_licitacao', 'numero', 'objeto', 'numero_aditivo', 'numero_processo', 'cpfContratada', 'cnpj_contratada', 'data_assinatura', 'fundamento_legal', 'data_inicio_vigencia', 'data_termino_vigencia', 'valor_inicial', '_links') - 1
-62 - ('contrato', 'uasg', 'codigo', 'numero', 'modalidade_termo', 'numero_termo', 'objeto_aditivo', 'fundamento_legal_aditivo', 'data_assinatura_aditivo', '_links') - 1
-63 - ('contrato', 'uasg', 'codigo', 'numero', 'numero_apostilamento', 'data_apostilamento', 'motivo_apostilamento', 'valor_apostilamento', '_links') - 1
-64 - ('id', 'codigo_contrato', 'numero', 'receita_despesa', 'orgao_codigo', 'orgao_nome', 'unidade_codigo', 'unidade_nome_resumido', 'unidade_nome', 'unidade_origem_codigo', 'unidade_origem_nome', 'codigo_tipo', 'tipo', 'categoria', 'processo', 'objeto', 'fundamento_legal', 'data_assinatura', 'data_publicacao', 'vigencia_inicio', 'vigencia_fim', 'valor_inicial', 'valor_global', 'num_parcelas', 'valor_parcela', 'valor_acumulado', 'fornecedor_tipo', 'fornecedor_cnpj_cpf_idgener', 'fornecedor_nome', 'codigo_compra', 'modalidade_codigo', 'modalidade', 'unidade_compra', 'licitacao_numero', 'informacao_complementar', '_links') - 1
-65 - ('id', 'contrato_id', 'tipo', 'numero', 'receita_despesa', 'observacao', 'mes_ref', 'ano_ref', 'vencimento', 'retroativo', 'valor', '_links') - 1
-66 - ('id', 'contrato_id', 'tipo_id', 'recorrencia_id', 'descricao_complementar', 'vencimento', 'valor', '_links') - 1
-67 - ('id', 'contrato_id', 'tipo_lista_fatura_id', 'justificativa_fatura_id', 'numero', 'emissao', 'prazo', 'vencimento', 'valor', 'juros', 'multa', 'glosa', 'valor_liquido', 'processo', 'protocolo', 'ateste', 'repactuacao', 'informacao_complementar', 'mesref', 'anoref', 'situacao', '_links') - 1
-68 - ('id', 'contrato_id', 'tipo', 'valor', 'vencimento', '_links') - 1
-69 - ('id', 'contrato_id', 'receita_despesa', 'numero', 'observacao', 'ug', 'gestao', 'fornecedor', 'codigo_tipo', 'tipo', 'categoria', 'processo', 'objeto', 'fundamento_legal_aditivo', 'informacao_complementar', 'modalidade', 'licitacao_numero', 'codigo_unidade_origem', 'nome_unidade_origem', 'data_assinatura', 'data_publicacao', 'vigencia_inicio', 'vigencia_fim', 'valor_inicial', 'valor_global', 'num_parcelas', 'valor_parcela', 'novo_valor_global', 'novo_num_parcelas', 'novo_valor_parcela', 'data_inicio_novo_valor', 'retroativo', 'retroativo_mesref_de', 'retroativo_anoref_de', 'retroativo_mesref_ate', 'retroativo_anoref_ate', 'retroativo_vencimento', 'retroativo_valor', '_links') - 1
-70 - ('id', 'contrato_id', 'tipo_id', 'grupo_id', 'catmatser_item_id', 'descricao_complementar', 'quantidade', 'valor_unitario', 'valor_total', '_links') - 1
-71 - ('id', 'contrato_id', 'doc_formalizacao', 'informacao_complementar', 'data_inicio', 'data_fim', 'situacao', '_links') - 1
-72 - ('id', 'contrato_id', 'funcao_id', 'instalacao_id', 'portaria', 'situacao', 'data_inicio', 'data_fim', '_links') - 1
-73 - ('id', 'contrato_id', 'funcao', 'descricao_complementar', 'jornada', 'unidade', 'custo', 'escolaridade', 'data_inicio', 'data_fim', 'situacao', 'aux_transporte', 'vale_alimentacao', '_links') - 1
-74 - ('id', 'descricao', 'codigo_longo', '_links') - 1
-75 - ('id', 'nome', 'cpf', 'id_unidade_cadastradora', 'id_municipio', 'uf', 'caixa_postal', 'ativo', 'recadastrado', 'habilitado_licitar', '_links') - 1
-76 - ('id', 'cnpj', 'razao_social', 'nome_fantasia', 'id_unidade_cadastradora', 'id_natureza_juridica', 'id_ramo_negocio', 'id_porte_empresa', 'id_cnae', 'id_cnae2', 'logradouro', 'numero_logradouro', 'complemento_logradouro', 'bairro', 'id_municipio', 'cep', 'caixa_postal', 'ativo', 'recadastrado', 'habilitado_licitar', '_links') - 1
-77 - ('id', 'codigo_servico', 'codigo_material', 'tipo', 'ativo', '_links') - 1
-78 - ('id', 'codigo_ibge', 'nome', 'nome_uf', 'sigla_uf', 'ativo', '_links') - 1
-79 - ('id', 'codigo', 'descricao', 'ativo', '_links') - 1
-80 - ('id', 'cnpj', 'cpf', 'tipo_pessoa', 'descricao', 'numero_contrato', 'numero_processo', 'id_unidade_cadastradora', 'id_orgao', 'id_tipo_ocorrencia', 'id_ambito_ocorrencia', 'motivo', 'impedido_licitar', 'id_prazo', 'data_aplicacao', 'data_inicial', 'data_final', 'valor_multa', '_links') - 1
-81 - ('id', 'descricao', 'ativo', '_links') - 1
-82 - ('uasg', 'numero_irp', 'modalidade_licitacao', 'numero_aviso', 'tipo_licitacao', 'justificativa_modalidade', 'objeto', 'cpf_responsavel', 'nome_responsavel', 'prazo_validade', 'municipio', 'sigla_uf', 'situacao', 'orgao', 'data_provavel_licitacao', '_links') - 1
-83 - ('uasg', 'numero_irp', 'numero_item', 'id_irp', 'modalidade_licitacao_item', 'criterio_julgamento', 'codigo_material', 'codigo_servico', 'descricao_detalhada', 'tipo', 'unidade_fornecimento', 'valor_estimado', '_links') - 1
-84 - ('uasg', 'modalidade', 'numero_aviso', 'identificador', 'numero_item_licitacao', 'tipo_pregao', 'situacao_aviso', 'objeto', 'codigo_do_item_no_catalogo', 'informacoes_gerais', 'numero_processo', 'tipo_recurso', 'numero_itens', 'nome_responsavel', 'funcao_responsavel', 'data_entrega_edital', 'endereco_entrega_edital', 'data_abertura_proposta', 'data_entrega_proposta', 'data_publicacao', '_links') - 1
-85 - ('uasg', 'modalidade', 'numero_aviso', 'numero_licitacao', 'numero_item_licitacao', 'codigo_item_servico', 'codigo_item_material', 'descricao_item', 'sustentavel', 'quantidade', 'unidade', 'cnpj_fornecedor', 'cpfVencedor', 'beneficio', 'valor_estimado', 'decreto_7174', 'criterio_julgamento', '_links') - 1
-86 - ('codigo', 'nome', 'codigo_tipo_adm', 'codigo_tipo_esfera', 'codigo_tipo_poder', 'ativo', '_links') - 1
-87 - ('uasg', 'modalidade', 'numero_aviso', 'objeto', 'situacao', 'id_licitacao', 'numero_itens', 'valor_total', '_links') - 1
-88 - ('uasg', 'modalidade', 'numero_aviso', 'numero_item_licitacao', 'codigo_item_material', 'codigo_item_servico', 'cnpj_fornecedor', 'marca', 'unidade', 'quantidade', 'valor_unitario', 'valor_total', 'beneficio', '_links', 'id_licitacao') - 1
-89 - ('error',) - 1
-90 - ('uasg', 'modalidade', 'numero_aviso', 'numero_registro_preco', 'numero_item_licitacao', 'codigo_item_material', 'codigo_item_servico', 'descricao_detalhada', 'marca', 'cnpj_fornecedor', 'classificacaoFornecedor', 'unidade', 'quantidade_empenhada', 'quantidade_total', 'quantidade_a_empenhar', 'valor_unitario', 'valor_total', 'data_assinatura', 'data_inicio_validade', 'data_fim_validade', 'beneficio', '_links') - 1
-91 - ('id', 'nome', 'nome_mnemonico', 'id_orgao', 'id_orgao_superior', 'id_municipio', 'sigla_uf', 'cnpj', 'endereco', 'cep', 'ddd', 'telefone', 'ramal', 'telefone2', 'ramal2', 'fax', 'total_fornecedores_cadastrados', 'total_fornecedores_recadastrados', 'unidade_cadastradora', 'ativo', '_links') - 1
-92 - ('uasg', 'modalidade', 'numero_aviso', 'identificador', 'situacao_aviso', 'objeto', 'informacoes_gerais', 'numero_processo', 'tipo_recurso', 'numero_itens', 'nome_responsavel', 'funcao_responsavel', 'data_entrega_edital', 'endereco_entrega_edital', 'data_abertura_proposta', 'data_entrega_proposta', 'data_publicacao', 'forma_de_realizacao_licitacao', '_links') - 1
-93 - ('numero', 'co_portaria', 'dtPortaria', 'co_processo', 'ds_tipo_pregao', 'ds_tipo_pregao_compra', 'tx_objeto', 'valorHomologadoTotal', 'valorEstimadoTotal', 'co_uasg', 'ds_situacao_pregao', 'dtDataEdital', 'dtInicioProposta', 'dtFimProposta', '_links') - 1
-94 - ('descricao_item', 'quantidade_item', 'valor_estimado_item', 'descricao_detalhada_item', 'tratamento_diferenciado', 'decreto_7174', 'margem_preferencial', 'unidade_fornecimento', 'situacao_item', 'fornecedor_vencedor', 'menor_lance', 'valorHomologadoItem', 'valor_negociado', '_links') - 1
-95 - ('codigo', 'descricao', 'id_grupo', 'id_classe', 'id_pdm', 'status', 'sustentavel', '_links') - 1
-96 - ('codigo', 'descricao', 'codigo_secao', '_links') - 1
-97 - ('codigo', 'descricao', 'codigo_divisao', '_links') - 1
-98 - ('codigo', 'descricao', 'codigo_classe', '_links') - 1
-99 - ('codigo', 'descricao', 'unidade_medida', 'cpc', 'codigo_secao', 'codigo_divisao', 'codigo_grupo', 'codigo_classe', 'codigo_subclasse', '_links') - 1
-100 - ('data', 'totalRegistros', 'totalPaginas', 'numeroPagina', 'paginasRestantes', 'empty') - 1
-101 - ('etapa', 'providencia', 'area', 'enquadramento', 'objetivos', 'ficha_tecnica', 'situacao', 'outras_fontes', 'acessibilidade', 'sinopse', 'nome', 'cgccpf', 'mecanismo', '_links', 'segmento', 'PRONAC', 'estrategia_execucao', 'valor_aprovado', 'justificativa', 'resumo', 'valor_solicitado', 'especificacao_tecnica', '_embedded', 'municipio', 'data_termino', 'UF', 'impacto_ambiental', 'democratizacao', 'valor_projeto', 'proponente', 'ano_projeto', 'data_inicio', 'valor_captado', 'valor_proposta') - 1
-102 - ('_embedded', '_links') - 1
-103 - ('data_arquivamento', 'acessibilidade', 'impacto_ambiental', 'nome', 'democratizacao', 'justificativa', 'mecanismo', 'resumo', 'sinopse', 'especificacao_tecnica', 'data_inicio', 'objetivos', 'ficha_tecnica', 'etapa', 'data_aceite', 'id', 'estrategia_execucao', 'data_termino') - 1
-104 - ('nome', 'cgccpf', 'total_doado', '_links', 'tipo_pessoa', 'responsavel', 'UF', 'municipio') - 1
-105 - ('cgccpf', '_links', 'email', 'nome') - 1
-106 - ('count', '_embedded') - 1
-107 - ('nome', 'cgccpf', '_links', 'tipo_pessoa', 'responsavel', 'UF', 'total_captado', 'municipio') - 1
-108 - ('id', 'uri', 'nome', 'siglaPartido', 'uriPartido', 'siglaUf', 'idLegislatura', 'urlFoto', 'email') - 1
-109 - ('id', 'viagem', 'situacao', 'beneficiario', 'cargo', 'funcao', 'tipoViagem', 'orgao', 'orgaoPagamento', 'unidadeGestoraResponsavel', 'dataInicioAfastamento', 'dataFimAfastamento', 'valorTotalRestituicao', 'valorTotalTaxaAgenciamento', 'valorMulta', 'valorTotalDiarias', 'valorTotalPassagem', 'valorTotalViagem', 'valorTotalDevolucao') - 1
-110 - ('qntPessoas', 'qntVinculos', 'skSituacao', 'descSituacao', 'skTipoVinculo', 'descTipoVinculo', 'skTipoServidor', 'descTipoServidor', 'licenca', 'codOrgaoExercicioSiape', 'nomOrgaoExercicioSiape', 'codOrgaoSuperiorExercicioSiape', 'nomOrgaoSuperiorExercicioSiape') - 1
-111 - ('cpf', 'nome', 'sigla_funcao', 'descricao_funcao', 'nivel_funcao', 'cod_orgao', 'nome_orgao', 'dt_inicio_exercicio', 'dt_fim_exercicio', 'dt_fim_carencia') - 1
-112 - ('notaFiscalDTO', 'itensNotaFiscal', 'eventosNotaFiscal') - 1
-113 - ('id', 'licitacao', 'dataResultadoCompra', 'dataAbertura', 'dataReferencia', 'dataPublicacao', 'situacaoCompra', 'modalidadeLicitacao', 'instrumentoLegal', 'valor', 'municipio', 'unidadeGestora') - 1
-114 - ('codigoEmenda', 'ano', 'tipoEmenda', 'autor', 'nomeAutor', 'numeroEmenda', 'localidadeDoGasto', 'funcao', 'subfuncao', 'valorEmpenhado', 'valorLiquidado', 'valorPago', 'valorRestoInscrito', 'valorRestoCancelado', 'valorRestoPago') - 1
-115 - ('data', 'documento', 'documentoResumido', 'observacao', 'funcao', 'subfuncao', 'programa', 'acao', 'subTitulo', 'localizadorGasto', 'fase', 'especie', 'favorecido', 'codigoFavorecido', 'nomeFavorecido', 'ufFavorecido', 'valor', 'codigoUg', 'ug', 'codigoUo', 'uo', 'codigoOrgao', 'orgao', 'codigoOrgaoSuperior', 'orgaoSuperior', 'categoria', 'grupo', 'elemento', 'modalidade', 'numeroProcesso', 'planoOrcamentario', 'autor', 'favorecidoIntermediario', 'favorecidoListaFaturas') - 1
-116 - ('id', 'dataReferencia', 'dataInicioVigencia', 'dataFinalVigencia', 'dataPublicacao', 'dataUltimaLiberacao', 'dataConclusao', 'dimConvenio', 'situacao', 'convenente', 'localidadePessoa', 'municipioConvenente', 'orgao', 'unidadeGestora', 'subfuncao', 'tipoInstrumento', 'valor', 'valorLiberado', 'valorContrapartida', 'valorDaUltimaLiberacao', 'numeroProcesso') - 1
-117 - ('id', 'numero', 'objeto', 'numeroProcesso', 'fundamentoLegal', 'compra', 'situacaoContrato', 'modalidadeCompra', 'unidadeGestora', 'unidadeGestoraCompras', 'dataAssinatura', 'dataPublicacaoDOU', 'dataInicioVigencia', 'dataFimVigencia', 'fornecedor', 'valorInicialCompra', 'valorFinalCompra') - 1
-118 - ('id', 'dataReferencia', 'dataInicioSancao', 'dataFimSancao', 'dataPublicacaoSancao', 'dataTransitadoJulgado', 'dataOrigemInformacao', 'tipoSancao', 'fonteSancao', 'fundamentacao', 'orgaoSancionador', 'sancionado', 'valorMulta', 'pessoa', 'textoPublicacao', 'linkPublicacao', 'detalhamentoPublicacao', 'numeroProcesso', 'abrangenciaDefinidaDecisaoJudicial', 'informacoesAdicionaisDoOrgaoSancionador') - 1
-119 - ('id', 'dataReferencia', 'motivo', 'orgaoSuperior', 'pessoaJuridica', 'convenio') - 1
-120 - ('id', 'dataPublicacao', 'dataReferencia', 'punicao', 'tipoPunicao', 'pessoa', 'orgaoLotacao', 'ufLotacaoPessoa', 'cargoEfetivo', 'codigoCargoComissao', 'cargoComissao', 'fundamentacao') - 1
-121 - ('id', 'titulo', 'organizacao', 'inventario', 'descricao', 'licenca', 'responsavel', 'emailResponsavel', 'periodicidade', 'temas', 'tags', 'coberturaTemporalInicio', 'coberturaTemporalFim', 'coberturaEspacial', 'valorCoberturaEspacial', 'granularidadeEspacial', 'versao', 'atualizacaoVersao', 'visibilidade', 'statusHomologacao', 'descontinuado', 'dataDescontinuacao', 'reuso', 'recursos') - 1
-122 - ('id', 'name', 'displayName', 'urlFoto', 'quantidadeSeguidores', 'quantidadeConjuntoDados', 'descricao', 'nome', 'ativo', 'atributos') - 1
-123 - ('id', 'descricao', 'secao', 'observacoes') - 1
-124 - ('id', 'descricao', 'divisao', 'observacoes') - 1
-125 - ('id', 'descricao', 'observacoes') - 1
-126 - ('id', 'nome', 'mesorregiao') - 1
-127 - ('id', 'nome', 'microrregiao', 'regiao-imediata') - 1
-128 - ('id', 'sigla', 'nome') - 1
-129 - ('id', 'nome', 'regiao-intermediaria') - 1
-130 - ('id', 'sigla', 'nome', 'regiao') - 1
-131 - ('situacao_ingles', 'categoria_ingles', 'tipo', 'tipo_ingles', 'area', 'sigla', 'data_inicio', 'data_desativacao', 'url_sidra', 'url_concla', 'periodicidade_coleta_ingles', 'periodicidade_divulgacao_ingles', 'ocorrencias_pesquisa', 'codigo', 'nome', 'nome_ingles', 'situacao', 'categoria', 'periodicidade_coleta', 'periodicidade_divulgacao', 'classificacoes_tematicas') - 1
-132 - ('id', 'nome', 'descricao', 'contexto', 'observacao', 'periodos') - 1
+5 - ('queueDuration', 'queryDuration', 'results') - 27
+6 - ('items', 'hasMore', 'limit', 'offset', 'count', 'links') - 19
+7 - ('success', 'data', 'count', 'query', 'offset', 'limit') - 9
+8 - ('statusCode', 'message') - 9
+9 - ('id', 'nome', 'municipio') - 8
+10 - ('distrito', 'id', 'nome') - 8
+11 - ('id', 'dataReferencia', 'tipo', 'quantidadeBeneficiados', 'valor', 'municipio') - 6
+12 - ('id', 'UF', 'nome') - 6
+13 - ('regiao-imediata', 'id', 'microrregiao', 'nome') - 6
+14 - ('observacoes', 'id', 'atividades', 'classe', 'descricao') - 5
+15 - ('id', 'nome', 'mesorregiao') - 5
+16 - ('titulo', 'id') - 4
+17 - ('id', 'titulo') - 4
+18 - ('conteudo',) - 4
+19 - ('id', 'descricao', '_links') - 4
+20 - ('_links', '_embedded') - 4
+21 - ('data', 'totalRegistros', 'totalPaginas', 'numeroPagina', 'paginasRestantes', 'empty') - 4
+22 - ('valorContrapartida', 'dataConclusao', 'dataUltimaLiberacao', 'dataReferencia', 'localidadePessoa', 'valorDaUltimaLiberacao', 'dataFinalVigencia', 'unidadeGestora', 'dataPublicacao', 'subfuncao', 'tipoInstrumento', 'valorLiberado', 'municipioConvenente', 'valor', 'numeroProcesso', 'id', 'dataInicioVigencia', 'dimConvenio', 'orgao', 'situacao', 'convenente') - 4
+23 - ('dataCalculoAltitude', 'itinerario', 'longitudeGMS', 'datumGravidade', 'codigoEstacao', 'sigmaLongitude', 'observacao', 'altitudeOrtometrica', 'dataCalculoCoordenada', 'numeroGeopotencial', 'sistemaReferenciaCoordenada', 'nomeEstacao', 'longitude', 'dataVisita', 'fonteCoordenada', 'sigmaLatitude', 'latitude', 'fonteAltitude', 'latitudeGMS', 'sigmaAltitude', 'idAjusteRN', 'dataMedicaoAltitude', 'municipio', 'tipoLocal', 'notaAjusteRN', 'altitudeNormal', 'dataCalculoGravidade', 'datumAltitude', 'descricaoEstacao', 'tipoEstacao', 'localizacao', 'sigmaAltitudeGeometrica', 'altitudeGeometrica', 'fonteAltitudeGeometrica', 'codigoEstacaoMaterializada', 'dataMedicaoCoordenada', 'dataMedicaoGravidade', 'tema', 'situacao', 'inscricaoChapa', 'valorGravidade') - 4
+24 - ('id', 'regiao-intermediaria', 'nome') - 4
+25 - ('id', 'sub-regioes-metropolitanas', 'UF', 'nome', 'municipios') - 4
+26 - ('codigo', 'descricao', '_links') - 3
+27 - ('id', 'licitacao', 'modalidadeLicitacao', 'dataReferencia', 'instrumentoLegal', 'dataAbertura', 'dataPublicacao', 'unidadeGestora', 'dataResultadoCompra', 'valor', 'situacaoCompra', 'municipio') - 3
+28 - ('id', 'descricao') - 3
+29 - ('count', 'page', 'totalPages', 'nextPage', 'previousPage', 'showingFrom', 'showingTo', 'items') - 3
+30 - ('observacoes', 'id', 'divisao', 'descricao') - 3
+31 - ('catId', 'id', 'path', 'alias', 'tipo', 'catTitle', 'parentCatId', 'titulo', 'parentCatTitle', 'sigla') - 3
+32 - ('origem', 'resultado', 'tipo_conversao') - 3
+33 - ('id', 'nome', 'agregados') - 2
+34 - ('id', 'literals', 'modificacao') - 2
+35 - ('size', 'total_elements', 'total_pages', 'page', 'page_elements', 'content', '_links') - 2
+36 - ('co_servico', 'co_conjunto_materiais', 'no_servico', 'no_conjunto_materiais', 'ds_detalhada', 'qt_material_alt', 'no_unidade_medida', 'vr_estimado', 'no_marca_material', 'ds_tipo_fornecedor_vencedor', 'nu_cpf_vencedor', 'nu_cnpj_vencedor', 'fornecedor', '_links') - 2
+37 - ('codigo', 'descricao', 'codigo_grupo', '_links') - 2
+38 - ('count', '_embedded', 'total', '_links') - 2
+39 - ('status', 'title', 'detail', 'instance', 'code') - 2
+40 - ('Erro na API',) - 2
+41 - ('id', 'dataMesReferencia', 'dataSaque', 'portaria', 'dataEmissaoParcela', 'situacao', 'pessoaSeguroDefeso', 'rgp', 'valor', 'parcela', 'municipio') - 2
+42 - ('id', 'dataMesReferencia', 'valor', 'beneficiarioSafra', 'municipio') - 2
+43 - ('id', 'dataMesReferencia', 'beneficiarioPeti', 'dataDisponibilizacaoRecurso', 'situacao', 'valor', 'municipio') - 2
+44 - ('id', 'dataMesReferencia', 'quantidadeDependentes', 'dataMesCompetencia', 'valor', 'titularBolsaFamilia', 'municipio') - 2
+45 - ('id', 'enquadramentoAuxilioEmergencial', 'numeroParcela', 'mesDisponibilizacao', 'responsavelAuxilioEmergencial', 'beneficiario', 'situacaoAuxilioEmergencial', 'valor', 'municipio') - 2
+46 - ('id', 'dataMesReferencia', 'valorSaque', 'dataSaque', 'dataMesCompetencia', 'beneficiarioAuxilioBrasil', 'municipio') - 2
+47 - ('descricao', 'codigo') - 2
+48 - ('empenhoResumido', 'empenho', 'observacao', 'valor', 'dataEmissao') - 2
+49 - ('id', 'objeto', 'fundamentoLegal', 'unidadeGestoraCompras', 'valorInicialCompra', 'dataFimVigencia', 'valorFinalCompra', 'situacaoContrato', 'dataInicioVigencia', 'modalidadeCompra', 'fornecedor', 'dataAssinatura', 'compra', 'dataPublicacaoDOU', 'numero', 'unidadeGestora', 'numeroProcesso') - 2
+50 - ('data', 'documentoResumido', 'especie', 'observacao', 'ug', 'favorecidoListaFaturas', 'codigoOrgaoSuperior', 'uo', 'fase', 'modalidade', 'favorecido', 'ufFavorecido', 'grupo', 'elemento', 'funcao', 'codigoUg', 'acao', 'planoOrcamentario', 'subfuncao', 'nomeFavorecido', 'orgaoSuperior', 'favorecidoIntermediario', 'codigoUo', 'localizadorGasto', 'subTitulo', 'valor', 'programa', 'numeroProcesso', 'codigoFavorecido', 'autor', 'codigoOrgao', 'orgao', 'categoria', 'documento') - 2
+51 - ('id', 'dataReferencia', 'dataInicioSancao', 'dataFimSancao', 'dataPublicacaoSancao', 'dataTransitadoJulgado', 'dataOrigemInformacao', 'tipoSancao', 'fonteSancao', 'fundamentacao', 'orgaoSancionador', 'sancionado', 'pessoa', 'textoPublicacao', 'linkPublicacao', 'detalhamentoPublicacao', 'numeroProcesso', 'abrangenciaDefinidaDecisaoJudicial', 'informacoesAdicionaisDoOrgaoSancionador') - 2
+52 - ('id', 'dataInicioAcordo', 'dataFimAcordo', 'orgaoResponsavel', 'situacaoAcordo', 'sancoes', 'quantidade') - 2
+53 - ('id', 'descricao', 'grupo', 'observacoes') - 2
+54 - ('observacoes', 'id', 'grupo', 'descricao') - 2
+55 - ('observacoes', 'id', 'secao', 'descricao') - 2
+56 - ('fator_conversao', 'incerteza', 'lat', 'long', 'modelo') - 2
+57 - ('id', 'nome', 'UF') - 2
+58 - ('id', 'sigla', 'nome') - 2
+59 - ('id', 'municipios', 'nome') - 2
+60 - ('regiao', 'id', 'sigla', 'nome') - 2
+61 - ('queueDuration', 'queryDurAction', 'results') - 1
+62 - ('nr_cnpj_entidade', 'sg_uf', 'no_ente', 'nr_notificacao', 'no_tipo_documento', 'no_item_analise', 'no_situacao_item_analise', 'dt_notificao', 'dt_preclusao', 'dt_resposta', 'nr_prazo_resposta') - 1
+63 - ('id', 'nome', 'nivel') - 1
+64 - ('id', 'nome', 'URL', 'pesquisa', 'assunto', 'periodicidade', 'nivelTerritorial', 'variaveis') - 1
+65 - ('id', 'variavel', 'unidade', 'resultados') - 1
+66 - ('registro_ans', 'cnpj', 'razao_social', 'nome_fantasia', 'ativa', 'email', 'site', 'representante_nome', 'representante_cargo', 'autorizacao_funcionamento_em', 'concessao_registro_definitivo_em', 'registrada_em', 'classificacao_sigla', 'classificacao_nome', 'segmentacao_sigla', 'segmentacao_nome', 'endereco_logradouro', 'endereco_numero', 'endereco_complemento', 'endereco_bairro', 'endereco_cep', 'endereco_municipio_codigo', 'endereco_municipio_nome', 'endereco_uf_sigla', 'endereco_valido', 'telefone_ddd', 'telefone_numero', 'fax_ddd', '_links') - 1
+67 - ('registro_ans', 'cnpj', 'razao_social', 'nome_fantasia', 'ativa', 'representante_nome', 'representante_cargo', 'autorizacao_funcionamento_em', 'concessao_registro_definitivo_em', 'registrada_em', 'descredenciada_em', 'descredenciamento_motivo', 'classificacao_sigla', 'classificacao_nome', 'endereco_logradouro', 'endereco_numero', 'endereco_complemento', 'endereco_bairro', 'endereco_cep', 'endereco_municipio_codigo', 'endereco_municipio_nome', 'endereco_uf_sigla', 'endereco_valido', 'telefone_ddd', 'telefone_numero', 'fax_ddd', '_links') - 1
+68 - ('sigla', 'nome', '_links') - 1
+69 - ('nome', 'versao') - 1
+70 - ('id', 'tipo', 'tema_id', 'subTemas', 'titulo', 'imagem') - 1
+71 - ('id', 'titulo', 'imagem', 'tipo') - 1
+72 - ('id', 'nome', 'URL', 'pesquisa', 'assunto', 'periodicidade', 'nivelTerritorial', 'variaveis', 'classificacoes') - 1
+73 - ('id_pleito', 'num_pvl', 'num_processo', 'indicador_liberacoes', 'ano', 'divida_consolidada_amortizacao', 'divida_consolidada_encargos', 'operacoes_contratadas_amortizacao', 'operacoes_contratadas_encargos', 'total_amorizacao', 'total_encargos', 'indicador_div_moeda_estrang') - 1
+74 - ('id_pleito', 'num_pvl', 'num_processo', 'sn_pvl_tramitacao_deferido', 'pleito_nao_contratado', 'num_pvl_nao_contratado', 'num_processo_nao_contratado', 'moeda_pvl_nao_contratado', 'valor_pvl_nao_contratado', 'status_pvl_nao_contratado', 'ano_pvl_nao_contratado', 'contrapartida_pvl_nao_contratado', 'liberacao_pvl_nao_contratado', 'amortizacao_pvl_nao_contratado', 'encargos_pvl_nao_contratado', 'liberacoes_pvl_nao_contratado') - 1
+75 - ('tipos_unidade',) - 1
+76 - ('codigo_tipo_unidade', 'descricao_tipo_unidade') - 1
+77 - ('estabelecimentos',) - 1
+78 - ('codigo_cnes', 'numero_cnpj_entidade', 'nome_razao_social', 'nome_fantasia', 'natureza_organizacao_entidade', 'tipo_gestao', 'descricao_nivel_hierarquia', 'descricao_esfera_administrativa', 'codigo_tipo_unidade', 'codigo_cep_estabelecimento', 'endereco_estabelecimento', 'numero_estabelecimento', 'bairro_estabelecimento', 'numero_telefone_estabelecimento', 'latitude_estabelecimento_decimo_grau', 'longitude_estabelecimento_decimo_grau', 'endereco_email_estabelecimento', 'numero_cnpj', 'codigo_identificador_turno_atendimento', 'descricao_turno_atendimento', 'estabelecimento_faz_atendimento_ambulatorial_sus', 'codigo_estabelecimento_saude', 'codigo_uf', 'codigo_municipio', 'descricao_natureza_juridica_estabelecimento', 'codigo_motivo_desabilitacao_estabelecimento', 'estabelecimento_possui_centro_cirurgico', 'estabelecimento_possui_centro_obstetrico', 'estabelecimento_possui_centro_neonatal', 'estabelecimento_possui_atendimento_hospitalar', 'estabelecimento_possui_servico_apoio', 'estabelecimento_possui_atendimento_ambulatorial', 'codigo_atividade_ensino_unidade', 'codigo_natureza_organizacao_unidade', 'codigo_nivel_hierarquia_unidade', 'codigo_esfera_administrativa_unidade', 'data_atualizacao') - 1
+79 - ('estados_nutricionais',) - 1
+80 - ('took', 'timed_out', '_shards', 'hits') - 1
+81 - ('identificador', 'uasg', 'modalidade_licitacao', 'numero_aviso_licitacao', 'codigo_contrato', 'licitacao_associada', 'origem_licitacao', 'numero', 'objeto', 'numero_aditivo', 'numero_processo', 'cpfContratada', 'cnpj_contratada', 'data_assinatura', 'fundamento_legal', 'data_inicio_vigencia', 'data_termino_vigencia', 'valor_inicial', '_links') - 1
+82 - ('contrato', 'uasg', 'codigo', 'numero', 'modalidade_termo', 'numero_termo', 'objeto_aditivo', 'fundamento_legal_aditivo', 'data_assinatura_aditivo', '_links') - 1
+83 - ('contrato', 'uasg', 'codigo', 'numero', 'numero_apostilamento', 'data_apostilamento', 'motivo_apostilamento', 'valor_apostilamento', '_links') - 1
+84 - ('id', 'codigo_contrato', 'numero', 'receita_despesa', 'orgao_codigo', 'orgao_nome', 'unidade_codigo', 'unidade_nome_resumido', 'unidade_nome', 'unidade_origem_codigo', 'unidade_origem_nome', 'codigo_tipo', 'tipo', 'categoria', 'processo', 'objeto', 'fundamento_legal', 'data_assinatura', 'data_publicacao', 'vigencia_inicio', 'vigencia_fim', 'valor_inicial', 'valor_global', 'num_parcelas', 'valor_parcela', 'valor_acumulado', 'fornecedor_tipo', 'fornecedor_cnpj_cpf_idgener', 'fornecedor_nome', 'codigo_compra', 'modalidade_codigo', 'modalidade', 'unidade_compra', 'licitacao_numero', 'informacao_complementar', '_links') - 1
+85 - ('id', 'contrato_id', 'tipo', 'numero', 'receita_despesa', 'observacao', 'mes_ref', 'ano_ref', 'vencimento', 'retroativo', 'valor', '_links') - 1
+86 - ('id', 'contrato_id', 'tipo_id', 'recorrencia_id', 'descricao_complementar', 'vencimento', 'valor', '_links') - 1
+87 - ('id', 'contrato_id', 'tipo_lista_fatura_id', 'justificativa_fatura_id', 'numero', 'emissao', 'prazo', 'vencimento', 'valor', 'juros', 'multa', 'glosa', 'valor_liquido', 'processo', 'protocolo', 'ateste', 'repactuacao', 'informacao_complementar', 'mesref', 'anoref', 'situacao', '_links') - 1
+88 - ('id', 'contrato_id', 'tipo', 'valor', 'vencimento', '_links') - 1
+89 - ('id', 'contrato_id', 'receita_despesa', 'numero', 'observacao', 'ug', 'gestao', 'fornecedor', 'codigo_tipo', 'tipo', 'categoria', 'processo', 'objeto', 'fundamento_legal_aditivo', 'informacao_complementar', 'modalidade', 'licitacao_numero', 'codigo_unidade_origem', 'nome_unidade_origem', 'data_assinatura', 'data_publicacao', 'vigencia_inicio', 'vigencia_fim', 'valor_inicial', 'valor_global', 'num_parcelas', 'valor_parcela', 'novo_valor_global', 'novo_num_parcelas', 'novo_valor_parcela', 'data_inicio_novo_valor', 'retroativo', 'retroativo_mesref_de', 'retroativo_anoref_de', 'retroativo_mesref_ate', 'retroativo_anoref_ate', 'retroativo_vencimento', 'retroativo_valor', '_links') - 1
+90 - ('id', 'contrato_id', 'tipo_id', 'grupo_id', 'catmatser_item_id', 'descricao_complementar', 'quantidade', 'valor_unitario', 'valor_total', '_links') - 1
+91 - ('id', 'contrato_id', 'doc_formalizacao', 'informacao_complementar', 'data_inicio', 'data_fim', 'situacao', '_links') - 1
+92 - ('id', 'contrato_id', 'funcao_id', 'instalacao_id', 'portaria', 'situacao', 'data_inicio', 'data_fim', '_links') - 1
+93 - ('id', 'contrato_id', 'funcao', 'descricao_complementar', 'jornada', 'unidade', 'custo', 'escolaridade', 'data_inicio', 'data_fim', 'situacao', 'aux_transporte', 'vale_alimentacao', '_links') - 1
+94 - ('id', 'descricao', 'codigo_longo', '_links') - 1
+95 - ('id', 'nome', 'cpf', 'id_unidade_cadastradora', 'id_municipio', 'uf', 'caixa_postal', 'ativo', 'recadastrado', 'habilitado_licitar', '_links') - 1
+96 - ('id', 'cnpj', 'razao_social', 'nome_fantasia', 'id_unidade_cadastradora', 'id_natureza_juridica', 'id_ramo_negocio', 'id_porte_empresa', 'id_cnae', 'id_cnae2', 'logradouro', 'numero_logradouro', 'complemento_logradouro', 'bairro', 'id_municipio', 'cep', 'caixa_postal', 'ativo', 'recadastrado', 'habilitado_licitar', '_links') - 1
+97 - ('id', 'codigo_servico', 'codigo_material', 'tipo', 'ativo', '_links') - 1
+98 - ('id', 'codigo_ibge', 'nome', 'nome_uf', 'sigla_uf', 'ativo', '_links') - 1
+99 - ('id', 'codigo', 'descricao', 'ativo', '_links') - 1
+100 - ('id', 'cnpj', 'cpf', 'tipo_pessoa', 'descricao', 'numero_contrato', 'numero_processo', 'id_unidade_cadastradora', 'id_orgao', 'id_tipo_ocorrencia', 'id_ambito_ocorrencia', 'motivo', 'impedido_licitar', 'id_prazo', 'data_aplicacao', 'data_inicial', 'data_final', 'valor_multa', '_links') - 1
+101 - ('id', 'descricao', 'ativo', '_links') - 1
+102 - ('uasg', 'numero_irp', 'modalidade_licitacao', 'numero_aviso', 'tipo_licitacao', 'justificativa_modalidade', 'objeto', 'cpf_responsavel', 'nome_responsavel', 'prazo_validade', 'municipio', 'sigla_uf', 'situacao', 'orgao', 'data_provavel_licitacao', '_links') - 1
+103 - ('uasg', 'numero_irp', 'numero_item', 'id_irp', 'modalidade_licitacao_item', 'criterio_julgamento', 'codigo_material', 'codigo_servico', 'descricao_detalhada', 'tipo', 'unidade_fornecimento', 'valor_estimado', '_links') - 1
+104 - ('uasg', 'modalidade', 'numero_aviso', 'identificador', 'numero_item_licitacao', 'tipo_pregao', 'situacao_aviso', 'objeto', 'codigo_do_item_no_catalogo', 'informacoes_gerais', 'numero_processo', 'tipo_recurso', 'numero_itens', 'nome_responsavel', 'funcao_responsavel', 'data_entrega_edital', 'endereco_entrega_edital', 'data_abertura_proposta', 'data_entrega_proposta', 'data_publicacao', '_links') - 1
+105 - ('uasg', 'modalidade', 'numero_aviso', 'numero_licitacao', 'numero_item_licitacao', 'codigo_item_servico', 'codigo_item_material', 'descricao_item', 'sustentavel', 'quantidade', 'unidade', 'cnpj_fornecedor', 'cpfVencedor', 'beneficio', 'valor_estimado', 'decreto_7174', 'criterio_julgamento', '_links') - 1
+106 - ('codigo', 'nome', 'codigo_tipo_adm', 'codigo_tipo_esfera', 'codigo_tipo_poder', 'ativo', '_links') - 1
+107 - ('uasg', 'modalidade', 'numero_aviso', 'objeto', 'situacao', 'id_licitacao', 'numero_itens', 'valor_total', '_links') - 1
+108 - ('uasg', 'modalidade', 'numero_aviso', 'numero_item_licitacao', 'codigo_item_material', 'codigo_item_servico', 'cnpj_fornecedor', 'marca', 'unidade', 'quantidade', 'valor_unitario', 'valor_total', 'beneficio', '_links', 'id_licitacao') - 1
+109 - ('error',) - 1
+110 - ('uasg', 'modalidade', 'numero_aviso', 'numero_registro_preco', 'numero_item_licitacao', 'codigo_item_material', 'codigo_item_servico', 'descricao_detalhada', 'marca', 'cnpj_fornecedor', 'classificacaoFornecedor', 'unidade', 'quantidade_empenhada', 'quantidade_total', 'quantidade_a_empenhar', 'valor_unitario', 'valor_total', 'data_assinatura', 'data_inicio_validade', 'data_fim_validade', 'beneficio', '_links') - 1
+111 - ('id', 'nome', 'nome_mnemonico', 'id_orgao', 'id_orgao_superior', 'id_municipio', 'sigla_uf', 'cnpj', 'endereco', 'cep', 'ddd', 'telefone', 'ramal', 'telefone2', 'ramal2', 'fax', 'total_fornecedores_cadastrados', 'total_fornecedores_recadastrados', 'unidade_cadastradora', 'ativo', '_links') - 1
+112 - ('uasg', 'modalidade', 'numero_aviso', 'identificador', 'situacao_aviso', 'objeto', 'informacoes_gerais', 'numero_processo', 'tipo_recurso', 'numero_itens', 'nome_responsavel', 'funcao_responsavel', 'data_entrega_edital', 'endereco_entrega_edital', 'data_abertura_proposta', 'data_entrega_proposta', 'data_publicacao', 'forma_de_realizacao_licitacao', '_links') - 1
+113 - ('numero', 'co_portaria', 'dtPortaria', 'co_processo', 'ds_tipo_pregao', 'ds_tipo_pregao_compra', 'tx_objeto', 'valorHomologadoTotal', 'valorEstimadoTotal', 'co_uasg', 'ds_situacao_pregao', 'dtDataEdital', 'dtInicioProposta', 'dtFimProposta', '_links') - 1
+114 - ('descricao_item', 'quantidade_item', 'valor_estimado_item', 'descricao_detalhada_item', 'tratamento_diferenciado', 'decreto_7174', 'margem_preferencial', 'unidade_fornecimento', 'situacao_item', 'fornecedor_vencedor', 'menor_lance', 'valorHomologadoItem', 'valor_negociado', '_links') - 1
+115 - ('codigo', 'descricao', 'id_grupo', 'id_classe', 'id_pdm', 'status', 'sustentavel', '_links') - 1
+116 - ('codigo', 'descricao', 'codigo_secao', '_links') - 1
+117 - ('codigo', 'descricao', 'codigo_divisao', '_links') - 1
+118 - ('codigo', 'descricao', 'codigo_classe', '_links') - 1
+119 - ('codigo', 'descricao', 'unidade_medida', 'cpc', 'codigo_secao', 'codigo_divisao', 'codigo_grupo', 'codigo_classe', 'codigo_subclasse', '_links') - 1
+120 - ('data',) - 1
+121 - ('etapa', 'providencia', 'area', 'enquadramento', 'objetivos', 'ficha_tecnica', 'situacao', 'outras_fontes', 'acessibilidade', 'sinopse', 'nome', 'cgccpf', 'mecanismo', '_links', 'segmento', 'PRONAC', 'estrategia_execucao', 'valor_aprovado', 'justificativa', 'resumo', 'valor_solicitado', 'especificacao_tecnica', '_embedded', 'municipio', 'data_termino', 'UF', 'impacto_ambiental', 'democratizacao', 'valor_projeto', 'proponente', 'ano_projeto', 'data_inicio', 'valor_captado', 'valor_proposta') - 1
+122 - ('_embedded', '_links') - 1
+123 - ('data_arquivamento', 'acessibilidade', 'impacto_ambiental', 'nome', 'democratizacao', 'justificativa', 'mecanismo', 'resumo', 'sinopse', 'especificacao_tecnica', 'data_inicio', 'objetivos', 'ficha_tecnica', 'etapa', 'data_aceite', 'id', 'estrategia_execucao', 'data_termino') - 1
+124 - ('nome', 'cgccpf', 'total_doado', '_links', 'tipo_pessoa', 'responsavel', 'UF', 'municipio') - 1
+125 - ('cgccpf', '_links', 'email', 'nome') - 1
+126 - ('count', '_embedded') - 1
+127 - ('nome', 'cgccpf', '_links', 'tipo_pessoa', 'responsavel', 'UF', 'total_captado', 'municipio') - 1
+128 - ('id', 'viagem', 'situacao', 'beneficiario', 'cargo', 'funcao', 'tipoViagem', 'orgao', 'orgaoPagamento', 'unidadeGestoraResponsavel', 'dataInicioAfastamento', 'dataFimAfastamento', 'valorTotalRestituicao', 'valorTotalTaxaAgenciamento', 'valorMulta', 'valorTotalDiarias', 'valorTotalPassagem', 'valorTotalViagem', 'valorTotalDevolucao') - 1
+129 - ('id', 'dataInicioOcupacao', 'valorPagoMes', 'cargo', 'permissionario', 'pessoaPermissionario', 'orgaoPermissionario') - 1
+130 - ('remuneracoesDTO', 'servidor') - 1
+131 - ('qntPessoas', 'qntVinculos', 'skSituacao', 'descSituacao', 'skTipoVinculo', 'descTipoVinculo', 'skTipoServidor', 'descTipoServidor', 'licenca', 'codOrgaoExercicioSiape', 'nomOrgaoExercicioSiape', 'codOrgaoSuperiorExercicioSiape', 'nomOrgaoSuperiorExercicioSiape') - 1
+132 - ('codigoFuncaoCargo', 'descricaoFuncaoCargo') - 1
+133 - ('cpf', 'nome', 'sigla_funcao', 'descricao_funcao', 'nivel_funcao', 'cod_orgao', 'nome_orgao', 'dt_inicio_exercicio', 'dt_fim_exercicio', 'dt_fim_carencia') - 1
+134 - ('concedidoJudicialmente', 'id', 'dataMesReferencia', 'menor16anos', 'beneficiario', 'dataMesCompetencia', 'valor', 'municipio') - 1
+135 - ('razaoSocial', 'descricaoBeneficioFiscal', 'valorRenunciado', 'cnpj', 'cnaeCodigoClasse', 'codigoIBGE', 'cnaeCodigoGrupo', 'descricaoFundamentoLegal', 'uf', 'tributo', 'cnaeCodigoSubClasse', 'tipoRenuncia', 'nomeFantasia', 'formaTributacao', 'cnaeNomeClasse', 'ano', 'cnaeDivisao', 'municipio') - 1
+136 - ('beneficioFiscal', 'tipoEntidade', 'cnpj', 'cnaeCodigoClasse', 'cnaeCodigoGrupo', 'uf', 'codigoIBGEMunicipio', 'cnaeCodigoSubClasse', 'nomeFantasia', 'cnaeNomeClasse', 'beneficiario', 'cnaeDivisao', 'municipio') - 1
+137 - ('beneficioFiscal', 'fundamentoLegal', 'cnpj', 'fruicaoVigente', 'dataInicioFruicao', 'cnaeCodigoGrupo', 'cnaeCodigoClasse', 'uf', 'codigoIBGEMunicipio', 'dataFimFruicao', 'cnaeCodigoSubClasse', 'descricao', 'nomeFantasia', 'cnaeNomeClasse', 'beneficiario', 'cnaeDivisao', 'municipio') - 1
+138 - ('id', 'serie', 'dataEmissao', 'cnpjFornecedor', 'dataTipoEventoMaisRecente', 'codigoOrgaoSuperiorDestinatario', 'valorNotaFiscal', 'chaveNotaFiscal', 'orgaoSuperiorDestinatario', 'municipioFornecedor', 'numero', 'nomeFornecedor', 'orgaoDestinatario', 'tipoEventoMaisRecente', 'codigoOrgaoDestinatario') - 1
+139 - ('notaFiscalDTO', 'itensNotaFiscal', 'eventosNotaFiscal') - 1
+140 - ('id', 'licitacao', 'dataResultadoCompra', 'dataAbertura', 'dataReferencia', 'dataPublicacao', 'situacaoCompra', 'modalidadeLicitacao', 'instrumentoLegal', 'valor', 'municipio', 'unidadeGestora') - 1
+141 - ('descricaoPoder', 'nome', 'orgaoVinculado', 'orgaoMaximo', 'codigo') - 1
+142 - ('tipoParticipante', 'nome', 'cpfCnpj', 'idParticipante') - 1
+143 - ('descUnidadeFornecimento', 'quantidade', 'tipoPessoa', 'idVencedor', 'nome', 'descComplementarItemCompra', 'codigoItemCompra', 'numero', 'descricao', 'valor', 'cpfCnpjVencedor') - 1
+144 - ('codigoEmenda', 'ano', 'tipoEmenda', 'autor', 'nomeAutor', 'numeroEmenda', 'localidadeDoGasto', 'funcao', 'subfuncao', 'valorEmpenhado', 'valorLiquidado', 'valorPago', 'valorRestoInscrito', 'valorRestoCancelado', 'valorRestoPago') - 1
+145 - ('especieTipo', 'fase', 'data', 'codigoDocumento', 'tipoEmenda', 'codigoDocumentoResumido') - 1
+146 - ('nomeUG', 'anoMes', 'siglaUFPessoa', 'codigoOrgaoSuperior', 'tipoPessoa', 'codigoPessoa', 'municipioPessoa', 'codigoOrgao', 'nomeOrgaoSuperior', 'nomePessoa', 'valor', 'nomeOrgao', 'codigoUG') - 1
+147 - ('liquidado', 'empenhado', 'codigoOrgao', 'orgaoSuperior', 'orgao', 'ano', 'codigoOrgaoSuperior', 'pago') - 1
+148 - ('liquidado', 'empenhado', 'funcao', 'acao', 'subfuncao', 'pago', 'codigoSubfuncao', 'ano', 'programa', 'codigoFuncao', 'codigoPrograma', 'codigoAcao') - 1
+149 - ('codigoFuncao', 'liquidado', 'empenhado', 'codigoSubfuncao', 'codigoModalidadeDespesa', 'codigoPrograma', 'codigoAcao', 'codigoGrupoDespesa', 'modalidadeDespesa', 'funcao', 'planoOrcamentario', 'acao', 'idPlanoOrcamentario', 'subfuncao', 'programa', 'elementoDespesa', 'codigoElementoDespesa', 'codigoPlanoOrcamentario', 'grupoDespesa', 'ano', 'pago') - 1
+150 - ('id', 'numAno', 'descPOIdAcompanhamento', 'codigoPrograma', 'codUnidadeOrcamentaria', 'codPOIdAcompanhamento', 'descricao', 'codigoSubFuncao', 'codigoFuncao', 'codigo', 'codigoAcao') - 1
+151 - ('codigoItemEmpenho', 'descricaoSubelemento', 'sequencial', 'codigoSubelemento', 'valorAtual', 'descricao') - 1
+152 - ('data', 'quantidade', 'operacao', 'valorTotal', 'valorUnitario') - 1
+153 - ('subitem', 'empenhoResumido', 'empenho', 'valorRestoInscrito', 'valorLiquidado', 'valorRestoPago', 'valorPago', 'valorRestoCancelado') - 1
+154 - ('data', 'documento', 'documentoResumido', 'observacao', 'funcao', 'subfuncao', 'programa', 'acao', 'subTitulo', 'localizadorGasto', 'fase', 'especie', 'favorecido', 'codigoFavorecido', 'nomeFavorecido', 'ufFavorecido', 'valor', 'codigoUg', 'ug', 'codigoUo', 'uo', 'codigoOrgao', 'orgao', 'codigoOrgaoSuperior', 'orgaoSuperior', 'categoria', 'grupo', 'elemento', 'modalidade', 'numeroProcesso', 'planoOrcamentario', 'autor', 'favorecidoIntermediario', 'favorecidoListaFaturas') - 1
+155 - ('fase', 'data', 'documentoResumido', 'favorecido', 'especie', 'orgaoSuperior', 'orgaoVinculado', 'unidadeGestora', 'valor', 'elementoDespesa', 'documento') - 1
+156 - ('codigoFuncao', 'liquidado', 'empenhado', 'codigoSubfuncao', 'codigoModalidadeDespesa', 'codigoPrograma', 'codigoAcao', 'codigoGrupoDespesa', 'modalidadeDespesa', 'funcao', 'idPlanoOrcamentario', 'acao', 'planoOrcamentario', 'subfuncao', 'mesAno', 'programa', 'elementoDespesa', 'codigoElementoDespesa', 'codigoPlanoOrcamentario', 'grupoDespesa', 'pago') - 1
+157 - ('id', 'descricao', 'codigo') - 1
+158 - ('id', 'dataReferencia', 'dataInicioVigencia', 'dataFinalVigencia', 'dataPublicacao', 'dataUltimaLiberacao', 'dataConclusao', 'dimConvenio', 'situacao', 'convenente', 'localidadePessoa', 'municipioConvenente', 'orgao', 'unidadeGestora', 'subfuncao', 'tipoInstrumento', 'valor', 'valorLiberado', 'valorContrapartida', 'valorDaUltimaLiberacao', 'numeroProcesso') - 1
+159 - ('quantidade', 'numero', 'descComplementarItemCompra', 'descricao', 'valor') - 1
+160 - ('id', 'numero', 'objeto', 'numeroProcesso', 'fundamentoLegal', 'compra', 'situacaoContrato', 'modalidadeCompra', 'unidadeGestora', 'unidadeGestoraCompras', 'dataAssinatura', 'dataPublicacaoDOU', 'dataInicioVigencia', 'dataFimVigencia', 'fornecedor', 'valorInicialCompra', 'valorFinalCompra') - 1
+161 - ('id', 'dataReferencia', 'dataInicioSancao', 'dataFimSancao', 'dataPublicacaoSancao', 'dataTransitadoJulgado', 'dataOrigemInformacao', 'tipoSancao', 'fonteSancao', 'fundamentacao', 'orgaoSancionador', 'sancionado', 'valorMulta', 'pessoa', 'textoPublicacao', 'linkPublicacao', 'detalhamentoPublicacao', 'numeroProcesso', 'abrangenciaDefinidaDecisaoJudicial', 'informacoesAdicionaisDoOrgaoSancionador') - 1
+162 - ('id', 'dataReferencia', 'pessoaJuridica', 'orgaoSuperior', 'convenio', 'motivo') - 1
+163 - ('id', 'dataReferencia', 'motivo', 'orgaoSuperior', 'pessoaJuridica', 'convenio') - 1
+164 - ('id', 'pessoa', 'fundamentacao', 'orgaoLotacao', 'dataReferencia', 'dataPublicacao', 'ufLotacaoPessoa', 'tipoPunicao', 'cargoComissao', 'punicao', 'codigoCargoComissao', 'cargoEfetivo') - 1
+165 - ('id', 'dataPublicacao', 'dataReferencia', 'punicao', 'tipoPunicao', 'pessoa', 'orgaoLotacao', 'ufLotacaoPessoa', 'cargoEfetivo', 'codigoCargoComissao', 'cargoComissao', 'fundamentacao') - 1
+166 - ('id', 'estabelecimento', 'portador', 'valorTransacao', 'dataTransacao', 'mesExtrato', 'unidadeGestora', 'tipoCartao') - 1
+167 - ('id', 'titulo', 'organizacao', 'inventario', 'descricao', 'licenca', 'responsavel', 'emailResponsavel', 'periodicidade', 'temas', 'tags', 'coberturaTemporalInicio', 'coberturaTemporalFim', 'coberturaEspacial', 'valorCoberturaEspacial', 'granularidadeEspacial', 'versao', 'atualizacaoVersao', 'visibilidade', 'statusHomologacao', 'descontinuado', 'dataDescontinuacao', 'reuso', 'recursos') - 1
+168 - ('dataAtualizacao', 'id', 'title', 'nome', 'nomeOrganizacao') - 1
+169 - ('quantidadeOrganizacoes', 'nameIcone', 'usuarioSegueTema', 'packageCount', 'imageDisplayUrl', 'icone', 'state', 'packages', 'users', 'tags', 'numFollowers', 'name', 'foto', 'iconeDisplayUrl', 'numReusos', 'displayName', 'description', 'id', 'title', 'atributos', 'nameFoto') - 1
+170 - ('id', 'name', 'displayName', 'urlFoto', 'quantidadeSeguidores', 'quantidadeConjuntoDados', 'descricao', 'nome', 'ativo', 'atributos') - 1
+171 - ('id', 'isAtualizado', 'title', 'ultimaAlteracaoMetadados', 'nome', 'ultimaAtualizacaoDados', 'catalogacao', 'nomeOrganizacao') - 1
+172 - ('descricaoTipoLocal', 'codigoTipoLocal') - 1
+173 - ('codigoSituacao', 'descricaoSituacao') - 1
+174 - ('codigoTipoEstacao', 'siglaTipoEstacao', 'descricaoTipoEstacao') - 1
+175 - ('id', 'descricao', 'secao', 'observacoes') - 1
+176 - ('id', 'descricao', 'divisao', 'observacoes') - 1
+177 - ('id', 'descricao', 'observacoes') - 1
+178 - ('id', 'descricao', 'classe', 'atividades', 'observacoes') - 1
+179 - ('fator_conversao', 'modelo', 'long', 'incerteza', 'lat') - 1
+180 - ('id', 'nome', 'microrregiao', 'regiao-imediata') - 1
+181 - ('id', 'regiao-intermediaria', 'sub-regiao', 'nome') - 1
+182 - ('id', 'nome', 'regiao-intermediaria') - 1
+183 - ('id', 'sigla', 'nome', 'regiao') - 1
+184 - ('situacao_ingles', 'categoria_ingles', 'tipo', 'tipo_ingles', 'area', 'sigla', 'data_inicio', 'data_desativacao', 'url_sidra', 'url_concla', 'periodicidade_coleta_ingles', 'periodicidade_divulgacao_ingles', 'ocorrencias_pesquisa', 'codigo', 'nome', 'nome_ingles', 'situacao', 'categoria', 'periodicidade_coleta', 'periodicidade_divulgacao', 'classificacoes_tematicas') - 1
+185 - ('mes', 'ordem_periodo', 'nome_ocorrencia_ingles', 'ano', 'nome_ocorrencia') - 1
+186 - ('periodicidade_divulgacao', 'nome', 'situacao', 'classificacoes_tematicas', 'categoria', 'nome_ingles', 'periodicidade_coleta', 'codigo') - 1
+187 - ('sexo', 'res', 'nome', 'localidade') - 1
+188 - ('sexo', 'res', 'localidade') - 1
+189 - ('id', 'unidade', 'indicador') - 1
+190 - ('series', 'id', 'unidade', 'indicador') - 1
+191 - ('id', 'unidades-monetarias', 'linguas', 'historico', 'nome', 'governo', 'localizacao', 'area') - 1
+192 - ('nota', 'periodo', 'fonte', 'publicacao', 'versao') - 1
+193 - ('id', 'nome', 'observacao', 'contexto', 'descricao', 'periodos') - 1
+194 - ('id', 'nome', 'descricao', 'contexto', 'observacao', 'periodos') - 1
+195 - ('tipo_conversao', 'resultado', 'origem') - 1
+196 - ('siglaMaregrafo', 'idUHSLC', 'idPSMSL', 'dataInicialOperacao', 'nomeMaregrafo', 'lat', 'lon', 'local', 'urlRelatorio', 'idGLOSS', 'siglaUF') - 1
+197 - ('unidadeMedida', 'codigoSensor', 'descricaoSensor', 'nomeSensor') - 1
+198 - ('dtHrPrevisao', 'previsao') - 1
+199 - ('encoder', 'dtHrLeitura', 'radar') - 1
+200 - ('direcaoVento', 'dtHrLeitura', 'pressaoAtm', 'precipitacao', 'temperaturaExt', 'velocidadeVento', 'umidadeExt') - 1
+201 - ('siglaMaregrafo', 'dados') - 1

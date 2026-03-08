@@ -12,14 +12,30 @@ CONNECTION_STRING = (
     'Trusted_Connection=yes;'
 )
 
-
 def extract_top_level_keys(json_text):
-    """Extrai as chaves do primeiro nível do JSON."""
     try:
         obj = json.loads(json_text)
-        return tuple(obj.keys()) if isinstance(obj, dict) else tuple()
-    except:
+    except json.JSONDecodeError:
         return tuple()
+
+    # Caso esteja duplamente serializado
+    if isinstance(obj, str):
+        try:
+            obj = json.loads(obj)
+        except json.JSONDecodeError:
+            return tuple()
+
+    if isinstance(obj, dict):
+        return tuple(obj.keys())
+
+    if isinstance(obj, list):
+        keys = set()
+        for item in obj:
+            if isinstance(item, dict):
+                keys.update(item.keys())
+        return tuple(keys)
+
+    return tuple()
 
 
 def carregar_apis_maps():
