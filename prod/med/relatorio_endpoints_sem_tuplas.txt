@@ -1,11 +1,11 @@
 758: Nao achei endpoint com esse id
-48: Faltando um '}' no final aparentemente
+48: Faltando um '}' no final aparentemente ✅
 70: Vazia ✅
-130: Nao sei
-178: Nao sei
-193: Nao sei
-198: Nao sei
-204: Nao sei
+130: Nao sei ✅
+178: Nao sei ✅
+193: Nao sei ✅
+198: Nao sei ✅
+204: Nao sei ✅
 239: Vazia ✅
 240: Vazia ✅
 248: Vazia ✅
@@ -23,30 +23,30 @@
 315: Vazia ✅
 357: Vazia ✅
 538: Vazia ✅
-359: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar.
+359: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar. ✅
 363: Vazia ✅
 372: Vazia ✅
 373: Vazia ✅
-379: Falta um final para esse json kkkk
+379: Falta um final para esse json kkkk ✅
 381: Vazia ✅
 389: Vazia ✅
 390: Vazia ✅
-411: Falta um final para esse json kkkk
-413: Falta um final para esse json kkkk
-415: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar.
-416: Falta um final para esse json kkkk
-420: Tá faltando um '}' no final
-421: Duplamente codificado e string trunkada. 
-470: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar.
-478: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar.
-483: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar.
-484: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar.
+411: Falta um final para esse json kkkk ✅
+413: Falta um final para esse json kkkk ✅
+415: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar. ✅
+416: Falta um final para esse json kkkk ✅
+420: Tá faltando um '}' no final ✅
+421: Duplamente codificado e string trunkada. ✅
+470: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar. ✅
+478: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar. ✅
+483: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar. ✅
+484: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar. ✅
 499: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar. ('dados', 'links') ✅
 509: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar. ('dados', 'links') ✅
-524: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
-526: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
+524: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
+526: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
 527: Retorna uma lista dos formatos. Nome da coluna recomendada: ('situacao') ✅
-530: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
+530: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
 547: Tá duplamente formatado como string, todos os dados do arquivo ("''"). ('id', 'dataMesCompetencia', 'dataMesReferencia', 'beneficiario', 'municipio', 'valor', 'concedidoJudicialmente', 'menor16anos') ✅
 548: Tá duplamente formatado como string, todos os dados do arquivo ("''"). ('id', 'dataMesCompetencia', 'dataMesReferencia', 'municipio', 'beneficiarioBolsaFamilia', 'cpfFormatado', 'nis', 'nome', 'dataSaque', 'valorSaque') ✅
 549: Tá duplamente formatado como string, todos os dados do arquivo ("''"). ('id', 'dataMesCompetencia', 'dataMesReferencia', 'municipio', 'beneficiarioBolsaFamilia', 'cpfFormatado', 'nis', 'nome', 'dataSaque', 'valorSaque') ✅
@@ -56,10 +56,10 @@
 592: Tá faltando um '[' no inicio. ('mesAno', 'tipoTransferencia', 'codigoOrgao', 'orgao', 'tipoFavorecido', 'codigoFavorecido', 'favorecido', 'codigoFuncao', 'funcao', 'codigoPrograma', 'programa', 'codigoAcao', 'acao', 'codigoGrupoDespesa', 'grupoDespesa', 'codigoModalidadeAplicacaoDespesa', 'modalidadeAplicacaoDespesa', 'codigoElementoDespesa', 'elementoDespesa', 'valor') ✅
 601: Vazia ✅
 602: Vazia ✅
-603: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
-607: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
+603: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
+607: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
 608: Vazia ✅
-609: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
+609: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
 621: Vazia ✅
 622: Vazia ✅
 623: Vazia ✅
@@ -69,17 +69,17 @@
 628: Vazia ✅
 629: Vazia ✅
 630: Vazia ✅
-632: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
+632: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
 634: Vazia ✅
-763: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
-780: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
+763: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
+780: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
 788: Vazia ✅
 792: Vazia ✅
-798: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
-811: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
-819: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
+798: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
+811: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
+819: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
 843: Vazia ✅
-871: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar
+871: String trunkada, provavelmente a resposta foi maior do que o banco consegue guardar ✅
 887: Vazia ✅
 891: Vazia ✅
 897 - 901: Não retorna um json, apenas um link. ('link') ✅
