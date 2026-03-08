@@ -19,7 +19,9 @@ def navegador_id1(jsonStr, idEndpoint):
 
 def navegador_id2(jsonStr, idEndpoint):
     # ()
-    
+
+  lista = []
+  
   idsVazios = ["70", "239", "240", "248", "249", "272", "273", "278", "279", "280",
                  "282", "283", "286", "293", "299", "315", "357", "538", "363", "372",
                  "373", "381", "389", "390", "586", "601", "602", "608", "621", "622",
@@ -55,10 +57,89 @@ def navegador_id2(jsonStr, idEndpoint):
   
   if idEndpoint in ["897", "898", "899", "900", "901"]:
     lista = ["link"]
+
+  if idEndpoint == "48":
+    lista = ["registro_ans", "cnpj", "razao_social", "nome_fantasia", "classificacao_sigla", "ativa", "_links"]
+
+  if idEndpoint == "130":
+    lista = ["Data", "Codigo", "Categoria", "Quantidade", "Valor"]
+
+  if idEndpoint == "178":
+    lista = ["PAS", "Nome", "CPF_CNPJ", "Penalidade", "Prazo_em_anos", "Inicio_do_cumprimento", "Prazo_final_penalidade"] 
+
+  if idEndpoint == "193":
+    lista = ["CodigoRDE", "CnpjBaseReceptora", "NomePessoaNacional", "UfPessoaNacional", "NomePessoaEstrangeira", "PaisPessoaEstrangeira", "MoedaOperacao", "ValorOperacao", "Sistema", "Ocorrencia", "Modalidade", "Ano", "Mes"]
+
+  if idEndpoint == "198":
+    lista = ['CNPJ', 'NOME_INSTITUICAO', 'ENDERECO', 'COMPLEMENTO', 'BAIRRO', 'CEP', 'MUNICIPIO', 'UF', 'DDD', 'TELEFONE', 'CLASSE', 'ASSOCIACAO', 'CATEGCOOPSING', 'FILIACAO', 'E_MAIL', 'SITIO_NA_INTERNET', 'MUNICIPIO_IBGE']
+
+  if idEndpoint == "204":
+    lista = ['codigo', 'periodo', 'versaoRel', 'id', 'tituloRel', 'dataHora', 'assunto', 'tipo_doc', 'urlDocPDF','urlDocHtm']
+
+  if idEndpoint == "359":
+    lista = ['id', 'nome', 'id_orgao', 'id_orgao_superior', 'id_municipio', 'cnpj', 'cep', 'total_fornecedores_cadastrados', 'total_fornecedores_recadastrados', 'unidade_cadastradora', 'ativo', '_links']
+
+  if idEndpoint == "379":
+    lista = ['numero', 'co_portaria', 'dtPortaria', 'co_processo', 'ds_tipo_pregao', 'ds_tipo_pregao_compra', 'tx_objeto', 'valorHomologadoTotal', 'valorEstimadoTotal', 'co_uasg', 'ds_situacao_pregao', 'dtDataEdital', 'dtInicioProposta', 'dtFimProposta', '_links']
+
+  if idEndpoint == "411":
+    lista = ['descricaoItem', 'nomeClassificacaoCatalogo', 'quantidadeEstimada', 'dataInclusao', 'numeroItem', 'dataAtualizacao', 'valorTotal', 'pdmCodigo', 'pdmDescricao', 'codigoItem', 'unidadeRequisitante', 'grupoContratacaoCodigo', 'grupoContratacaoNome', 'classificacaoSuperiorCodigo', 'classificacaoSuperiorNome', 'unidadeFornecimento', 'valorUnitario', 'valorOrcamentoExercicio', 'dataDesejada', 'classificacaoCatalogoId', 'categoriaItemPcaNome']
+
+  if idEndpoint == "413":
+    lista = ['etapa', 'providencia', 'area', 'enquadramento', 'objetivos', 'ficha_tecnica', 'situacao', 'outras_fontes', 'acessibilidade', 'sinopse', 'nome', 'cgccpf', 'mecanismo', '_links', 'segmento', 'PRONAC', 'estrategia_execucao', 'valor_aprovado', 'justificativa', 'resumo', 'valor_solicitado', 'especificacao_tecnica', 'municipio', 'data_termino', 'UF', 'impacto_ambiental', 'democratizacao', 'valor_projeto', 'proponente', 'ano_projeto', 'data_inicio', 'valor_captado', 'valor_proposta']
+
+  if idEndpoint == "415":
+    lista = ["codigo", "_links", "nome"]
+
+  if idEndpoint == "416":
+    lista = ['data_arquivamento', 'acessibilidade', 'impacto_ambiental', 'nome', 'democratizacao', 'justificativa', 'mecanismo', 'resumo', 'sinopse', 'especificacao_tecnica', '_links', 'data_inicio', 'objetivos', 'ficha_tecnica', 'etapa', 'data_aceite', 'id', 'estrategia_execucao', 'data_termino']
+
+  if idEndpoint == "420":
+    lista = ['data_recibo', 'cgccpf', 'nome_doador', 'nome_projeto', '_links', 'valor', 'PRONAC']
+
+  if idEndpoint == "421":
+    lista = ["cgccpf", "_links", "email", "nome"]
+
+  if idEndpoint == "470":
+    lista = ['uri', 'nome', 'codTipo', 'tipo', 'ordemAssinatura', 'proponente']
+
+  if idEndpoint in ["478", "483", "484"]:
+    lista = ['cod', 'sigla', 'nome', 'descricao']
+
+  if idEndpoint in ["524", "526"]:
+    lista = ['id', 'viagem', 'situacao', 'beneficiario', 'cargo', 'funcao', 'tipoViagem', 'orgao', 'orgaoPagamento', 'unidadeGestoraResponsavel', 'dataInicioAfastamento', 'dataFimAfastamento', 'valorTotalRestituicao', 'valorTotalTaxaAgenciamento', 'valorMulta', 'valorTotalDiarias', 'valorTotalPassagem', 'valorTotalViagem', 'valorTotalDevolucao']
+
+  if idEndpoint == "530":
+    lista = ['servidor', 'fichasCargoEfetivo', 'fichasFuncao', 'fichasMilitar', 'fichasDemaisSituacoes']
+
+  if idEndpoint in ["603", "607"]:
+    lista = ['id', 'numero', 'objeto', 'numeroProcesso', 'fundamentoLegal', 'compra', 'situacaoContrato', 'modalidadeCompra', 'unidadeGestora', 'unidadeGestoraCompras', 'dataAssinatura', 'dataPublicacaoDOU', 'dataInicioVigencia', 'dataFimVigencia', 'fornecedor', 'valorInicialCompra', 'valorFinalCompra']
+
+  if idEndpoint == "609":
+    lista = ['id', 'dataReferencia', 'dataInicioSancao', 'dataFimSancao', 'dataPublicacaoSancao', 'dataTransitadoJulgado', 'dataOrigemInformacao', 'tipoSancao', 'fonteSancao', 'fundamentacao', 'orgaoSancionador', 'sancionado', 'valorMulta', 'pessoa', 'textoPublicacao', 'linkPublicacao', 'detalhamentoPublicacao', 'numeroProcesso', 'abrangenciaDefinidaDecisaoJudicial', 'informacoesAdicionaisDoOrgaoSancionador']
+
+  if idEndpoint == "632":
+    lista = ["id", "urlImagem", "titulo", "descricao", "nome", "qtdConjuntoDeDados", "qtdSeguidores", "organizationEsfera", "organizationUf", "organizationMunicipio"]
+
+  if idEndpoint == "763":
+    lista = ["codigoEstacao", "tipoEstacao", "tema", "nomeEstacao", "codigoEstacaoMaterializada", "inscricaoChapa", "dataVisita", "situacao", "descricaoEstacao", "latitude", "longitude", "latitudeGMS", "longitudeGMS", "sigmaLatitude", "sigmaLongitude", "fonteCoordenada", "dataMedicaoCoordenada", "dataCalculoCoordenada", "sistemaReferenciaCoordenada", "altitudeGeometrica", "sigmaAltitudeGeometrica", "fonteAltitudeGeometrica", "altitudeOrtometrica", "altitudeNormal", "fonteAltitude", "dataMedicaoAltitude", "dataCalculoAltitude", "datumAltitude", "sigmaAltitude", "numeroGeopotencial", "valorGravidade", "datumGravidade", "dataMedicaoGravidade", "dataCalculoGravidade", "idAjusteRN", "notaAjusteRN", "localizacao", "itinerario", "observacao", "tipoLocal", "municipio"]
+
+  if idEndpoint == "780":
+    lista = ["id", "descricao", "observacoes"]
+
+  if idEndpoint == "798":
+    lista = ['id', 'nome', 'municipio']
+
+  if idEndpoint == "811":
+    lista = ["id", "nome", "microrregiao", "regiao-imediata"]
+
+  if idEndoint == "819":
+    lista = ['id', 'nome', 'regiao-intermediaria', 'sub-regiao']
+
+  if idEndpoint == "871":
+    lista = ["id", "tipo", "titulo", "introducao", "data_publicacao", "produto_id", "produtos", "editorias", "imagens", "produtos_relacionados", "destaque", "link"]
   
-  dicionario = {item: None for item in lista}
-  return dicionario
-    
+  return lista
 
 def navegador_id3(jsonStr, idEndpoint):
     # ('dados', 'links')
@@ -162,7 +243,7 @@ def navegador_id8(jsonStr, idEndpoint):
       if isinstance(item,list):
           return list(item[0].keys())
     """
-    
+    return []
 
 def navegador_id9(jsonStr, idEndpoint):
     # ('id', 'nome', 'municipio')
@@ -667,6 +748,7 @@ def navegador_id39(jsonStr, idEndpoint):
       if isinstance(item,list):
           return list(item[0].keys())
     """
+    return []
 
 def navegador_id40(jsonStr, idEndpoint):
     # ('Erro na API',)
@@ -686,7 +768,7 @@ def navegador_id40(jsonStr, idEndpoint):
       if isinstance(item,list):
           return list(item[0].keys())
     """
-    
+    return []
 
 def navegador_id41(jsonStr, idEndpoint):
     # ('id', 'dataMesReferencia', 'dataSaque', 'portaria', 'dataEmissaoParcela', 'situacao', 'pessoaSeguroDefeso', 'rgp', 'valor', 'parcela', 'municipio')
@@ -1799,6 +1881,7 @@ def navegador_id109(jsonStr, idEndpoint):
       if isinstance(item,list):
           return list(item[0].keys())
     """
+    return []
 
 def navegador_id110(jsonStr, idEndpoint):
     # ('uasg', 'modalidade', 'numero_aviso', 'numero_registro_preco', 'numero_item_licitacao', 'codigo_item_material', 'codigo_item_servico', 'descricao_detalhada', 'marca', 'cnpj_fornecedor', 'classificacaoFornecedor', 'unidade', 'quantidade_empenhada', 'quantidade_total', 'quantidade_a_empenhar', 'valor_unitario', 'valor_total', 'data_assinatura', 'data_inicio_validade', 'data_fim_validade', 'beneficio', '_links')
