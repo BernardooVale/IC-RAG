@@ -102,7 +102,7 @@ class agenteChat:
         embedMsg = self.retEmbedMsg(msg) # gera o embedding da msg
         endpointsFinais = self.filtraEndpoints(msg, embedMsg)
             
-        self.explicacaoConsulta(msg, endpointsFinais)
+        self.explicacaoConsulta(endpointsFinais)
         
     def retEmbedMsg(self, msg:str): # Gera o embedding da msg do usuario
         
@@ -124,7 +124,7 @@ class agenteChat:
         resposta = self.modelo.invoke(msg).content
         print(f"Resposta Natural gerada: {resposta}")
     
-    def explicacaoConsulta(self, msg:str, resultados:list): #resposta que consulta os endpoints relevantes para a mensagem do usuario
+    def explicacaoConsulta(self, resultados:list): #resposta que consulta os endpoints relevantes para a mensagem do usuario
         
         resposta = f"""Voce pode encontrar os dados desejados nessas fontes:"""
         
