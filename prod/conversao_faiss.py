@@ -4,16 +4,23 @@ from bd import integracaoBD
 faiss = Faiss()
 bd = integracaoBD()
 
-idMin = faiss.ret_checkpoint()
+def apis(faiss, bd):
 
-query = f"select id, embedding from embeddings_api where id>{idMin};"
+    idMin = faiss.ret_checkpoint()
 
-resultado = bd.executaQuery(query=query)
+    query = f"select id, embedding from embeddings_api where id>{idMin};"
 
-faiss.cria_documento_apis(resultado)
+    resultado = bd.executaQuery(query=query)
 
-query = f"select id, idApi, embedding from embeddings;"
+    faiss.cria_documento_apis(resultado)
 
-resultado = bd.executaQuery(query=query)
+def endpoints(faiss, bd):
 
-faiss.cria_documento_endpoint(resultado)
+    query = f"select id, idApi, embedding from embeddings;"
+
+    resultado = bd.executaQuery(query=query)
+
+    faiss.cria_documento_endpoint(resultado)
+    
+apis(faiss=faiss, bd=bd)
+endpoints(faiss=faiss, bd=bd)

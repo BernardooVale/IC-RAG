@@ -221,6 +221,78 @@ class integracaoBD:
         except Error as e:
             return []
     
+    def atualizaEmbeddingEndpoint(self, dados: dict):
+        """
+        Atualiza embedding de um endpoint existente na tabela embeddings.
+        
+        Args:
+            dados: Dicionário com os campos:
+                - Id: ID do endpoint (obrigatório)
+                - Name: Nome do endpoint
+                - Url: URL do endpoint
+                - Documentation: Link da documentação
+                - ResponseType: Tipo de resposta (JSON, XML, etc)
+                - idApi: ID da API pai
+                - Embedding_Text: Texto usado para gerar o embedding
+                - embedding: Vetor de embedding (lista de floats)
+        
+        Raises:
+            pyodbc.Error: Em caso de erro no SQL
+        """
+        try:
+            # Converter embedding (lista) para JSON string
+            embedding_json = json.dumps(dados.get("embedding", []))
+            
+            # Extrair dados
+            endpoint_id = dados.get("Id")
+            nome = dados.get("Name", "N/A")
+            url = dados.get("Url", "")
+            documentacao = dados.get("Documentation", "")
+            tipo_resposta = dados.get("ResponseType", "")
+            id_api = dados.get("idApi")
+            texto_embedding = dados.get("Embedding_Text", "")
+            
+            # SQL de UPDATE
+            sql_update = """
+            UPDATE embeddings
+            SET 
+                nome = ?,
+                url = ?,
+                documentacao = ?,
+                tipo_resposta = ?,
+                idApi = ?,
+                texto = ?,
+                embedding = ?
+            WHERE 
+                id = ?;
+            """
+            
+            # Executar update
+            self.cur.execute(
+                sql_update,
+                (
+                    nome,
+                    url,
+                    documentacao,
+                    tipo_resposta,
+                    id_api,
+                    texto_embedding,
+                    embedding_json,
+                    endpoint_id
+                )
+            )
+            
+            # Commit (se autocommit=False)
+            if not self.conexao.autocommit:
+                self.conexao.commit()
+            
+            print(f"✅ Embedding atualizado para endpoint {endpoint_id}: {nome}")
+            
+        except Exception as e:
+            self.conexao.rollback()
+            print(f"❌ Erro ao atualizar embedding do endpoint {dados.get('Id')}: {e}")
+            raise
+    
     def fecharConexao(self): # fecha a conexao
         self.cur.close()
         self.conexao.close()

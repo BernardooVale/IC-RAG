@@ -26,6 +26,8 @@ while not entrada.strip().lower().startswith("sair"):
     agente_chat.controleResposta(entrada)
     print(f"Tempo total: {time.time()  - t1}")
     
+    entrada = input("Escreva sua pergunta: ")
+    
 print("Fim")
 # finalizacao do sistema ==========================================================================================
 

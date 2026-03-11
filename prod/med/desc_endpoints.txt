@@ -1,0 +1,755 @@
+24 - Hipoteses atuariais, para realizar análises. Seleciona registro da tabela /DRAA_HIPOTESE_ATUARIAL. 
+25 - Hipoteses biométircas separadas por masculino e feminino. Seleciona registro da tabela /DRAA_HIPOTESE_BIOMETRICA. 
+26 - Dados de uma notificação de um item analisado.. Seleciona registro da tabela /DRAA_NOTIFICACAO. 
+27 - Dados do órgão de uma entidade. Seleciona registro da tabela /DRAA_ORGAO_ENTIDADE. 
+28 - Parecer atuarial de um tema. Seleciona registro da tabela /DRAA_PARECER_ATUARIAL. 
+29 - Plano de amortização, considerando valores iniciais, base calculo e taxa de juros. Seleciona registro da tabela /DRAA_PLANO_AMORTIZACAO. 
+93 - Dados de instrumentos contratuais. Retorna Dados cadastrais de instrumentos contratuais - Instrumento contratual. 
+94 - Dados de instrumentos contratuais sobre alterações em Instrumentos. Retorna Dados cadastrais de instrumentos contratuais - Instrumento alteração. 
+95 - Dados de ocorrencias de instrumentos contratuais. Retorna Dados cadastrais de instrumentos contratuais - Ocorrência. 
+96 - Dados de Conformidade de instrumentos contratuais. Retorna Dados cadastrais de instrumentos contratuais - Conformidade
+97 - Dados de Rescisão de instrumentos contratuais. Retorna Dados cadastrais de instrumentos contratuais - Rescisão
+98 - Dados de anulação de instrumentos contratuais. Retorna Dados cadastrais de instrumentos contratuais - Anulação
+99 - Garantia Financeira em instrumentos contratuais. Retorna Dados cadastrais de instrumentos contratuais - Garantia financeira. 
+100 - Garantia Técnica em instrumentos contratuais. Retorna Dados cadastrais de instrumentos contratuais - Garantia técnica. 
+101 - Mão de obra terceirizada em instrumentos contratuais. Retorna Dados cadastrais de instrumentos contratuais - Mão de obra terceirizada. 
+179 - Quadro Geral Inabilitados de Ocupar cargos de instituição financeira ou administradora de consórcio. Alguns cargos de instituição financeira ou administradora de consórcio, tais como administradores ou conselheiros, só podem ser ocupados por pessoas autorizadas pelo Banco Central. O QGI contém os nomes das pessoas que estão temporariamente impedidas de atuarem nesses cargos, por terem recebido a penalidade de inabilitação no âmbito de um processo administrativo sancionador. Mais informações sobre esse assunto podem ser encontradas na página https://www.bcb.gov.br/estabilidadefinanceira/processossfn.. 
+180 - Quadro Geral Proibidos de Ocupar cargos de instituição financeira ou administradora de consórcio. Alguns cargos de instituição financeira ou administradora de consórcio, tais como administradores ou conselheiros, só podem ser ocupados por pessoas autorizadas pelo Banco Central. O QGI contém os nomes das pessoas que estão temporariamente impedidas de atuarem nesses cargos, por terem recebido a penalidade de inabilitação no âmbito de um processo administrativo sancionador. Mais informações sobre esse assunto podem ser encontradas na página https://www.bcb.gov.br/estabilidadefinanceira/processossfn.. 
+181 - Busca Processos de autorização. O recurso disponibilizado apresenta relação de processos de autorização de funcionamento em aberto (ainda não decididos) no ano-mês selecionado. Nos casos em que o titular do processo é a instituição a ser constituída, não consta a informação de CNPJ e nem de CPF.. 
+182 - Projetos corporativos Banco Central. Projetos corporativos ativos no Banco Central do Brasil. 
+183 - Instituições brasileiras autorizadas a operar no SML com a Argentina. Instituições brasileiras autorizadas a operar no SML com a Argentina. 
+184 - Instituições argentinas autorizadas a operar no SML com a Brasil. Instituições argentinas autorizadas a operar no SML com a Brasil. 
+185 - Instituições brasileiras autorizadas a operar no SML com o Uruguai. Instituições brasileiras autorizadas a operar no SML com o Uruguai. 
+186 - Instituições uruguaias autorizadas a operar no SML com a Brasil. Instituições uruguaias autorizadas a operar no SML com a Brasil. 
+255 - Outros custos. Outros custos. 
+256 - Lista das informações de um Pedido de Verificação de Limites. Lista das informações básicas de um Pedido de Verificação de Limites.. 
+257 - Cronograma de pagamento de operações contratadas. Retorna um ou mais cronogramas de pagamentos da aba Operações Contratadas.. 
+258 - Cronograma de liberações de operações contratadas. Retorna um ou mais cronogramas de liberações da aba Operações Contratadas.. 
+259 - Taxas de câmbio da aba Operações Contratadas. Retorna uma ou mais taxas de câmbio da aba Operações Contratadas. 
+260 - Cronogramas de pagamentos . Retorna um ou mais cronogramas de pagamentos da aba Resumo.. 
+261 - Resumo sobre Cadastro da Dívida Pública . Retorna as informações referentes ao CDP da aba Resumo.. 
+262 - Informações de outros PVLs - Operações não Contratadas. . Retorna informações de outros PVLs da aba Operações não Contratadas.. 
+263 - Anexos dos relatórios/demonstrativos por esfera de governo.. Refere-se às dos anexos de cada um dos relatórios/demonstrativos agrupados por esfera de governo.. 
+264 - Informações básicas de cadastro dos entes da federação.. Refere-se às informações básicas de cadastro dos entes da federação.. 
+265 - Informações sobre relatórios homologados e retificados no Siconfi.. Informações sobre relatórios homologados e retificados bem como matrizes entregues no Siconfi.. 
+266 - Relatório Resumido de Execução Orçamentária. Lista de dados contidos nos quadros dos anexos do Relatório Resumido de Execução Orçamentária - RREO para um ente e período específicos.
+267 - Relatório de Gestão Fiscal - RGF para um poder/órgão e período específicos.. Lista de dados contidos nos quadros dos anexos do Relatório de Gestão Fiscal - RGF para um poder/órgão e período específicos.
+356 - Informações relacionadas aos registros de um Item do SISRP.. Fornece uma lista de dados sobre itens de registros dos preços.. 
+357 - Lista de Fornecedores de item de Registro de Preço. Fornece uma lista de dados sobre fornecedores de item de registros dos preços.
+358 - Lista de Renegociações de um Fornecedor de Item de Registro de Preço. Fornece uma lista de dados sobre renegociações de fornecedor de item de registros dos preços.
+359 - Informações das Unidades de Administração de Serviços Gerais . Fornece uma lista com informações relacionadas às UASGs(Unidades de Administração de Serviços Gerais )
+360 - Informações sobre licitações do tipo  Regime Diferenciado de Contratação. Fornece uma lista com informações relacionadas às RDCs(Regime Diferenciado de Contratação). 
+424 - Lista Proponentes. Busca proponentes dado uma combinação de valores diversos de pesquisa. 
+425 - Informações de um proponente. Busca proponentes dado um id fornecido. 
+426 - Lista blocos partidários. Lista de dados sobre os blocos partidários. 
+427 - Dados de um bloco partidário. Informações sobre um bloco partidário específico. 
+428 - Lista deputados. Listagem e busca dos Deputados. 
+429 - Dados de um deputado. Retorna os dados cadastrais de um parlamentar identificado por {id} que, em algum momento da história e por qualquer período, entrou em exercício na Câmara.. 
+430 - Despesas de um deputado. Dá acesso aos registros de pagamentos e reembolsos feitos pela Câmara em prol do deputado identificado por {id}, a título da Cota para Exercício da Atividade Parlamentar, a chamada "cota parlamentar".. 
+431 - Discursos de um deputado. Retorna uma lista de informações sobre os pronunciamentos feitos pelo deputado identificado por {id} que tenham sido registrados, em quaisquer eventos, nos sistemas da Câmara.. 
+432 - Eventos de um deputado. Retorna uma lista de objetos evento nos quais a participação do parlamentar identificado por {id} era ou é prevista.. 
+475 - Lista situações de proposições. Uma lista de identificadores das diversas situações de tramitação em que uma proposição pode se encontrar, como Encaminhada à Publicação, Aguardando Análise, Devolvida ao Autor, etc.. 
+476 - Lista temas de proposições. Uma lista de identificadores numéricos e nome dos temas que uma proposição pode apresentar.. 
+477 - Lista Tipos de autores de proposições. Uma lista de códigos numéricos e descritores dos tipos de parlamentares, órgãos da Câmara e instituições que podem ser autores de proposições.. 
+478 - Lista Tipos de tramitação de proposições. Uma lista de identificadores numéricos, siglas e descrições dos tipos de tramitações em que uma proposição pode se encontrar, como Apensação, Despacho, Devolução ao autor, etc.
+479 - Lista tipos de proposições. Uma lista de identificadores numéricos, siglas e descrições dos tipos de proposições que existem ou já existiram no Congresso, tais como PEC, Requerimento, Emenda de Plenário e outros.. 
+480 - Lista situações de proposições. Uma lista de identificadores das diversas situações de tramitação em que uma proposição pode se encontrar, como Encaminhada à Publicação, Aguardando Análise, Devolvida ao Autor, etc.. 
+481 - Lista Tipos de autores de proposições. Uma lista de códigos numéricos e descritores dos tipos de parlamentares, órgãos da Câmara e instituições que podem ser autores de proposições.. 
+482 - Lista tipos de proposições. Uma lista de identificadores numéricos, siglas e descrições dos tipos de proposições que existem ou já existiram no Congresso, tais como PEC, Requerimento, Emenda de Plenário e outros.. 
+483 - Lista Tipos de tramitação de proposições. Uma lista de identificadores numéricos, siglas e descrições dos tipos de tramitações em que uma proposição pode se encontrar, como Apensação, Despacho, Devolução ao autor, etc.
+484 - Lista todas as informações da api com dados de deputados. Retorna, como valor do elemento "dados", um objeto em que cada elemento tem o nome de um parâmetro aplicável ao endpoint /deputados.
+485 - Lista siglas e descrições dos possíveis estados em relação ao exercício parlamentar. Retorna uma lista de siglas e descrições dos possíveis estados em que um deputado pode estar em relação ao seu exercício parlamentar: Exercício, Fim de Mandato, Afastado, etc.. 
+486 - Lista Tipos de profissões dos deputados. Retorna uma lista dos títulos de profissões registradas na Câmara dos Deputados (em masculino) e seus códigos.. 
+487 - Lista estados. Retorna uma lista de siglas e nomes das unidades de federação brasileiras, usados principalmente para indicar onde um parlamentar foi eleito.. 
+488 - Lista tipos de despesas. Retorna uma lista de cÃ³digos e nomes das possÃ­veis despesas de Cota Parlamentar: COMBUSTÃVEIS E LUBRIFICANTES., TELEFONIA, SERVIÃ‡OS POSTAIS, etc.. 
+489 - Lista todas as informações sobre eventos. Retorna, como valor do elemento "dados", um objeto em que cada elemento tem o nome de um parâmetro aplicável ao endpoint /eventos.. 
+490 - Lista informações sobre situação de eventos. Retorna uma lista de identificadores numéricos, siglas e descrições dos estados em que eventos como uma reunião podem se encontrar, como Em Andamento, Cancelada e Encerrada.. 
+491 - Lista informações sobre tipos de eventos. Retorna uma lista de identificadores numéricos, siglas e descrições dos tipos de eventos ocorridos na Câmara, tais como Audiência Pública, Comissão Geral e Palestra, entre outros.. 
+492 - Lista todas as informações sobre órgãos. Retorna, como valor do elemento "dados", um objeto em que cada elemento tem o nome de um parâmetro aplicável ao endpoint /órgãos.. 
+493 - Lista situações . Retorna uma lista de identificadores numéricos, títulos e descrições das situações possíveis para órgãos em operação na Câmara, como Em funcionamento, Extinta, Pronta para criação, etc.. 
+494 - Lista tipos de órgãos. Retorna uma lista de identificadores numéricos, siglas e descrições dos tipos de órgãos legislativos ou representados na Câmara, tais como as comissões permanentes, CPIs, procuradorias, etc.. 
+495 - Lista todas as informações sobre preposições. Retorna, como valor do elemento "dados", um objeto em que cada elemento tem o nome de um parâmetro aplicável ao endpoint /proposições.. 
+496 - Lista as situações de proposições. Uma lista de identificadores das diversas situações de tramitação em que uma proposição pode se encontrar, como Encaminhada à Publicação, Aguardando Análise, Devolvida ao Autor, etc.. 
+497 - Lista temas disponíveis para preposições. Uma lista de identificadores numéricos e nome dos temas que uma proposição pode apresentar.. 
+498 - Lista Tipos de autores de proposições. Uma lista de códigos numéricos e descritores dos tipos de parlamentares, órgãos da Câmara e instituições que podem ser autores de proposições.. 
+814 - Lista Municípios. Obtém o conjunto de municípios do Brasil. 
+815 - Lista Município por identificador. Obtém o conjunto de municípios do Brasil a partir dos respectivos identificadores. 
+816 - Lista Municípios por região imediata. Obtém o conjunto de municípios do Brasil a partir dos identificadores das regiões imediatas. 
+817 - Lista Municípios por região intermediária. Obtém o conjunto de municípios do Brasil a partir dos identificadores das regiões intermediárias. 
+818 - Lista Municípios por região. Obtém o conjunto de municípios do Brasil a partir dos identificadores das regiões. 
+819 - Lista Países. Obtém o conjunto de países
+820 - Lista País por identificador. Obtém o conjunto de países a partir dos respectivos identificadores. 
+821 - Lista Regiões. Obtém o conjunto de regiões do Brasil. 
+822 - Lista Região por identificador. Obtém o conjunto de regiões do Brasil a partir dos respectivos identificadores. 
+823 - Lista Regiões imediatas por Estado. Obtém o conjunto de regiões imediatas do Brasil a partir dos identificadores das Unidades da Federação. 
+824 - Lista Regiões imediatas. Obtém o conjunto de regiões imediatas do Brasil. 
+825 - Lista Regiões imediatas por identificador. Obtém o conjunto de regiões imediatas do Brasil a partir dos respectivos identificadores. 
+826 - Lista Regiões imediatas por regiões intermediárias. Obtém o conjunto de regiões imediatas do Brasil a partir dos identificadores das regiões intermediárias. 
+887 - Processamento dos dados(POST). Efetua o processamento dos dados contidos no arquivo RINEX e fornece as coordenadas resultantes e suas respectivas incertezas.
+888 - Produtos de estatística do IBGE. Obtém a lista dos produtos de estatística do IBGE.. 
+889 - Produtos de geociências do IBGE. Obtém a lista dos produtos de geociências do IBGE.. 
+17 - Custo Normal de aposentadorias por repartição. Seleciona registro da tabela /DRAA_CUSTO_NORMAL_REP_APOS. 
+18 - Custo Normal de Auxilios por Repartição. Seleciona registro da tabela /DRAA_CUSTO_NORMAL_REP_AUX. 
+19 - Dados consolidados por processo. Seleciona registro da tabela /DRAA_DADOS_CONSOLIDADOS. 
+20 - Dados de encaminhamento de documentos, processos. Seleciona registro da tabela /DRAA_ENCAMINHAMENTO. 
+21 - Estatísticas por órgão, considerando a categoria e regra de enquadramento. Seleciona registro da tabela /DRAA_ESTATISTICA. 
+22 - Dados sobre Fluxos e valores projetados. Seleciona registro da tabela /DRAA_FLUXO_ATUARIAL. 
+23 - Dados demonstrativos por resultado para valores de geração. Seleciona registro da tabela /DRAA_FORMA_AMORTIZACAO. 
+111 - Cotação por moeda e por data. Retorna informações sobre Dólar comercial (venda e compra) - Cotações diárias - Moeda e dia
+112 - Cotação de uma moeda em um período. Retorna informações sobre Dólar comercial (venda e compra) - Cotações diárias - Moeda e período. 
+113 - Cotação de uma moeda no período de abertura ou intermediário por data. Retorna informações sobre Dólar comercial (venda e compra) - Cotações diárias - Moeda - Abertura ou intermediário. 
+114 - Cotação de uma moeda no período de fechamento por período. Retorna informações sobre Dólar comercial (venda e compra) - Cotações diárias - Cotação da moeda por período de fechamento. 
+115 - Estatísticas dos meios de pagamentos por trimestre. Retorna Estatísticas de meios de pagamentos. 
+117 - Estatísticas sobre transações pix por municípios por data. Traz informações sobre Estatísticas do Pix - Transações pix por município. 
+144 - Expectativas de Mercado Mensais Top 5 estatísiticas. Dados sobre Expectativas de Mercado Mensais Top 5 - Estatísticas. 
+145 - Expectativas de Mercado Mensais Top 5 Selic. Traz os dados sobre Expectativas de Mercado Selic Top 5 - Estatísticas. 
+146 - Expectativas de Mercado Mensais Top 5 anuais. Dados sobre Expectativas de Mercado Anuais Top 5 - Estatísticas. 
+147 - Filiais de Administradoras de Consórcios. Dados sobre as Filiais de Administradoras de Consórcios. 
+148 - Instituições credenciadas de acordo com Mês/Ano. Fornece informações das instituições financeiras que compõem os relatórios disponíveis no IFData.. 
+149 - Lista de relatórios disponíveis. Lista os relatórios disponíveis e seus códigos. 
+150 - Dados das instituições financeiras por Tipo de instituição, relatório e Mês/Ano. Fornece as informações sobre a estrutura de um relatório específico e os valores de cada coluna do IFData.. 
+151 - Lista Indicadores de gestão do Banco Central do Brasil. Obtém os dados abertos dos indicadores de gestão ativos no Banco Central do Brasil. São listadas todas apurações de todos períodos de todos indicadores nos ano-bases em que foram considerados. O serviço disponibiliza parâmetros opcionais para filtrar os resultados por Indicador, ano-base e situação do indicador.. 
+187 - Instituições brasileiras autorizadas a operar no SML com o Paraguai. Instituições brasileiras autorizadas a operar no SML com o Paraguai. 
+188 - Instituições paraguaias autorizadas a operar no SML com a Brasil. Instituições paraguaias autorizadas a operar no SML com a Brasil. 
+189 - Feriados da Argentina no ano corrente informados no SML. Feriados da Argentina no ano corrente informados no SML. 
+190 - Feriados do Uruguai no ano corrente informados no SML. Feriados do Uruguai no ano corrente informados no SML. 
+191 - Feriados do Paraguai no ano corrente informados no SML. Feriados do Paraguai no ano corrente informados no SML
+192 - Dados de operações de exportações do Brasil agregados por mês, ano e país. Valor e quantidade de operações de exportações do Brasil agregados por mês, ano e país. 
+193 - Publicação dos feriados e instituições autorizadas a operar no Sistema de Pagamentos em Moeda Local por período. Publicação dos feriados e instituições autorizadas a operar no Sistema de Pagamentos em Moeda Local (SML)- ExportacoesImportacoesSmlArgentina(DataInicial=@DataInicial,DataFinal=@DataFinal)
+194 - Publicação dos registros de capitais estrangeiros, todos os registros. Publicação dos registros de capitais estrangeiros- TodosRegistros. 
+268 - Declaração das Contas Anuais. Lista de dados contidos nos quadros da Declaração das Contas Anuais - DCA e do antigo Quadro de Detalhamento das Contas Contábeis - QDCC para um ente e exercício específicos. 
+269 - Contas contabeis Patrimoniais. Refere-se às contas contábeis de ativos (classe 1), passivos (classe 2), variações patrimoniais diminutivas (classe 3) e variações patrimoniais aumentativas (classe 4) bem como suas respectivas informações complementares.
+270 - Contas Contábeis Orçamentárias. Refere-se às contas contábeis de controle da aprovação (classe 5) e da execução (classe 6) do planejamento e orçamento bem como suas respectivas informações complementares.
+271 - Contas Contabeis de Controle. Refere-se às contas contábeis de controle para conferência de saldos de natureza devedora (classe 7) e de natureza credora (classe 8) bem como suas respectivas informações complementares.
+272 - Obtém token de acesso para utilizar api DEMAS. Obtém access token para autorização aos endpoints restritos.
+273 - Revogar a autorização para acesso aos endpoints restritos.. Revogar a autorização para acesso aos endpoints restritos.
+274 - Obtém todos os tipos de unidade Cadastro Nacional de Estabelecimentos de Saúde. Obtém todos os tipos de unidade.. 
+275 - Obtém tipo de unidade utilizando o código do tipo da unidade . Obtém tipo de unidade utilizando o código do tipo da unidade.. 
+276 - Obtém todos os estabelecimentos do  Cadastro Nacional de Estabelecimentos de Saúde. Obtém todos os estabelecimentos.. 
+277 - Dados de um estabelecimento utilizando o código CNES.. Obtém estabelecimento utilizando o código CNES.. 
+278 - Dados de lista de parâmetros de vigilância das instituições. Obtém lista de parâmetros de vigilância das instituições
+361 - Detalhes de uma intenção de registro de preços. Fornece dados detalhados de uma intenção de registro de preços selecionada.. 
+362 - Dados detalhados de um item de intenção de registro. Fornece dados detalhados de um item de intenção de registro de preços selecionada.. 
+363 - Detalhe do participante do item de IRP.. Fornece dados detalhados de um participante de item de intenção de registro de preços selecionado.
+364 - Dados sobre uma licitação. Retorna dados detalhados de uma licitação selecionada.. 
+365 - Dados sobre o item de uma licitação. Retorna dados detalhados de um item de licitação selecionada.. 
+366 - Dados de uma modalidade de licitação. Retorna dados detalhados de uma modalidade de licitação.. 
+367 - Dados de um órgão específico. Retorna dados detalhados de um órgão.. 
+368 - Informações sobre um preço praticado específico. Retorna dados detalhados sobre os preços praticados.. 
+369 - Informações sobre um item de preço praticado. Retorna dados detalhados sobre um item de preços praticados.. 
+370 - Informações sobre o registro de um preço. Retorna dados detalhados sobre os registros de preço.
+371 - Dados de um item de registro de preço. Retorna dados detalhados sobre um item de registros de preço.. 
+372 - Informações sobre um fornecedor de um item. Retorna dados detalhados sobre um fornecedor de item de registros de preço.
+373 - Renegociação do fornecedor de item. Retorna dados detalhados sobre uma renegociação de fornecedor de item de registros de preço.
+499 - Lista Tipos de tramitação de proposições. Uma lista de identificadores numéricos, siglas e descrições dos tipos de tramitações em que uma proposição pode se encontrar, como Apensação, Despacho, Devolução ao autor, etc.
+500 - Lista siglas de tipos de preposições. Uma lista de identificadores numéricos, siglas e descrições dos tipos de proposições que existem ou já existiram no Congresso, tais como PEC, Requerimento, Emenda de Plenário e outros.. 
+501 - Lista siglas de situações de deputados. Retorna uma lista de siglas e descrições dos possíveis estados em que um deputado pode estar em relação ao seu exercício parlamentar: Exercício, Fim de Mandato, Afastado, etc.. 
+502 - Lista siglas de eventos . Retorna uma lista de identificadores numéricos, siglas e descrições dos estados em que eventos como uma reunião podem se encontrar, como Em Andamento, Cancelada e Encerrada.. 
+503 - Lista situações do órgão em operação na câmara. Retorna uma lista de identificadores numéricos, títulos e descrições das situações possíveis para órgãos em operação na Câmara, como Em funcionamento, Extinta, Pronta para criação, etc.. 
+504 - Lista situações em que uma proposição pode se encontrar. Uma lista de identificadores das diversas situações de tramitação em que uma proposição pode se encontrar, como Encaminhada à Publicação, Aguardando Análise, Devolvida ao Autor, etc.. 
+505 - Lista Tipos de parlamentares que podem ser  autores de proposições. Uma lista de códigos numéricos e descritores dos tipos de parlamentares, órgãos da Câmara e instituições que podem ser autores de proposições.. 
+506 - Lista tipos de eventos ocorridos. Retorna uma lista de identificadores numéricos, siglas e descrições dos tipos de eventos ocorridos na Câmara, tais como Audiência Pública, Comissão Geral e Palestra, entre outros.. 
+507 - Lista tipos de órgãos legislativos. Retorna uma lista de identificadores numéricos, siglas e descrições dos tipos de órgãos legislativos ou representados na Câmara, tais como as comissões permanentes, CPIs, procuradorias, etc.. 
+508 - Lista tipos de proposições que existem ou já existiram no Congresso. Uma lista de identificadores numéricos, siglas e descrições dos tipos de proposições que existem ou já existiram no Congresso, tais como PEC, Requerimento, Emenda de Plenário e outros.. 
+509 - Lista tipos de tramitações em que uma proposição pode se encontrar. Uma lista de identificadores numéricos, siglas e descrições dos tipos de tramitações em que uma proposição pode se encontrar, como Apensação, Despacho, Devolução ao autor, etc.
+510 - Lista de siglas e nomes das unidades de federação . Retorna uma lista de siglas e nomes das unidades de federação brasileiras, usados principalmente para indicar onde um parlamentar foi eleito.. 
+511 - Lista votações diversas. Retorna uma lista de informações básicas sobre as votações ocorridas em eventos dos diversos órgãos da Câmara.. 
+512 - Informações sobre uma votação. Retorna um conjunto detalhado de dados sobre a votação identificada por {id}, tais como as proposições que podem ter sido o objeto da votação e os efeitos de tramitação de outras proposições que eventualmente tenham sido cadastrados em consequência desta votação.. 
+513 - Orientações de uma votação. Se a votação identificada por {id} teve orientações, este recurso retorna uma lista em que cada item contém os identificadores de um partido, bloco ou liderança, e o posicionamento ou voto que foi recomendado aos seus parlamentares.
+514 - Votos de uma votação. Se {id} é o identificador de uma votação da Câmara nominal que não tenha sido secreta, este endpoint retorna uma lista em que cada item contém os identificadores básicos de um deputado e o voto ou posicionamento que ele registrou.
+515 - Lista órgãos legislativos. Retorna uma lista de informações básicas sobre os órgãos legislativos e seus identificadores, tipos e descrições.. 
+516 - Informações de um órgão. Retorna todas as informações disponíveis sobre o órgão da Câmara identificado por id.. 
+517 - Informações de eventos de um órgão. Retorna uma lista de informações resumidas dos eventos realizados (ou a realizar) pelo órgão legislativo identificado por {id}.
+759 - Dados Estação geodésica por código. Obtém uma ou mais estações geodésicas através dos códigos de identificação informados.. 
+760 - Dados Estação geodésica por município. Obtém as estações geodésicas localizadas em um determinado município do Brasil a partir do respectivo identificador.. 
+761 - Dados Estação geodésica por Estado . Obtém as estações geodésicas localizadas em uma determinada Unidade da Federação (estado) do Brasil a partir da respectiva sigla.. 
+762 - Dados Estação geodésica próximas de uma coordenada geográfica. Obtém as estações geodésicas localizadas próximas a coordenada informada, considerando uma distância em Km.. 
+763 - Dados Estação geodésica localizadas no retângulo a partir das coordenadas. Obtém as estações geodésicas localizadas no retângulo envolvente definido pelas coordenadas informadas.
+764 - Lista os tipos de locais que as estações geodésicas são estabelecidas.. Obtém uma lista com os tipos de locais em que as estações geodésicas são estabelecidas.. 
+765 - Lista situações possíveis para as estações geodésicas.. Obtém uma lista com as situações possíveis para as estações geodésicas.. 
+766 - Lista os tipos de estações. Obtém uma lista com os tipos de estações possíveis no BDG.. 
+767 - Calendário de divulgações de uma pesquisa. Obtém o calendário de divulgações de uma pesquisa.. 
+839 - Lista Subdistritos por Estado. Obtém o conjunto de subdistritos do Brasil a partir dos identificadores das Unidades da Federação. 
+840 - Lista Subdistritos por mesorregião. Obtém o conjunto de subdistritos do Brasil a partir dos identificadores das mesorregiões. 
+841 - Lista Subdistritos por microrregião. Obtém o conjunto de subdistritos do Brasil a partir dos identificadores das microrregiões. 
+842 - Lista Subdistritos por município. Obtém o conjunto de subdistritos do Brasil a partir dos identificadores dos municípios. 
+843 - Lista Subdistritos por região imediata. Obtém o conjunto de subdistritos do Brasil a partir dos identificadores das regiões imediatas
+30 - Plano de amortização, considerando valores iniciais, base calculo e taxa de juros. Seleciona registro da tabela /DRAA_PLANO_AMORTIZACAO_DEFICIT. 
+31 - Plano por beneficio, considerando o regime financeiro. Seleciona registro da tabela /DRAA_PLANO_BENEFICIO. 
+32 - Plano de Custeio considerando base de calculo e  aliquotas. Seleciona registro da tabela /DRAA_PLANO_CUSTEIO. 
+33 - Retificação de notificação se necessário. Seleciona registro da tabela /DRAA_RETIFICACAO_NOTIFICACAO. 
+34 - Segregação de massa. Seleciona registro da tabela /DRAA_SEGREGACAO_MASSA. 
+35 - Demonstrativo de um item, valor geração atual e valor geração futura. Seleciona registro da tabela /DRAA_VALORES_COMPROMISSOS. 
+36 - Valor da alíquota por plano de segregação por ente. Seleciona registro da tabela /RPPS_ALIQUOTA. 
+37 - Dados sobre o Certificado de Regularidade Previdenciária(CRP) por ente. Seleciona registro da tabela /RPPS_CRP. 
+127 - Movimentações Redesconto por dia. Movimentações financeiras referentes a Redesconto Intradia transitadas no STR.. 
+128 - Portabilidade de dívidas de uma instituição para outra, até 4.5.2014. Movimentações financeiras referentes a transferência de dívidas de uma instituição para outra, até 4.5.2014, consideradas apenas as operações efetivadas e não devolvidas posteriormente. Portabilidade de Crédito é a possibilidade que o cliente tem em poder transferir sua dívida de uma instituição para outra. A operacionalização da transação ocorre com a liquidação antecipada de contratos de operações de crédito e de arrendamento mercantil, mediante o recebimento de recursos transferidos por outra instituição. As condições da nova operação devem ser negociadas entre a instituição que efetivará a transferência e o mutuário da operação original.. 
+129 - Portabilidade de dívidas de uma instituição para outra, após 4.5.2014. Considerando pessoas jurídicas. Movimentações financeiras referentes a transferência de dívidas de uma instituição para outra, relativas à Pessoa Jurídica e de Arrendamento Mercantil, de acordo com a Resolução CMN 3.401, efetuadas após 4.5.2014, consideradas apenas as operações efetivadas e não devolvidas posteriormente. O resultado no mês pode apresentar pequenas variações nos números, principalmente nos meses mais recentes, pela ocorrência de devoluções registradas entre as publicações. A liquidação antecipada de contratos de operações de crédito de Pessoa Jurídica e de contratos de arrendamento mercantil com recursos provenientes de outra instituição permite a transferência desses contratos da instituição credora original para a instituição proponente. As condições da nova operação devem ser negociadas entre a instituição que efetivará a transferência e o mutuário da operação original.. 
+130 - Portabilidade de dívidas de uma instituição para outra, após 4.5.2014, relativas a pessoas físicas. Movimentações financeiras referentes a transferência de dívidas de uma instituição para outra, relativas a Pessoa Natural, de acordo com a Resolução CMN 4.292, efetuadas após 4.5.2014, consideradas apenas as operações efetivadas e não devolvidas posteriormente. O resultado no mês pode apresentar pequenas variações nos números, principalmente nos meses mais recentes, pela ocorrência de devoluções registradas entre as publicações. Portabilidade de Crédito é a transferência da operação de crédito da instituição credora original para instituição proponente, por solicitação do devedor. De acordo com a Resolução CMN 4.292, de 20/12/2013, enquadram-se neste conceito somente as operações em que o devedor é pessoa natural, com exceção dos contratos de arrendamento mercantil.
+131 - Estatísticas sobre liquidação de documentos com código de barras. Estatística das transferências para liquidação de documento com código de barras, utilizando a mensagem STR0026, desconsideradas as transferências devolvidas.
+132 - Quantidade de Clientes no Selic. Quantidade de clientes registrados no Selic, por tipo, em uma data. Dados disponíveis a partir de 16/11/2010.. 
+133 - Quantidade de Contas Selic. Quantidade de contas registradas no Selic, por tipo, em uma data. Dados disponíveis a partir de 16/11/2010.. 
+134 - Datas de operações no Selic. Datas onde houve registro de operações no Selic, em ordem decrescente.. 
+152 - Lista das instituições em liquidação extrajudicial decretadas pelo BCB. Lista das instituições que se encontram em liquidação extrajudicial decretadas pelo BCB.
+153 - Instituições Financeiras autorizadas no CCR. Retorna todas as Instituições Financeiras autorizadas no CCR. 
+154 - Dados de Contratos de Custeio por Município e Produto.. Quantidade e Valor dos Contratos de Custeio por Município e Produto.. 
+155 - Dados de Contratos de Comercialização por Produto, Região e UF.. Quantidade e Valor dos Contratos de Comercialização por Produto, Região e UF.. 
+156 - Dados de Contratos de Custeio por Produto, Região e UF.. Quantidade e Valor dos Contratos de Custeio por Produto, Região e UF.. 
+157 - Dados dos Contratos de Crédito rural por Faixa de Valores do crédito rural. Quantidade e Valor dos Contratos por Faixa de Valores.. 
+158 - Dados dos Contratos de Crédito rural  por Fonte de Recursos do crédito rural. Quantidade e Valor dos Contratos por Fonte de Recursos.. 
+159 - Dados dos Contratos de Crédito rural  por Fonte de Recursos e IF.. Quantidade e Valor dos Contratos por Fonte de Recursos e IF.. 
+160 - Dados dos Contratos de Crédito rural  por Faixa de Valores e UF.. Quantidade e Valor dos Contratos por Faixa de Valores e UF.. 
+221 - Tarifas bancárias por Serviços bancários por segmentos e serviços. Tarifas Bancárias - por Segmento e por Serviços - Serviços Bancários. 
+222 - Lista de Tarifas bancárias por grupo consolidados e por código de serviço. Tarifas Bancárias - por Segmento e por Serviços -ListaTarifasPorValores(CodigoGrupoConsolidado=@CodigoGrupoConsolidado,CodigoServico=@CodigoServico). 
+223 - Valores Mínimos, médios e máximos de tarifas bancárias por serviço e grupo consolidados. Tarifas Bancárias - valores mínimos, máximos e médios por serviço - Grupos Consolidados. 
+224 - Valores Mínimos, médios e máximos de tarifas bancárias por serviço, por tipo de pessoa e por código de grupo consolidados. Tarifas Bancárias - valores mínimos, máximos e médios por serviço -ListaValoresServicoBancario(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CodigoGrupoConsolidado=@CodigoGrupoConsolidado). 
+225 - Lista moedas disponíveis. Retorna a lista de moedas que podem ser usadas como parâmetros para este conjunto de dados.. 
+226 - Cotação do dólar por determinada data. Retorna a Cotação de Compra e a Cotação de Venda da moeda Dólar contra a unidade monetária corrente para a data informada.. 
+227 - Cotação do dólar por período. Retorna a Cotação de Compra e a Cotação de Venda da moeda Dólar contra a unidade monetária corrente para o período informado.. 
+228 - Boletim de Paridade de cotação de moeda por data. Retorna os boletins diários com a Paridade de Compra e a Paridade de Venda, a Cotação de Compra e a Cotação de Venda para a data da moeda consultada. São cinco boletins para cada data, um de abertura, três intermediários e um de fechamento.. 
+302 - Relação de cronogramas cadastrados.. Retorna uma relação de cronogramas cadastrados.. 
+303 - Despesas acessórias cadastrados.. Retorna uma relação de despesas acessórias cadastrados.. 
+304 - Empenhos cadastrados.. Retorna uma relação de empenhos cadastrados.. 
+305 - Faturas cadastrados.. Retorna uma relação de faturas cadastrados.. 
+306 - Garantias cadastrados.. Retorna uma relação de garantias cadastrados.. 
+307 - Históricos cadastrados.. Retorna uma relação de históricos cadastrados.. 
+350 - Informações relacionadas aos registros do Item de uma licitação. Fornece dados sobre itens de uma licitação cadastrada.. 
+351 - Lista modalidades de licitações disponíveis. Retorna uma lista de Modalidades de Licitação.. 
+352 - Lista órgãos. Retorna uma lista de Ã“rgÃ£os.. 
+353 - Lista preços praticados. Retorna uma lista de dados sobre os preços praticados nas licitações, obtidos através do SISPP.. 
+354 - Lista itens de um preço praticado. Retorna uma lista de dados sobre os itens de preços praticados nas licitações, obtidos através do SISPP.. 
+355 - Lista informações relacionadas aos registros do SISRP.. Fornece uma lista de dados sobre registros dos preços.. 
+396 - Lista grupos sobre serviços . Fornece uma lista das informações relacionados ao grupo informado do serviço.. 
+397 - Dados sobre clases dos serviços . Fornece uma lista das informações relacionadas à classe do serviço.. 
+398 - Dados sobre subclasses dos serviços. Fornece uma lista das informações relacionadas à subclasse do serviço.. 
+399 - Lista serviços cadastrados no CATSER. Fornece uma lista das informações relacionadas aos serviços cadastrados no Catálogo de Serviços.. 
+400 - Dados sobre uma seção de serviço. Fornece uma descrição detalhada relacionada a uma seção informada.. 
+401 - Dados de uma divisão de serviço. Fornece uma descrição detalhada relacionada a uma divisão informada.. 
+402 - Dados de um grupo de serviço. Fornece uma descrição detalhada relacionada a um grupo informado.. 
+403 - Dados de uma classe de serviço. Fornece uma descrição detalhada relacionada a uma classe informada.. 
+404 - Dados de uma subclasse de um serviço. Fornece uma descrição detalhada relacionada a uma subclasse informada.. 
+405 - Dados de um serviço específico . Fornece uma descrição detalhada relacionada a um serviço informado.. 
+406 - Informações de contratos por data de publicação. Consultar Contratos por Data de Publicação. 
+407 - Dados de contratações por data de publicação. Consultar Contratações por data de Publicação. 
+408 - Contratações com recebimento aberto de proposta . Consultar Contratações com Recebimento de Propostas Aberto. 
+531 - Dados de um servidor Federal. Consulta um servidor do Poder Executivo Federal pelo idServidorAposentadoPensionista
+532 - Dados de remuneração de um servidor federal pelo CPF. Consulta remunerações de um servidor do Poder Executivo Federal pelo CPF ou idServidorAposentadoPensionista e mês/ano. 
+533 - Lista servidores Agregados por órgão. Consulta de servidores agregados por órgão. 
+534 - Informações de uma função ou cargo de confiança. Código da Função ou Cargo de Confiança. 
+535 - Consulta informações de PEPs. Consulta PEPs. 
+536 - Lista registros de Seguro Defeso. Consulta os registros Seguro Defeso. 
+537 - Lista registros de Seguro Defeso por CPF. Consulta os registros Seguro Defeso por CPF/NIS. 
+538 - Lista registros de seguro defeso dos beneficiários por município e mês/ano. Consulta os registros Seguro Defeso dos Beneficiários por Município e Mês/Ano. 
+539 - Lista Registros garantia-safra. Consulta os registros Garantia-Safra. 
+540 - Lista Registros garantia-safra por CPF. Consulta os registros Garantia-Safra por CPF/NIS. 
+541 - Dados dos beneficiários do Garantia safra por município e mês/ano. Consulta os registros Garantia-Safra dos beneficiários por município e mês/ano. 
+542 - Dados do programa de erradicação do trabalho infantil. Consulta os registros Programa de Erradicação do Trabalho Infantil. 
+543 - Dados do programa de erradicação do trabalho infantil por CPF. Consulta os registros Programa de Erradicação do Trabalho Infantil por CPF/NIS. 
+606 - Lista documentos relacionados a um contrato . Consulta os documentos relacionados a um contrato pelo id do contrato. 
+607 - Busca um contrato por CPF ou CNPJ do fornecedor. Consulta um contrato do Poder Executivo Federal pelo CPF/CNPJ do Fornecedor
+608 - Lista os apostilamentos de um contrato por id. Consulta os apostilamentos do contrato pelo id do contrato
+609 - Lista os registros do CNEP por CNPJ/CPF  Sancionado/Ã“rgÃ£o, Sancionador/PerÃ­odo. Consulta os registros do CNEP por CNPJ ou CPF Sancionado/Ã“rgÃ£o Sancionador/PerÃ­odo
+610 - Busca um registro do CNEP por id. Consulta um registro do CNEP pelo id. 
+611 - Lista os registros do CEPIM por CNPJ/CPF Sancionado/Ã“rgÃ£o superior. Consulta os registros do CEPIM por CNPJ ou CPF Sancionado/Ã“rgÃ£o superior. 
+612 - Busca um registro do CEPIM por id. Consulta um registro do CEPIM pelo id. 
+613 - Lista os registros do CEIS por CNPJ/CPF Sancionado/Ã“rgÃ£o Sancionador/PerÃ­odo. Consulta os registros do CEIS por CNPJ ou CPF Sancionado/Ã“rgÃ£o Sancionador/PerÃ­odo. 
+614 - Busca  um registro do CEIS pelo ID. Consulta um registro do CEIS pelo id. 
+615 - Lista os registros do CEAF por CPF/Ã“rgÃ£o de LotaÃ§Ã£o/PerÃ­odo. Consulta os registros do CEAF por CPF/Ã“rgÃ£o de LotaÃ§Ã£o/PerÃ­odo. 
+616 - Busca um registro do CEAF pelo id . Consulta um registro do CEAF pelo id. 
+617 - Lista os registros de Acordos de leniência por nome/CNPJ do Sancionado/Situação/Período. Consulta os registros de Acordos de Leniência por Nome ou CNPJ do Sancionado/Situação/Período. 
+38 - Dados sobre o Regime previdenciario por ente. Seleciona registro da tabela /RPPS_REGIME_PREVIDENCIARIO. 
+45 - Dados de uma operadora pelo registro ANS . Busca operadora de acordo com o registro operadora informado. 
+46 - Lista todas operadoras de plano de sáude. Lista operadoras de acordo com os parâmetros da pesquisa. Se nenhum resultado for encontrado, uma lista vazia é retornada. 
+47 - Busca Administradora por registro ANS. Busca cuja classificação seja administradoras de beneficiários. 
+48 - Lista todas as Administradoras . Lista administradoras de beneficiários de acordo com os parâmetros da pesquisa. Se nenhum resultado for encontrado, uma lista vazia é retornada
+49 - Busca uma classificação da ANS pela sigla. Busca as classificações de acordo com a sigla informada. 
+50 - Lista todas as classificações da ANS. Lista Classificações de acordo com os parâmetros da pesquisa. Se nenhum resultado for encontrado, uma lista vazia é retornada. 
+51 - Informações da API. Retorna informações da API. 
+52 - Fontes de dados da API. Retorna quais são as fontes de dados da API. 
+53 - Fonte de dados da API de acordo com o id. Retorna quais são as fontes de dados da API, com filtro pelo ID. 
+54 - Unidades de dados. Retorna as unidades. 
+55 - Unidade de acordo com o id. Retorna a unidade de acordo com o valor do parâmetro. 
+56 - Lista as frequências disponíveis para os outros dados. Retorna as periodicidades disponíveis. 
+57 - Periodicidade de acordo com o filtro. Retorna a periodicidade disponível de acordo com o valor do parâmetro. 
+60 - Temas das pesquisas do IPEA. Retorna os temas das pesquisas. 
+61 - Um tema de pesquisa do IPEA por id. Retorna um tema da pesquisa de acordo com o ID. 
+64 - Lista séries do IPEA. Retorna dados sobre as séries. 
+65 - Uma série do IPEA por id. Retorna dados sobre a série de acordo com o ID. 
+213 - Informações mensais das operações. Informações mensais das operações. 
+214 - Cronograma das operações de crédito. Cronograma das operações de crédito. 
+215 - Evolução do limite diário. Evolução do limite diário - por ano e modalidade. 
+216 - Lista de dados disponibilizados pelas Instituições Reguladas. Através deste serviço é possível obter as URLs dos dados abertos catalogados pelo Banco Central do Brasil dentro da iniciativa de Dados Abertos do Sistema Financeiro Nacional. 
+217 - Grupos consolidados de instituições. Grupos consolidados de instituições financeiras.. 
+218 - Lista as instituições de um grupo consolidado.. Lista as instituições de um grupo consolidado.. 
+219 - Lista as tarifas bancárias por instituição financeira.. Lista as tarifas bancárias por instituição financeira.. 
+220 - Tarifas bancárias por Grupos consolidados por segmentos e serviços. Tarifas Bancárias - por Segmento e por Serviços - Grupos Consolidados. 
+286 - Lista de compras sem licitação, a partir de dados de um item informado.. Fornece uma lista de compras sem licitação, a partir de dados de um item informado.
+287 - Detalhes sobre uma Compra sem Licitação.. Fornece detalhes sobre uma Compra sem Licitação.. 
+288 - Detalhes sobre um item licitado. Fornece detalhes sobre um item.. 
+289 - Informações relacionadas aos registros de Contratos. Fornece uma lista das informações relacionadas aos registros de Contratos.. 
+290 - Informações relacionadas aos registros de aditivos de Contratos.. Fornece uma lista das informações relacionadas aos registros de aditivos de Contratos.. 
+291 - Informações relacionadas aos registros de Apostilamento de Contratos.. Fornece uma lista das informações relacionadas aos registros de Apostilamento de Contratos.. 
+323 - Lista âmbitos de ocorrência no cadastro de fornecedores. Fornece uma lista com informações relacionadas aos âmbitos de ocorrência.. 
+324 - Lista classificações do CNAE - Classificação Nacional de Atividade Econômica. Fornece uma lista com informações relacionadas aos códigos da Classificação Nacional de Atividade Econômica - CNAE.. 
+325 - Informações básicas de fornecedores. Retorna lista de fornecedores de acordo com os parâmetros informados inicialmentes.. 
+326 - Dados sobre linha de fornecimento e fornecedores relacionados. Retorna dados sobre linhas de fornecimento e fornecedores relacionados.. 
+327 - Informnações sobre municipios. Retorna dados sobre municípios de acordo com parâmetros informados, com possibilidade de relacionar os fornecedores e unidades cadastradoras do município selecionado.. 
+328 - Lista naturezas jurídicas. Retorna lista de naturezas jurídicas através de parâmetros informados, com possibilidade de consultar dados de fornecedores relacionados com uma natureza jurídica selecionada.. 
+329 - Informações básicas das ocorrências dos fornecedores . Retorna lista com ocorrências registradas por fornecedor, de acordo com parâmetros informados.. 
+374 - Dados de uma Unidade de Administração de Serviços Gerais . Fornece uma descrição detalhada relacionada a uma UASG informado.. 
+375 - Informações de uma licitação do tipo RDC. Fornece uma descrição detalhada relacionada a um RDC informado.. 
+376 - Lista pregões. Fornece uma lista das informações relacionadas aos registros dos pregões.. 
+377 - Lista tipos de pregões. Fornece uma lista das informações relacionadas aos registros dos tipos dos pregões.. 
+378 - Lista situação dos pregões. Fornece uma lista das informações relacionadas aos registros de situações dos pregões.. 
+379 - Informações dos registros de órgãos dos pregões.. Fornece uma lista das informações relacionadas aos registros de órgãos dos pregões.
+380 - Informações sobre os objetos dos pregões.. Fornece uma lista das informações relacionadas aos registros de objetos dos pregões.. 
+381 - Lista informações de um ou mais itens de um pregão.. Fornece uma lista de informações sobre um ou mais itens de um pregão.
+382 - Detalhes de um pregão. Fornece detalhes sobre um pregão.. 
+383 - Detalhes de um item de um pregão. Fornece detalhes sobre um item.. 
+384 - Informações sobre a classe do material informado. Fornece uma lista das informações sobre serviços relacionados à classe do material informado.. 
+465 - Informações de um partido. Retorna informações detalhadas sobre um partido. 
+466 - Deputados líderes de um partido. Retorna uma lista de deputados que ocupam ou ocuparam cargos de líder ou vice-líder do partido {id} num intervalo de tempo opcional, com a identificação do cargo e o período em que o tiveram.
+467 - Deputados Membros de um partído. Retorna uma lista de deputados que estão ou estiveram em exercício pelo partido {id}.. 
+468 - Lista Preposções. Lista de informações básicas sobre projetos de lei, resoluções, medidas provisórias, emendas, pareceres e todos os outros tipos de proposições na Câmara.. 
+469 - Informações de uma preposição. Informações detalhadas de uma proposição específica. 
+470 - Lista autores de uma preposição. Retorna uma lista em que cada item identifica uma pessoa ou entidade que é autora da proposição identificada por {id}. Além de deputados, também podem ser autores de proposições os senadores, a sociedade civil, assembleias legislativas e os poderes Executivo e Judiciário.
+471 - Lista preposições que se relacionam a uma preposição. Lista de informações básicas sobre proposições que de alguma forma se relacionam com a proposição identificada por {id}, como pareceres, requerimentos, substitutivos, etc.. 
+472 - Temas relacionados a uma preposição. Lista em que cada item traz informações sobre uma área temática à qual a proposição identificada por {id} se relaciona, segundo classificação oficial do Centro de Documentação e Informação da Câmara. 
+473 - Informações de tramitação de uma preposição. Lista que traz, como cada item, um "retrato" de informações que podem ser alteradas a cada etapa de tramitação na vida de uma proposição (como regime de tramitação e situação) e informações sobre o que causou esse novo estado.. 
+474 - Informações de votações de uma preposição. Retorna uma lista de identificadores básicos sobre as votações na Câmara que tiveram a proposição {id} como objeto ou como afetada pelos seus resultados. Dados complementares sobre cada votação listada podem ser obtidos no recurso /votacoes/{id}.. 
+583 - Consulta plano orçamentário. Consulta Plano orçamentário. 
+584 - Consulta os itens de um empenho. Consulta os itens de um Empenho. 
+585 - Histórico de um item de empenho. Consulta o histórico de um item de empenho. 
+586 - Consulta favorecidos finais de um documento. Consulta favorecidos finais por documento
+587 - Empenhos impactados por documento. Consulta empenhos impactados por documento/fase. 
+588 - Todos os documentos de despesas. Consulta todos os documentos de despesas. 
+589 - Consulta um documento pelo código. Consulta um documento pelo código (Unidade Gestora + Gestão + Número do documento). 
+590 - Documentos relacionados a um empenho,liquidação ou pagamento. Consulta os documentos relacionados a um Empenho, Liquidação ou Pagamento. 
+591 - Empenhos, liquidações e pagamentos emitidos para um favorecido. Consulta Empenhos, Liquidações e Pagamentos emitidos para um favorecido. 
+592 - Transferências mensal das despesas do executivo pela classificação funcional programática. Consulta de transferências mensal das despesas do Poder Executivo Federal pela classificação funcional programática
+593 - Movimentação líquida mensal das despesas do executivo pela classificação funcional programática. Consulta de movimentação líquida mensal das despesas do Poder Executivo Federal pela classificação funcional programática. 
+768 - Calendário de todas as divulgações. Obtém o calendário das divulgações. 
+769 - Dados de conjunto de clases por identificador. Obtém o conjunto de classes a partir dos respectivos identificadores.. 
+770 - Dados de conjunto de clases. Obtém o conjunto de classes. 
+771 - Dados de conjunto de clases por código de divisão. Obtém o conjunto de classes a partir dos identificadores das divisões. 
+772 - Dados de conjunto de clases por grupo. Obtém o conjunto de classes a partir dos identificadores dos grupos. 
+773 - Dados de divisões por identificador. Obtém o conjunto de divisões a partir dos respectivos identificadores. 
+774 - Dados de conjunto de divisões. Obtém o conjunto de divisões.. 
+775 - Dados de conjunto de divisões por seção. Obtém o conjunto de divisões a partir dos identificadores das seções. 
+776 - Dados de conjunto de grupos por divisão. Obtém o conjunto de grupos a partir dos identificadores das divisões. 
+777 - Dados de conjunto de grupos . Obtém o conjunto de grupos. 
+778 - Dados de conjunto de grupos por identificador. Obtém o conjunto de grupos a partir dos respectivos identificadores. 
+779 - Dados de conjunto de grupos por seção. Obtém o conjunto de grupos a partir dos identificadores das seções. 
+780 - Dados de conjunto de seções. Obtém o conjunto de seções
+781 - Dados de conjunto de seções por identificador. Obtém o conjunto de seções a partir dos respectivos identificadores. 
+782 - Dados de conjunto de subclasses por classe. Obtém o conjunto de subclasses a partir dos identificadores das classes. 
+783 - Dados de conjunto de subclasses por divisão. Obtém o conjunto de subclasses a partir dos identificadores das divisões. 
+784 - Dados de conjunto de subclasses por grupo. Obtém o conjunto de subclasses a partir dos identificadores dos grupos. 
+785 - Dados de conjunto de subclasses por seção. Obtém o conjunto de subclasses a partir dos identificadores das seções. 
+786 - Dados de conjunto de subclasses. Obtém o conjunto de subclasses. 
+787 - Dados de conjunto de subclasses por identificador. Obtém o conjunto de subclasses a partir dos respectivos identificadores. 
+788 - Processamento de arquivo com um conjunto de  pontos . Processamento de arquivo com um conjunto de pontos no formato de graus decimais ou graus sexagesimais.
+84 - Dados de entidades supervisionadas por esfera publica. Dados cadastrais de entidades supervisionadas pelo bacen por por esfera pública. 
+85 - Dados de entidades supervisionadas por classe cooperativa. Dados cadastrais de entidades supervisionadas pelo bacen por classe cooperativa. 
+86 - Dados de entidades supervisionadas por tipo cooperativa. Dados cadastrais de entidades supervisionadas pelo bacen por tipo cooperativa. 
+87 - Dados de entidades supervisionadas por categoria cooperativa. Dados cadastrais de entidades supervisionadas pelo bacen por categoria cooperativa. 
+88 - Dados de entidades supervisionadas por cooperativa e por data base. Dados cadastrais de entidades supervisionadas pelo bacen por cooperativa. 
+89 - Dados de entidades supervisionadas por entidades supervisionadas e data base. Dados cadastrais de entidades supervisionadas pelo bacen por entidade supervisionada filtando pela Data Base
+90 - Dados de instrumentos contratuais de Cadastro de contraparte. Retorna Dados cadastrais de instrumentos contratuais - Cadastro contraparte. 
+91 - Dados de instrumentos contratuais de Cadastro de penalidade. Retorna Dados cadastrais de instrumentos contratuais - Cadastro penalidade. 
+92 - Dados de instrumentos contratuais de Atas de registro de Preço. Retorna Dados cadastrais de instrumentos contratuais - Ata, registro e preço. 
+135 - Operações por uma data específica no Selic. Estatísticas de operações registradas no Selic. Operações realizadas na mesma data. A consulta retorna o código da operação, a descrição, a quantidade e o valor financeiro, conforme data de referência informada. Valores financeiros expressos em milhões de reais.. 
+136 - Operações por um ano específico no Selic.. Estatísticas de operações registradas no Selic. Operações realizadas no período de um ano. A consulta retorna a data, o código da operação, a descrição, a quantidade e o valor financeiro. Valores financeiros expressos em milhões de reais.. 
+137 - Quantidade de Participantes no Selic. Quantidade de participantes registrados no Selic, por tipo, em uma data. Dados disponíveis a partir de 16/11/2010.. 
+138 -  Expectativas de Mercado Mensais. Dados sobre Expectativas de Mercado Mensais - Estatísticas. 
+139 -  Expectativas de Mercado Selic. Dados sobre Expectativas de Mercado Selic - Estatísticas. 
+140 -  Expectativas de Mercado Trimestal. Dados sobre Expectativas de Mercado Trimestrais - Estatísticas. 
+141 -  Expectativas de Mercado Anual. Traz dados sobre Expectativas de Mercado Anuais - Estatísticas. 
+142 -  Expectativas de Mercado Inflação próximos12 meses. Dados sobre Expectativas de Mercado para inflação nos próximos 12 meses - Estatísticas. 
+143 -  Expectativas de Mercado para inflação nos próximos 13 a 24 meses. Traz dados sobre Expectativas de Mercado para inflação nos próximos 13 a 24 meses - Estatísticas. 
+203 - Lista informações básicas dos últimos relatórios de inflação publicados.. Lista informações básicas dos últimos relatórios de inflação publicados.. 
+204 - Lista informações básicas dos arquivos que, juntos, compõem um relatório específico.. Lista informações básicas dos arquivos que, juntos, compõem um relatório específico. A partir do relatório de setembro de 2021 está sendo disponibilizado um anexo estatístico em formato de planilha. Esse documento objetiva dar publicidade aos dados que suportaram a elaboração dos gráficos e das tabelas utilizados nos relatórios.
+205 - Lista próximas datas de divulgação dos relatórios de inflação já agendadas a partir de uma data específica. O Relatório de Inflação será divulgado até o último dia de cada trimestre civil (de acordo com o artigo 5º do Decreto nº 3088 de 21/06/1999).. Lista próximas datas de divulgação dos relatórios de inflação já agendadas a partir de uma data específica. O Relatório de Inflação será divulgado até o último dia de cada trimestre civil (de acordo com o artigo 5º do Decreto nº 3088 de 21/06/1999).
+206 - Lista de relatórios e documentos já disponibilizados pela Ouvidoria em formato aberto. Lista de relatórios e documentos já disponibilizados pela Ouvidoria em formato aberto. 
+207 - Saldos contábeis mensais do Banco Central do Brasil. Saldos contábeis mensais do Banco Central do Brasil. 
+208 - Modalidades das operações de crédito do CADIP. Modalidades das operações de crédito do CADIP. 
+209 - Endividamento dos entes públicos com o Sistema Financeiro Nacionais. Endividamento dos entes públicos com o Sistema Financeiro Nacional - dados agregados históricos. 
+210 - Cadastro das operações de crédito por entes públicos. Cadastro das operações de crédito por entes públicos - pesquisa por ano de contratação da operação. 
+211 - Lista de parcelas liberadas - dados até 2022. Lista de parcelas liberadas - dados até 2022. 
+212 - Lista dos pagamentos efetuados. Lista dos pagamentos efetuados. 
+308 - Itens de contratos cadastrados.. Retorna uma relação de itens de contratos cadastrados.. 
+309 - Prepostos cadastrados.. Retorna uma relação de prepostos cadastrados.. 
+310 - Responsáveis cadastrados.. Retorna uma relação de responsáveis cadastrados.. 
+311 - Terceirizados cadastrados.. Retorna uma relação de terceirizados cadastrados.. 
+312 - Dados detalhados de um contrato selecionado.. Fornece dados detalhados de um contrato selecionado.. 
+313 - Dados detalhados de um cronograma selecionado.. Fornece dados detalhados de um cronograma selecionado.. 
+314 - Dados detalhados de uma despesa acessória selecionada.. Fornece dados detalhados de uma despesa acessória selecionada.. 
+315 - Dados detalhados de um empenho selecionado.. Fornece dados detalhados de um empenho selecionado.
+316 - Dados detalhados de uma fatura selecionada.. Fornece dados detalhados de uma fatura selecionada.. 
+317 - Dados detalhados de uma garantia selecionada.. Fornece dados detalhados de uma garantia selecionada.. 
+318 - Dados detalhados de um histórico selecionado.. Fornece dados detalhados de um histórico selecionado.. 
+319 - Informações Detalhadas da compra de um item. Fornece dados detalhados de um item de contrato selecionado.. 
+320 - Dados de um Preposto referente a um contrato. Fornece dados detalhados de um preposto selecionado.. 
+321 - Dados do responsável por um contrato. Fornece dados detalhados de um responsável selecionado.. 
+322 - Dados de um tercerizado contratado via contrato. Fornece dados detalhados de um terceirizado selecionado.. 
+446 - Lista dados do órgão responsável pelo evento. Retorna uma lista em que cada item é um conjunto mínimo de dados sobre o(s) órgão(s) responsável(veis) pelo evento identificado por {id}. 
+448 - Lista de dados básicos sobre votações que tenham sido realizadas no evento. Retorna uma lista de dados básicos sobre votações que tenham sido realizadas no evento identificado por {id}
+449 - Lista situações para os eventos. Retorna uma lista de identificadores numéricos, siglas e descrições dos estados em que eventos como uma reunião podem se encontrar, como Em Andamento, Cancelada e Encerrada.. 
+450 - Lista tipos de eventos da câmara. Retorna uma lista de identificadores numéricos, siglas e descrições dos tipos de eventos ocorridos na Câmara, tais como Audiência Pública, Comissão Geral e Palestra, entre outros.. 
+451 - Lista situações para os eventos. Retorna uma lista de identificadores numéricos, siglas e descrições dos estados em que eventos como uma reunião podem se encontrar, como Em Andamento, Cancelada e Encerrada.. 
+452 - Lista tipos de eventos da câmara. Retorna uma lista de identificadores numéricos, siglas e descrições dos tipos de eventos ocorridos na Câmara, tais como Audiência Pública, Comissão Geral e Palestra, entre outros.. 
+453 - Lista Frentes parlamentares. Retorna uma lista de informações sobre uma frente parlamentar - um agrupamento oficial de parlamentares em torno de um determinado tema ou proposta.. 
+454 - Informações de uma frente parlamentar. Este recurso traz informações detalhadas sobre a frente parlamentar identificada por {id}.. 
+455 - Membros de uma frente parlamentar. Uma lista dos deputados participantes da frente parlamentar identificada por {id} e os papéis que exerceram nessa frente (signatário, coordenador ou presidente).. 
+458 - Histórico de um grupo interparlamentar. Uma lista contendo todos os "retratos" das informaÃ§Ãµes sujeitas a mudanÃ§as sobre o grupo parlamentar identificado por {id} â€” por exemplo, todos os ofÃ­cios de instalaÃ§Ã£o dos grupos apresentados a cada legislatura desde sua criaÃ§Ã£o, e eventuais substituiÃ§Ãµes de presidentes.. 
+459 - Membros de um grupo interparlamentar. Retorna uma lista de deputados ou senadores que são ou foram participantes do grupo interparlamentar identificado por {id}. Podem ser utilizados os parâmetros dataInicio e/ou dataFim para definir de qual período se deseja saber quem foram os participantes.
+460 - Lista de legislaturas. Este serviço retorna uma lista em que cada item contém as informações básicas sobre um desses períodos.. 
+461 - Informações de uma legislatura. Retorna informações adicionais sobre o período de atividades da Câmara identificado por {id}.. 
+462 - Líderes de uma legislatura. Retorna uma lista de parlamentares que ocuparam cargos de liderança ao longo da legislatura {id}. Cada item identifica um parlamentar, uma bancada (partido, bloco ou lideranças de situação e oposição), o título de liderança exercido e o período de exercício do parlamentar nesta posição.. 
+463 - Lista deputados que ocuparam a mesa Diretora da Câmara durante uma legislatura. Retorna uma lista com dados básicos sobre todos os deputados que ocuparam algum posto na Mesa Diretora da Câmara em algum período de tempo dentro da legislatura identificada por {id}.. 
+464 - Lista Partidos. Retorna uma lista de dados básicos sobre os partidos políticos que têm ou já tiveram deputados na Câmara.. 
+570 - Dados de uma licitação número do processo. Consulta uma licitação pelo número do processo. 
+571 - Informações de participantes de uma licitação. Consulta os participantes de uma licitação. 
+572 - Lista modalidades de licitação. Consulta as modalidades de licitação
+573 - Itens licitados de uma licitação. Consulta os itens licitados pelo id licitação. 
+574 - Empenhos de uma licitação. Consulta os empenhos de uma licitação. 
+575 - Contratos relacionados a uma licitação. Consulta os contratos relacionados a licitação. 
+576 - Lista emendas parlamentares. Consulta as emendas parlamentares. 
+577 - Documentos relacionados à uma emenda . Consulta os documentos relacionados à emenda parlamentar pelo código da emenda. 
+578 - Tipos de transferências usados nas despesas. Consulta os tipos de transferências usados nas despesas. 
+579 - Recursos por favorecido. Recebimento de recursos por favorecido. 
+580 - Consultar despesas por órgão do executivo federal. Consulta as despesas dos órgão do Poder Executivo Federal. 
+581 - Consultar despesas do executivo federal por classificação funcional programática. Consulta as despesas do Poder Executivo Federal pela classificação funcional programática. 
+582 - Consultar movimentação líquida anual das despesas do executivo federal pela classificação funcional programática. Consulta de movimentação líquida anual das despesas do Poder Executivo Federal pela classificação funcional programática. 
+801 - Lista Distritos por região. Obtém o conjunto de distritos do Brasil a partir dos identificadores das regiões. 
+802 - Lista Mesorregiões por Estado. Obtém o conjunto de mesorregiões do Brasil a partir dos identificadores das Unidades da Federação. 
+803 - Lista Mesorregiões. Obtém o conjunto de mesorregiões do Brasil. 
+804 - Lista Mesorregião por identificador. Obtém o conjunto de mesorregiões do Brasil a partir dos respectivos identificadores. 
+805 - Lista Mesorregiões por região. Obtém o conjunto de mesorregiões do Brasil a partir dos identificadores das regiões. 
+806 - Lista Microrregiões por Estado. Obtém o conjunto de microrregiões do Brasil a partir dos identificadores das Unidades da Federação. 
+807 - Lista Microrregiões por mesorregião. Obtém o conjunto de microrregiões do Brasil a partir dos identificadores das mesorregiões. 
+808 - Lista Microrregiões. Obtém o conjunto de microrregiões do Brasil. 
+809 - Lista Microrregião por identificador. Obtém o conjunto de microrregiões do Brasil a partir dos respectivos identificadores. 
+810 - Lista Microrregiões por região. Obtém o conjunto de microrregiões do Brasil a partir dos identificadores das regiões. 
+811 - Lista Municípios por Estado. Obtém o conjunto de municípios do Brasil a partir dos identificadores das Unidades da Federação
+812 - Lista Municípios por mesorregião. Obtém o conjunto de municípios do Brasil a partir dos identificadores das mesorregiões. 
+813 - Lista Municípios por microrregião. Obtém o conjunto de municípios do Brasil a partir dos identificadores das microrregiões. 
+898 - Arquivo RINEX2 com intervalo de 15s por estação e dia do ano. Obtém um arquivo no formato RINEX2, com intervalo de 15s entre observações, coletadas por uma estação em um dado dia do ano
+899 - Arquivo RINEX3 com intervalo de 1s por estação e data/hora/minuto. Obtém um arquivo no formato RINEX3, com intervalo de 1s entre observações, coletadas por uma estação em um dado dia/hora/minuto do ano
+900 - Arquivo RINEX3 com intervalo de 15s por estação e dia do ano. Obtém um arquivo no formato RINEX3, com intervalo de 15s entre observações, coletadas por uma estação em um dado dia do ano
+901 - Ã“rbitas multiconstelaÃ§Ã£o para um dia especÃ­fico. Obtém as órbitas multiconstelação em um dado dia do ano
+902 - Lista de marégrafos RMPG com informações básicas. Retorna uma lista dos marégrafos pertencentes a RMPG com informações básicas, como identificação, coordenadas, datas etc. 
+903 - Sensores instalados nas estações maregráficas. Retorna uma lista dos diversos sensores instalados nas estações maregráficas. Cada sensor pode ser entendido como um dispositivo que responde a um estímulo (físico ou químico, por exemplo), produzindo um sinal digital para fins de medição e/ou monitoramento. 
+904 - Previsões de maré para o período informado. Obtém as previsões de maré calculadas para um marégrafo para o período informado. Os harmônicos utilizados estão disponíveis em https://geoftp.ibge.gov.br/informacoes_sobre_posicionamento_geodesico/rmpg/series_temporais/. 
+905 - Leituras de nível do mar por sensores RADAR e ENCODER. Obtém as leituras de nível do mar dos sensores RADAR e ENCODER instalados no marégrafo para o período informado. 
+906 - Leituras meteorológicas para marégrafos e período informados. Obtém as leituras de meteorologia (precipitação, pressão atmosférica, direção e velocidade do vento, umidade, etc para o marégrafo e período informados. 
+907 - Leituras de nível ou meteorologia de múltiplos marégrafos. Obtém as leituras de nível ou de meteorologia, conforme os sensores informados, para diversos marégrafos no período informado. 
+908 - Conjunto de Dado por id. Detalha um conjunto de dados. 
+909 - Lista Conjunto de Dados. Esse método lista conjuntos de dados existente. 
+910 - Observancia Legal. 
+911 - Objetivos Desenvolvimento Sustentável. Lista objetivos para o desenvolvimento sustentável. 
+1 - Dados de resgate de aplicações bancárias. Seleciona registro da tabela /DAIR_APLICACOES_RESGATE. 
+2 - Carteira de Investimentos. Seleciona registro da tabela /DAIR_CARTEIRA. 
+3 - Forma de contratação de um contrato. Seleciona registro da tabela /DAIR_FORMA_GESTAO. 
+4 - Dados de fundos de investimentos analizados. Selecciona registro da tabela /DAIR_FUNDO_INVEST_ANALISADOS. 
+5 - Dados sobre a governança de entidades. Seleciona registro da tabela /DAIR_GOVERNANCA. 
+6 - Identificação de envio de informação por ente. Seleciona registro da tabela /DAIR_IDENTIFICACAO. 
+7 - Instituições credenciadas. Seleciona registro da tabela /DAIR_INSTITUICAO_CREDENCIADA. 
+8 - Dados sobre atas de reunião. Seleciona registro da tabela /DAIR_REGIME_ATA. 
+102 - Recebimento acerca de instrumentos contratuais[. Retorna Dados cadastrais de instrumentos contratuais - Recebimento. 
+103 - Documentos de Cobrança de  instrumentos contratuais. Retorna Dados cadastrais de instrumentos contratuais - Documento de cobrança. 
+104 - Relatorio de Instrumento Contratual. Retorna Dados cadastrais de instrumentos contratuais - Relatório instrumento contratual. 
+105 - Recimento pagamento. Retorna Dados cadastrais de instrumentos contratuais - Recebimento de pagamento. 
+106 - Informações Diárias sobre dinheiro em circulação. Traz informações sobre Dinheiro em circulação - Informações diárias. 
+107 - Informações Diárias sobre dinheiro em circulação com categorias. Traz informações sobre Dinheiro em circulação - Informações diárias com categoria. 
+108 - Moedas disponíveis para visualizar cotação em reais. Retorna informações sobre Dólar comercial (venda e compra) - Cotações diárias - Moedas. 
+109 - Cotação do dólar comercial por data. Retorna informações sobre Dólar comercial (venda e compra) - Cotações diárias - Dia. 
+110 - Cotação do dólar comercial por período. Retorna informações sobre Dólar comercial (venda e compra) - Cotações diárias - Período. 
+170 - Informações sobre moedas comemorativas em circulação. O arquivo disponibilizado apresenta informações diárias das quantidades de moedas comemorativas. As informações estão separadas para cada família (categoria) e denominação do Real (símbolos : R$, BRL).. 
+171 - Multas emitidas pelo Banco Central. Informações de multas, agregadas por ano, fundamento legal e fato gerador.
+172 - Orçamento de Autoridade Monetária . Informações sobre a execução do Orçamento de Autoridade Monetária do Banco Central do Brasil a partir de janeiro de 2015. Quadros com a execução mensal podem ser encontrados na página do Banco Central do Brasil.
+173 - Dados relativos à ouvidoria dos bancos.. Conjunto de dados relativos à ouvidoria dos bancos.
+174 - Listas Perguntas e respostas Faq BCB. Lista de perguntas e respostas da base de dados da Faq do Banco Central do Brasil.. 
+175 - Lista Categorias Faq BCB. Lista de categorias e suas respectivas subcategorias, que agrupam perguntas e respostas por afinidade do ponto de vista do usuário.
+176 - Postos de Atendimento Pix Saque e Pix Troco. Através deste serviço é possível obter as URLs dos dados abertos catalogados pelo Banco Central do Brasil dentro da iniciativa de Dados Abertos do Sistema Financeiro Nacional
+177 - Atendimento de instituições supervisionadas pelo Bacen. Postos de Atendimento. 
+178 - Atendimento Eletrônico de Instituições supervisionadas pelo Bacen. Postos de Atendimento Eletronico
+237 - Taxas de juros das modalidades diárias e mensais. Consulta unificada de taxas de juros das modalidades diárias e mensais
+238 - Títulos da carteira do BC disponíveis para operações conjugadas com dealers.. Consulta a títulos da carteira do BC disponíveis para operações conjugadas com dealers. A consulta retorna nome do título, código do título no Selic e data de vencimento do título, para determinada data de referência informada na pesquisa.
+239 - Busca cidades. Busca de localidades
+240 - Situação nas Estações de Superfície dos Aeroportos. Situação nas Estações de Superfície dos Aeroportos
+248 - Previsão de ondas (dia atual, manhã, tarde e noite). Previsão de Ondas para localidades litorâneas (dia atual, manhã, tarde e noite)
+249 - Previsão de ondas (6 dias, 8 horários por dia). Previsão de Ondas para localidades litorâneas (6 dias, 8 horários por dia)
+250 - Custos de Depreciação por conta contábil. Os Custos com Depreciação do Governo Federal detalhados por Conta Contábil. 
+251 - Pessoal Ativo do Ministério . Retorna Pessoal Ativo do Ministério. 
+253 - Pessoal Inativo. Traz o pessoal inativo. 
+254 - Pessoal Pensionista. Traz o pessoal pensionista. 
+343 - Dados de um prazo de ocorrência. Fornece uma descrição detalhada relacionada a um prazo de ocorrência informado.. 
+344 - Dados de um ramo de negócio. Fornece uma descrição detalhada relacionada a um ramos de negócio informado.. 
+345 - Dados de um tipo de ocorrência específico. Fornece dados detalhados sobre os tipos de ocorrências relacionadas com fornecedores e que estejam cadastradas no SICAF.. 
+346 - Lista das informações relacionadas aos registros do IRP. Retorna uma relação de intenção de registro de preços cadastrados.. 
+347 - Lista das informações relacionadas aos registros do Item de IRP.. Retorna uma relação de itens de uma intenção de registro de preços cadastrada.. 
+348 - Informações do registros do participante do item de IRP.. Retorna uma relação de UASGs participantes de um item de uma intenção de registro de preços.. 
+349 - Lista de licitações e suas informações. Fornece dados sobre licitações cadastradas.. 
+385 - Informações sobre grupo do material informado. Fornece uma lista das informações sobre serviços relacionados ao grupo do material informado.. 
+386 - Lista informações sobre Padrão Descritivo de Material informado. Fornece uma lista das informações sobre serviços relacionados ao Padrão Descritivo de Material.. 
+387 - Informações dos materiais cadastrados no CATMAT. Fornece uma lista das informações relacionadas aos materiais cadastrados no CATMAT.. 
+388 - Dados disponíveis de uma classe do material. Todos os dados disponíveis de uma classe.. 
+389 - Dados de um grupo do material. Todos os dados disponíveis de um grupo.
+390 - Dados de um Padrão Descritivo de Material . Todos os dados disponíveis de um PDM.
+391 - Dados de um material cadastrado no CATMAT.. Todos os dados disponíveis de um material cadastrado no CATMAT. 
+392 - Dados de  Planejamento e Gerenciamento de Contratações. Fornece uma lista do PGC.. 
+393 - Dados de um item específico de Planejamento e Gerenciamento de Contratações. Fornece detalhes sobre um item do PGC.. 
+394 - Lista seções sobre serviços . Fornece uma lista das informações relacionadas à seção informada do serviço.. 
+395 - Lista divisões sobre serviços . Fornece uma lista das informações relacionadas à divisão informada do serviço.. 
+518 - Membros de um órgão. Retorna uma lista de dados resumidos que identificam cada parlamentar e o cargo ou posição que ocupa ou ocupou no órgão parlamentar identificado por {id} durante um certo período de tempo.. 
+519 - Votações de um órgão. Retorna uma lista de dados básicos de votações que tenham sido realizadas em eventos realizados no órgão {id}.. 
+520 - Situação de um órgão. Retorna uma lista de identificadores numéricos, títulos e descrições das situações possíveis para órgãos em operação na Câmara, como Em funcionamento, Extinta, Pronta para criação, etc.. 
+521 - Situação de um órgão. Retorna uma lista de identificadores numéricos, títulos e descrições das situações possíveis para órgãos em operação na Câmara, como Em funcionamento, Extinta, Pronta para criação, etc.. 
+522 - Líderes de uma legislatura. Retorna uma lista de parlamentares que ocuparam cargos de liderança ao longo da legislatura {id}. Cada item identifica um parlamentar, uma bancada (partido, bloco ou lideranças de situação e oposição), o título de liderança exercido e o período de exercício do parlamentar nesta posição.. 
+523 - Líderes de um partido . SituaÃ§Ãµes Ã“rgÃ£o- Ã³rgÃ£os filtrando por ID
+524 - Informações sobre viagens por período. Consulta viagens por período
+525 - Informações de uma viagem. Consulta uma viagem pelo ID. 
+526 - Informações de viagens por CPF. Consulta viagens por CPF
+527 - Dados de situação dos imóveis funcionais. Consulta situações dos imóveis funcionais
+528 - Dados de relação de ocupantes. Consulta relação de ocupantes. 
+529 - Dados da relação de imóveis. Consulta relação de imóveis
+530 - Lista servidores Federais. Consulta todos servidores do Poder Executivo Federal
+594 - Lista todos os convênios do executivo federal. Consulta todos convênios do Poder Executivo Federal. 
+595 - Tipos de instrumentos usados nos convênios do poder executivo. Consulta os tipos de instrumentos usados nos convênios. 
+596 - Um convênio do executivo federal pelo número do contrato. Consulta um convênio do Poder Executivo Federal pelo número do contrato. 
+597 - Um convênio do executivo federal pelo número do processo. Consulta um convênio do Poder Executivo Federal pelo número do processo. 
+598 - Um convênio do executivo federal pelo número original do contrato. Consulta um convênio do Poder Executivo Federal pelo número original do contrato. 
+599 - Um convênio do executivo federal pelo id. Consulta um convênio do Poder Executivo Federal pelo id. 
+600 - Lista todos os contratos do executivo federal. Consulta os todos contratos do Poder Executivo Federal. 
+9 - Demonstrativo de Repasses previdenciário. Seleciona registro da tabela /DIPR. 
+10 - Base de Cálculo de armotização. Seleciona registro da tabela /DRAA_BASE_CALCULO_AMORTIZACAO. 
+11 - Base de Cálculo do ente. Seleciona registro da tabela /DRAA_BASE_CALCULO_ENTE. 
+12 - Comparativo de valores para avaliação de uma situação por plano. Seleciona registro da tabela /DRAA_COMPARATIVO_AVALIACAO. 
+13 - Comparativo de valores entre o projetado e o executado.. Seleciona registro da tabela /DRAA_COMPARATIVO_RECEITA. 
+14 - Valores de contribuição mensal e anual. Seleciona registro da tabela /DRAA_CONTRIBUICAO. 
+15 - Custo previsto por benefício. Seleciona registro da tabela /DRAA_CUSTO_NORMAL_BENEF_CAPIT. 
+16 - Custo normal beneficio Cob.. Seleciona registro da tabela /DRAA_CUSTO_NORMAL_BENEF_COB. 
+118 - Dados sobre Pix Liquidados. PIX liquidados no SPI considerando as ordens de transferências (PACS008) e devoluções (PACS004). Este valor é representado em milhares de R$.. 
+119 - Estatísticas Média quantidade de Pix liquidados por horário. Movimentações financeiras transitadas no SPI, excluídas as mensagens dos grupos STR. PIX liquidados no SPI considerando as ordens de transferências (PACS008) e devoluções (PACS004). Quantidades e valores médios por intervalo de trinta minutos, nos últimos 30 dias. Valores representados em milhares de R$.. 
+120 - Remuneração paga pelo Banco Central às instituições financeiras para manutenção PIX. Informações sobre a remuneração paga pelo Banco Central às instituições financeiras para manutenção dos respectivos saldos em conta de Pagamento Instantâneo.. 
+121 - Informações sobre a disponibilidade do SPI. Informações sobre a disponibilidade do SPI frente ao mínimo normativo. Segue a fórmula id = (hf / hp) x 100, onde id = índice de disponibilidade; hf = número de horas de efetivo funcionamento do SPI, ao longo dos últimos três meses; hp = número de horas em que o SPI deveria estar aberto para uso pelos participantes, ao longo dos últimos três meses (o SPI deve ficar aberto 24 horas por dia em todos os dias do ano).. 
+122 - Movimentações financeiras transitadas no STR. Movimentações financeiras transitadas no STR na data considerando todas as ordens que resultam em movimentação financeira, exceto Recolhimentos Compulsórios e Meio Circulante. Este valor é representado em R$ milhões.. 
+123 - Detalhamento de movimentações financeiras transitadas no STR. Detalhamento das transferências financeiras relacionadas com outros sistemas de liquidação do SPB (Sistema de Pagamentos Brasileiro), outras transferências de instituição financeira, e transferências do governo. Média percentual nos últimos 21 dias úteis e no último dia útil.. 
+124 - Movimentações financeiras transitadas no STR média por horário. Movimentações financeiras transitadas no STR, excluídas as mensagens dos grupos RCO e CIR. Média percentual, discriminadas por intervalo de treinta minutos, nos últimos 21 dias úteis. 
+125 - Quantidade de transações TED diárias. Movimentações financeiras referentes a TEDs que envolvem clientes transitadas no STR.
+126 - Quantidade de transações TEDs. Média móvel de 21 dias úteis por faixa de valor. Quantidade de movimentações financeiras referentes a TEDs que envolvem clientes transitadas no STR. Média móvel de 21 dias úteis por faixa de valor, nos últimos dois anos. As faixas utilizadas são: Faixa 1 - até R$ 999,99; Faixa 2 - de R$ 1.000,00 até R$ 2.999,99; Faixa 3 - de R$ 3.000,00 até R$ 9.999,99; Faixa 4 - de R$ 10.000,00 até R$ 249.999,99; Faixa 5: de R$ 250.000,00 até R$ 999.999,99; Faixa 6 - valor igual ou superior a R$ 1.000.000,00.
+161 - Dados dos Contratos de Investimento de Crédito rural  por Município e Produto.. Quantidade e Valor dos Contratos de Investimento por Município e Produto.. 
+162 - Dados dos Contratos de Investimento de Crédito rural  por Região, UF e Produto.. Quantidade e Valor dos Contratos de Investimento por Região, UF e Produto.. 
+163 - Dados dos Contratos de Crédito rural  por Programa e Subprograma.. Quantidade e Valor dos Contratos por Programa e Subprograma.. 
+164 - Dados dos Contratos de Crédito rural  por Programa, Subprograma e UF.. Quantidade e Valor dos Contratos por Programa, Subprograma e UF.. 
+165 - Dados dos Contratos de Crédito rural por Região e UF. Quantidade e Valor dos Contratos por Região e UF. 
+166 - Dados dos Contratos de Crédito rural  por Região, UF e Gênero.. Quantidade e Valor dos Contratos por Região, UF e Gênero.. 
+167 - Dados dos Contratos de Crédito rural  por Segmento e IF.. Quantidade e Valor dos Contratos por Segmento e IF.. 
+168 - Dados dos Contratos de Crédito rural por Região, UF, Segmento e IF.. Quantidade e Valor dos Contratos por Região, UF, Segmento e IF.. 
+169 - Dados dos Contratos de Crédito rural  por Tipo de Pessoa, Segmento e IF.. Quantidade e Valor dos Contratos por Tipo de Pessoa, Segmento e IF.. 
+229 - Boletim de Paridade de cotação de moeda por período. Retorna os boletins diários com a Paridade de Compra e a Paridade de Venda, a Cotação de Compra e a Cotação de Venda para um período da moeda consultada. São cinco boletins para cada data, um de abertura, três intermediários e um de fechamento.. 
+230 - Cotação da moeda na abertura ou intermediário por código da moeda ou data da cotação. Taxas de Câmbio - todos os boletins diários - CotacaoMoedaAberturaOuIntermediario(codigoMoeda=@codigoMoeda,dataCotacao=@dataCotacao). 
+231 - Cotação da moeda no fechamento por código da moeda ou data inicial e data final. Taxas de Câmbio - todos os boletins diários -CotacaoMoedaPeriodoFechamento(codigoMoeda=@codigoMoeda,dataInicialCotacao=@dataInicialCotacao,dataFinalCotacao=@dataFinalCotacao). 
+232 - Lista de recursos disponibilizados pelas Instituições Reguladas. Através deste serviço é possível obter as URLs dos dados abertos catalogados pelo Banco Central do Brasil dentro da iniciativa de Dados Abertos do Sistema Financeiro Nacional. 
+233 - Taxa de juros diário. Taxas médias de juros por instituição financeira para os últimos 5 dias úteis disponíveis a cada publicação. As taxas são apuradas pela média aritmética das taxas de juros pactuadas nas operações realizadas a cada dia útil do período considerado, ponderadas pelos respectivos valores contratados. Os valores apresentados incluem os juros e os encargos fiscais e operacionais incidentes sobre as operações.. 
+234 - Taxa de juros mensal. Taxas médias de juros por instituição financeira para modalidades de crédito selecionadas. Para essas modalidades não há dados diários disponíveis, apenas as médias mensais são apresentadas.. 
+235 - Lista parâmetros disponíveis para consultar taxas das modalidades. Lista todas as combinações possíveis de segmento e modalidades para a consulta de taxas das modalidades diárias e mensais.. 
+236 - Datas disponíveis para consultar . Lista todas as datas disponíveis para consulta de taxas das modalidades diárias e mensais.. 
+292 - Informações relacionadas aos tipos de contrato existentes no cadastro de contratos.. Fornece uma lista com informações relacionadas aos tipos de contrato existentes no cadastro de contratos.. 
+293 - Retorna uma relação de cronogramas cadastrados.. Retorna uma relação de cronogramas cadastrados.
+294 - Informações relacionadas aos registros de Eventos de Contrato. Fornece uma lista das informações relacionadas aos registros de Eventos de Contrato. 
+295 - Dados detalhados de contratos selecionado.. Fornece dados detalhados de um contrato selecionado.. 
+296 - Dados detalhados de um contrato aditivo selecionado.. Fornece dados detalhados de um contrato aditivo selecionado.. 
+297 - Dados detalhados de um contrato de apostilamento selecionado.. Fornece dados detalhados de um contrato de apostilamento selecionado.. 
+298 - Dados detalhados de um tipo de contrato selecionado.. Fornece dados detalhados de um tipo de contrato selecionado.. 
+299 - Dados detalhados de um cronograma selecionado.. Fornece dados detalhados de um cronograma selecionado.
+300 - Dados detalhados de um evento de contrato selecionado. Fornece dados detalhados de um evento de contrato selecionado. 
+301 - Relação de contratos cadastrados.. Retorna uma relação de contratos cadastrados.. 
+409 - Ata de registro de preço por período de vigência. Consultar Ata de Registro de Preço por Período de Vigência. 
+410 - Itens de PCA por ano, usuário e classificação. Consulta Itens de PCA por Ano do PCA, Usuário e Classificação Superior. 
+411 - Itens de PCA por ano e classificação. Consulta Itens de PCA por Ano do PCA e Classificação Superior
+412 - Dados de um um projeto do Programa Nacional de Apoio à Cultura. Busca um projeto por meio de seu número PRONAC. 
+413 - Lista todos os projetos. Busca projetos dado uma combinação de valores diversos de pesquisa
+414 - Lista áreas do projetos. Retorna todas as áreas disponíveis. 
+415 - Lista segmentos. Retorna todos os segmentos disponíveis
+416 - Informações de propostas de projetos. Busca propostas dado uma combinação de valores diversos de pesquisa
+417 - Informações de uma proposta de projeto. Dados detalhados de uma proposta. 
+418 - Lista incentivadores. Busca incentivadores dado uma combinação de valores diversos de pesquisa. 
+419 - Informações de um incentivador de projetos. Busca incentivadores dado uma combinação de valores diversos de pesquisa. 
+420 - Informações de doações de um incentivador. Dado o id de um incentivador, retorna informações relativas a todas as doações por ele feitas
+421 - Lista fornecedores. Busca fornecedores dado uma combinação de valores diversos de pesquisa
+422 - Dados de um fornecedor específico. Busca fornecedores dado uma combinação de valores diversos de pesquisa. 
+423 - Dados de produtos de um fornecedor. Dado o id de um fornecedor, retorna informações relativas a todas os ítens ou serviços fornecidos por ele. 
+544 - Dados dos beneficiários do PETI. Consulta os registros PETI dos beneficiários por município e mês/ano. 
+545 - Dados do benefício de Prestação continuada por município. Consulta os registros de Benefício de Prestação Continuada por Município. 
+546 - Dados benefício de prestação continuada por CPF. Consulta os registros de Benefício de Prestação Continuada por CPF/NIS. 
+547 - Dados dos beneficiários de Prestação continuada por município. Consulta os registros de Benefício de Prestação Continuada dos Beneficiários por Município e Mês/Ano
+548 - Informações sobre parcelas sacadas do bolsa família por NIS. Consulta as parcelas sacadas pelo Bolsa Família pelo NIS
+549 - Dados de parcelas sacadas do bolsa familia por município e mês/ano. Consulta as parcelas do Bolsa Família Sacado dos Beneficiários por Município e Mês/Ano
+550 - Dados de parcelas sacadas do bolsa familia por município. Consulta as parcelas do Bolsa Família por Município
+551 - Dados de parcelas disponíveis para um beneficiário. Consulta as parcelas disponibilizadas pelo Bolsa Família pelo CPF/NIS. 
+552 - Dados de parcelas disponíveis para os beneficiários por município e mês/ano. Consulta as parcelas do Bolsa Família Disponível dos Beneficiários por Município e Mês/Ano. 
+553 - Informações sobre auxilio emergencial por município. Consulta os registros de auxílio emergencial por Município. 
+554 - Dados de auxilio emergencial por CPF. Consulta os registros de auxílio emergencial por CPF/NIS. 
+555 - Dados de beneficiários por município e mês/ano. Consulta os registros dos beneficiários por município e mês/ano. 
+556 - Dados do Auxilio Brasil por NIS. Consulta as parcelas disponibilizadas pelo Auxílio Brasil pelo NIS. 
+620 - Detalha um conjunto de dados por id. Detalha um conjunto de dados - GET. 
+621 - EXCLUSIVO PARA  ADMINISTRADORES - Atualiza um conjunto de dados por id . Atualiza um conjunto de dados (Exclusivo para administradores de organização) - PUT
+622 - EXCLUSIVO PARA  ADMINISTRADORES - Exclui um conjunto de dados. Exclui um conjunto de dados (Exclusivo para administradores de organização) - DELETE
+623 - EXCLUSIVO PARA  ADMINISTRADORES - Atualiza partes de um conjunto de dados. Atualiza partes de um conjunto de dados (Exclusivo para administradores de organização) - PATCH
+624 - Lista os conjuntos de dados. Lista conjuntos de dados - GET. 
+625 - EXCLUSIVO PARA ADMINISTRADORES - Cria um novo conjunto de dados. Cria um conjunto de dados (Exclusivo para administradores de organização) - POST
+626 - Lista os Formatos de dados. Formatos - GET
+627 - EXCLUSIVO PARA  ADMINISTRADORES - Lista Resposta de solicitações. Resposta de Solicitações (Exclusivo para administradores de organização) - POST
+628 - Lista Solicitções. Consulta de Solicitações - GET
+629 - EXCLUSIVO PARA  ADMINISTRADORES - Salva um novo Recurso. Salvar Recurso (Exclusivo para administradores de organização) - POST
+630 - EXCLUSIVO PARA  ADMINISTRADORES - Exclui um recurso por id. Excluir Recurso (Exclusivo para administradores de organização) - DELETE
+631 - Lista os temas dos dados. Consulta de temas - GET. 
+632 - Lista as organizações. Lista organizações - GET
+633 - Busca detalhes de uma organização por id. Detalha uma organização - GET. 
+634 - Lista dados de inventários. Listar inventários - GET
+66 - Metadados da api. Retorna os metadados. 
+67 - Metadados da API por Código. Retorna os metadados filtrando o código. 
+68 - Valores dos Metadados por código. Retorna os metadados e os valores filtrando o código. 
+69 - Valores numa série temporal por código. Retorna os valores da série
+70 - ValoresStr dos metadados por código. Metadados, trazendo valores filtrando por código
+72 - Temas das pesquisas do IPEAData. Retorna temas. 
+73 - Tema de uma pesquisa por código. Retorna temas filtrando por código. 
+74 - Buscas os países. Retorna países. 
+75 - Busca um país pelo código. Retorna países filtrando pelo código. 
+76 - Busca Territórios. Retorna os territórios. 
+77 - Busca Territórios pelo código e nome. Retorna os territórios filtrando pelo código. 
+78 - Lista agendas supervisionadas pelo bacen. Apresentam as informações mais atuais das agências de instituições supervisionadas pelo Bacen.. 
+79 - Chancela de  cédulas. . Traz informações sobre cédulas nacionais produzidas. 
+80 - Correspondentes no país. Retorna informes sobre correspondentes. 
+81 - Dados de entidades supervisionadas por Situação Pessoa Jurídica. Dados cadastrais de entidades supervisionadas pelo bacen por pessoa jurídica. 
+82 - Dados de entidades supervisionadas por Entidade supervisionada. Dados cadastrais de entidades supervisionadas pelo bacen por entidade supervisionada. 
+83 - Dados de entidades supervisionadas por natureza juridica. Dados cadastrais de entidades supervisionadas pelo bacen por natureza juridica. 
+195 - Publicação dos registros de capitais estrangeiros, registros IED. Publicação dos registros de capitais estrangeiros- RegistrosIED. 
+196 - Publicação dos registros de capitais estrangeiros, registros por mês. Publicação dos registros de capitais estrangeiros- RegistrosPorMes(Mes=@Mes,Ano=@Ano)
+197 - Ranking de Qualidade das ouvidorias dos bancos por período. Ranking de Qualidade de Ouvidorias - Períodos. 
+198 - Ranking de Qualidade de Ouvidorias dos bancos por ano, período e tipo do período. Ranking de Qualidade de Ouvidorias- Relatórios(Ano=@Ano,Periodo=@Periodo,TipoPeriodo=@TipoPeriodo)
+199 - Relatório com informações cadastrais de Bancos Comerciais, Múltiplos e Caixa Econômica. Relatório com informações cadastrais de Bancos Comerciais, Múltiplos e Caixa Econômica. 
+200 - Relatório com informações cadastrais de Cooperativas de Crédito. Relatório com informações cadastrais de Cooperativas de Crédito. 
+201 - Relatório com informações cadastrais de várias instituições financeiras. Relatório com informações cadastrais de Bancos de Investimento, Bancos de Desenvolvimento, Sociedades Corretoras de TVM e Câmbio, Sociedades Distribuidoras de TVM, Sociedades de Crédito, Financiamento e Investimento, Sociedades de Crédito Imobiliário e APE, Sociedades de Arrendamento Mercantil, Sociedades de Investimento, Sociedades de Crédito ao Microempreendedor, Agências de Fomento, Companhias Hipotecárias, Instituições de Pagamento, Sociedades de Crédito Direto e Sociedades de Empréstimo entre Pessoas.
+202 - Relatório com informações cadastrais de Administradoras de Consórcios. Relatório com informações cadastrais de Administradoras de Consórcios
+279 - Lista de parâmetros de controle semestral. Obtém lista de parâmetros de controle semestral
+280 - Lista de parâmetros de controle mensal coletado das instituições. Obtém lista de parâmetros de controle mensal coletado das instituições
+281 - Informações de acompanhamento de estado nutricional.. Obtém informações de acompanhamento de estado nutricional.. 
+282 - Todos os projetos.. Obtém todos os projetos.
+283 - Projeto utilizando o nÃºmero CAAE (Certificado de ApresentaÃ§Ã£o de ApreciaÃ§Ã£o Ã‰tica).. ObtÃ©m projeto utilizando o nÃºmero CAAE (Certificado de ApresentaÃ§Ã£o de ApreciaÃ§Ã£o Ã‰tica).
+284 - Notificações de Síndrome Gripal. O Ministério da Saúde, por meio da Secretaria de Vigilância em Saúde e Ambiente (SVSA), implementou, devido à pandemia, a vigilância da Síndrome Gripal (SG) de casos leves e moderados suspeitos de covid-19.. 
+285 - Lista de compras sem licitação.. Fornece uma lista de compras sem licitação.. 
+330 - Lista tipos de portes de empresa possíveis. Fornece lista de portes de fornecedores com possibilidade de consultar dados de fornecedores relacionados com um porte selecionado.. 
+331 - Informações de prazos de ocorrências existentes no cadastro de fornecedores. Fornece uma lista com informações relacionadas aos prazos de ocorrência.. 
+332 - Lista ramos de negócios. Fornece lista com ramos de negócio de fornecedores, com possibilidade de consultar dados de fornecedores relacionados com um ramo selecionado.. 
+333 - Lista tipos de ocorrências existentes para os fornecedores. Retorna lista com tipos de ocorrências.. 
+334 - Dados de um âmbito de ocorrência específico. Fornece uma descrição detalhada relacionada a um âmbito de ocorrência informado.. 
+335 - Dados de uma classificação do CNAE. Fornece descriÃ§Ã£o detalhada do CÃ³digo Nacional de Atividade EconÃ´mica â€“ CNAE do fornecedor selecionado.. 
+336 - Dados de um fornecedor PF específico. Fornece dados detalhados de um fornecedor Pessoa Física cadastrado no SICAF. 
+337 - Todos os dados de um fornecedor PJ específico.. Fornece dados detalhados de um fornecedor Pessoa Jurídica cadastrado no SICAF.. 
+338 - Dados de uma linha de fornecimento específica. Fornece uma descrição detalhada da linha de fornecimento de produtos e serviços.. 
+339 - Informações sobre um município específico. Fornece a descrição do município da localidade do fornecedor.. 
+340 - Dados de uma natureza jurídica. Fornece a descrição da natureza jurídica do fornecedor.. 
+341 - Todos os dados disponíveis de ocorrências de fornecedores. Fornece dados relativos às ocorrências sofridas pelo fornecedor e registradas no SICAF.. 
+342 - Informações sobre um porte de empresa específico. Fornece dados sobre o porte do fornecedor.. 
+433 - Frentes de um deputado. Retorna uma lista de informações básicas sobre as frentes parlamentares das quais o parlamentar identificado por {id} seja membro, ou, no caso de frentes existentes em legislaturas anteriores, tenha encerrado a legislatura como integrante.. 
+434 - Histórico de movimentação de um deputado. Retorna uma listagem com as diferentes situações de exercício parlamentar do deputado identificado por {id}, mesmo que a alteração registrada não tenha afetado o andamento do mandato.. 
+435 - Informações de outros cargos de um deputado. Retorna uma lista em que cada item traz informações básicas sobre um cargo para o qual o parlamentar identificado por {id} tenha sido eleito, em sua carreira política fora da Câmara dos Deputados. Estes dados são fornecidos pelo Tribunal Superior Eleitoral
+436 - Ocupações e atividades profissionais de um deputado. Enumera as atividades profissionais ou ocupacionais que o deputado identificado por {id} já teve em sua carreira e declarou à Câmara dos Deputados.. 
+437 - Lista órgãos que um deputado participa ou participou de comissões. Retorna uma lista de órgãos, como as comissões e procuradorias, dos quais o deputado identificado por {id} participa ou participou durante um intervalo de tempo.. 
+438 - Profissões que um deputado possuiu ou pode exercer;. Retorna uma lista de dados sobre profissões que o parlamentar identificado por {id} declarou à Câmara que já exerceu ou que pode exercer pela sua formação e/ou experiência.. 
+439 - Lista deputados que foram líderes. Retorna uma lista de parlamentares que ocuparam cargos de liderança ao longo da legislatura {id}
+440 - Dados sobre todos os deputados que ocuparam cargo na  Mesa Diretora da Câmara. Retorna uma lista com dados básicos sobre todos os deputados que ocuparam algum posto na Mesa Diretora da Câmara em algum período de tempo dentro da legislatura identificada por {id}.
+441 - Lista códigos de situações que um deputado pode ter. Retorna uma lista de siglas e descrições dos possíveis estados em que um deputado pode estar em relação ao seu exercício parlamentar: Exercício, Fim de Mandato, Afastado, etc.. 
+442 - Lista situações que um deputado se classifica. Retorna uma lista de siglas e descrições dos possíveis estados em que um deputado pode estar em relação ao seu exercício parlamentar: Exercício, Fim de Mandato, Afastado, etc.. 
+443 - Lista eventos ocorridos e previstos da câmara. Retorna uma lista cujos elementos trazem informações básicas sobre eventos dos órgãos legislativos da Câmara, previstos ou já ocorridos, em um certo intervalo de tempo.. 
+444 - Dados de um evento da câmara. Retorna um conjunto detalhado de informações sobre o evento da Câmara identificado por id.. 
+445 - Lista dados de deputados que participaram de um evento. Retorna uma lista de dados resumidos sobre deputados participantes do evento identificado por {id}.. 
+557 - Parcelas sacadas do auxilio brasil por município e mês/ano. Consulta as parcelas do Auxílio Brasil Sacado dos Beneficiários por Município e Mês/Ano. 
+558 - Parcelas disponibilizadas pelo Auxilio brasil por município . Consulta as parcelas do Auxílio Brasil por Município. 
+559 - Informações de valores renunciados. Consulta de Valores Renunciados. 
+560 - Pessoas Jurídicas imunes e isentas. Consulta Pessoas Jurídicas Imunes e Isentas. 
+561 - Pessoas Jurídicas habilitadas a beneficio fiscal. Consulta Pessoas Jurídicas Habilitadas a Benefício Fiscal. 
+562 - Dados de órgãos cadastrados no SIAPE. Consulta de órgãos cadastrados no Sistema Integrado de Administração de Pessoal (SIAPE). 
+563 - Dados de órgãos cadastrados no SIAFI. Consulta de órgãos cadastrados no Sistema Integrado de Administração Financeira do Governo Federal (SIAFI). 
+564 - Lista todas as NFE's do Poder Executivo Federal. Consulta todas as notas fiscais eletrônicas (NFe´s) do Poder Executivo Federal. 
+565 - Dados de uma nota NFE Federal por chave única. Consulta uma nota fiscal eletrônica (NFe) do Poder Executivo Federal pela chave única. 
+566 - Lista todas as licitações do Poder Executivo Federal. Consulta todas as licitações do Poder Executivo Federal. 
+567 - Dados de uma licitação por id. Consulta uma licitação do Poder Executivo Federal pelo id. 
+568 - Lista Unidades Gestoras que realizam licitações. Consulta as Unidades Gestoras que realizaram licitações. 
+569 - Dados de uma licitação por código Unidade Gestora, número e modalidade. Consulta uma licitação pelo código da Unidade Gestora, número e modalidade. 
+789 - Processamento de coordenadas em graus decimais. Processamento de um único ponto informando as coordenadas em graus decimais.. 
+790 - Processamento de coordenadas em graus sexagesimais.. Processamento de um único ponto informando as coordenadas em. 
+791 - Processamento de um conjunto de pontos - GET. Processamento de um conjunto de pontos no formato grau decimal ou grau sexagesimal.. 
+792 - Processamento de um conjunto de pontos - POST. Processamento de um conjunto de pontos no formato grau decimal ou grau sexagesimal.
+793 - Lista Distritos do Brasil. Obtém o conjunto de distritos do Brasil. 
+794 - Lista Distritos do Brasil por identificador. Obtém o conjunto de distritos do Brasil a partir dos respectivos identificadores. 
+795 - Lista Distritos do Brasil por estado. Obtém o conjunto de distritos do Brasil a partir dos identificadores das Unidades da Federação. 
+796 - Lista Distritos do Brasil por Mesorregião. Obtém o conjunto de distritos do Brasil a partir dos identificadores das mesorregiões. 
+797 - Lista Distritos do Brasil por Microrregião. Obtém o conjunto de distritos do Brasil a partir dos identificadores das microrregiões. 
+798 - Lista Distritos do Brasil por município. Obtém o conjunto de distritos do Brasil a partir dos identificadores dos municípios
+799 - Lista Distritos por região imediata. Obtém o conjunto de distritos do Brasil a partir dos identificadores das regiões imediatas. 
+800 - Lista Distritos por região intermediária. Obtém o conjunto de distritos do Brasil a partir dos identificadores das regiões intermediárias. 
+880 - Ranking por pesquisa e indicadores. Funcionalmente igual à consulta /pesquisas/{pesquisa}/periodos/all/indicadores/{indicador}/ranking
+881 - Ranking por pesquisa, períodos pesquisados e indicadores. Obtém o ranking dos resultados de um dado indicador. Válido apenas para indicadores cujas classes sejam N ou $
+882 - Resultados por indicadores e localidades. Obtém os resultados a partir dos identificadores dos indicadores, independente da pesquisa e do período pesquisado. Funcionalmente igual à consulta /pesquisas/-/periodos/all/indicadores/{indicador}/resultados/{localidade}
+883 - Resultados por períodos, indicadores e localidades. Obtém os resultados dos indicadores referentes aos períodos pesquisados, independente da pesquisa
+884 - Resultados por pesquisa, indicadores e localidades. Funcionalmente igual à consulta /pesquisas/{pesquisa}/periodos/all/indicadores/{posicao}/resultados/{localidades}
+885 - Resultados por pesquisa, períodos pesquisados, indicadores e localidades. Obtém os resultados dos indicadores
+886 - Resultados por pesquisa e localidades. Funcionalmente igual à consulta /pesquisas/{pesquisa}/periodos/all/indicadores/0/resultados/{localidades}
+844 - Lista Subdistritos por região. Obtém o conjunto de subdistritos do Brasil a partir dos identificadores das regiões. 
+845 - Lista Subdistritos. Obtém o conjunto de subdistritos do Brasil. 
+846 - Lista Subdistritos por identificador. Obtém o conjunto de subdistritos do Brasil a partir dos respectivos identificadores. 
+847 - Lista Estados. Obtém o conjunto de Unidades da Federação do Brasil. 
+848 - Lista Estado por identificador. Obtém o conjunto de Unidades da Federação do Brasil a partir dos respectivos identificadores. 
+849 - Lista Estados por região. Obtém o conjunto de Unidades da Federação do Brasil a partir dos identificadores da regiões. 
+866 - Obtém metadados da malha por região intermediária. Obtém as ocorrências, na base de metadados, nas quais a pesquisa é citada, em um dado período. 
+890 - Produtos do IBGE. Obtém a lista dos produtos do IBGE.. 
+891 - Processamento arquivo de coordenadas como entrada de dado. Transformação utilizando um arquivo de coordenadas como entrada de dados.
+892 - Processamento de coordenadas em graus decimais. Transformação utilizando coordenada de entrada em grau decimal.. 
+893 - Processamento de coordenadas em graus sexagesimais. Transformação utilizando coordenada de entrada em graus sexagesimais.. 
+894 - Processamento de coordenadas em UTM. Transformação utilizando coordenada de entrada UTM. 
+895 - Processamento de coordenadas em XYZ. Transformação utilizando coordenada de entrada em XYZ. 
+896 - Llista de publicações por críterio. Obtém uma lista de publicações relacionadas a um termo de busca. 
+897 - Dados técnicos de uma dada estação da RBMC.. Obtém um descritivo em PDF com os dados técnicos atualizados referente a uma dada estação da RBMC
+618 - Busca um registro de Acordo de leniência por id. Consulta um registro de Acordo de Leniência pelo id. 
+619 - Lista os registros de Cartões de Pagamento. Consulta os registros de Cartões de Pagamento. 
+867 - Períodos Pesquisados com metadados. Obtém os períodos pesquisados com metadados associados.. 
+868 - Obtém as pesquisas com metadados. Obtém as pesquisas com metadados associados. 
+869 - Obtém a frequência de nascimentos por nome. Obtém a frequência de nascimentos por década para o nome consultado. 
+870 - Obtém o ranking dos nomes por década. Obtém o ranking dos nomes segundo a frequência de nascimentos por década. 
+871 - Conjunto de notícias. Obtém o conjunto de notícias
+872 - Listagem dos indicadores. Obtém a listagem dos indicadores. 
+873 - Indicadores e os respectivos resultados por país. Obtém os indicadores e os respectivos resultados a partir de um conjunto de países. 
+874 - Listagem de Países. Obtém a listagem dos países e os respectivos perfis. 
+875 - Indicadores por pesquisa. Funcionalmente igual à consulta /pesquisas/{pesquisa}/periodos/all/indicadores/{posicao}
+876 - Indicadores por pesquisa e períodos pesquisados. Obtém o conjunto de indicadores e os respectivos resultados. Observe que os indicadores são vinculados ao período pesquisado e não à pesquisa. Isso se deve ao fato de que indicadores podem ser desmebrados ou mesmo combinados entre diferentes períodos pesquisados. No entanto, o IBGE se esforça para manter a compatibilidade entre os diversos períodos pesquisados, embora nem sempre isso seja possível.
+877 - Períodos por pesquisa. Obtém o conjunto de períodos de uma pesquisa a partir do identificador desta. 
+878 - Pesquisas. Obtém o conjunto de pesquisas. Caso queira restringir o resultado, informe o parâmetro q. 
+879 - Pesquisa por identificador. Obtém o conjunto de pesquisas a partir dos respectivos identificadores. 
+601 - Lista os termos aditivos do contrato pelo id do contrato. Consulta os termos aditivos do contrato pelo id do contrato
+602 - Busca um contrato do executivo federal pelo número do processo. Consulta um contrato do Poder Executivo Federal pelo número do processo
+603 - Busca um contrato do executivo federal pelo número do contrato. Consulta um contrato do Poder Executivo Federal pelo número do contrato
+604 - Busca itens de um contrato. Consulta os itens contratados pelo id do contrato. 
+605 - Dados de um contrato do poder Executivo. Consulta um contrato do Poder Executivo Federal pelo id. 
+827 - Lista Regiões imediatas por região. Obtém o conjunto de regiões imediatas do Brasil a partir dos identificadores das regiões. 
+828 - Lista Regiões integradas de desenvolvimento. Obtém o conjunto de regiões integradas de desenvolvimento do Brasil. 
+829 - Lista Regiões integradas de desenvolvimento por identificador. Obtém o conjunto de regiões integradas de desenvolvimento a partir dos respectivos identificadores. 
+830 - Lista Regiões intermediárias por Estado. Obtém o conjunto de regiões intermediárias do Brasil a partir dos identificadores das Unidades da Federação. 
+831 - Lista Regiões intermediárias. Obtém o conjunto de regiões intermediárias do Brasil. 
+832 - Lista Região intermediária por identificador. Obtém o conjunto de regiões intermediárias do Brasil a partir dos respectivos identificadores. 
+833 - Lista Regiões intermediárias por região. Obtém o conjunto de regiões intermediárias do Brasil a partir dos identificadores das regiões. 
+834 - Lista Regiões metropolitanas por Estado. Obtém o conjunto de regiões metropolitanas do Brasil a partir dos identificadores das Unidades da Federação. 
+835 - Lista Regiões metropolitanas por região. Obtém o conjunto de regiões metropolitanas do Brasil a partir dos identificadores das regiões. 
+836 - Lista Regiões metropolitanas. Obtém o conjunto de regiões metropolitanas do Brasil. 
+837 - Lista Regiões metropolitanas por identificador. Obtém o conjunto de regiões metropolitanas a partir dos respectivos identificadores. 
+838 - Lista Subdistritos por distrito. Obtém o conjunto de subdistritos do Brasil a partir dos identificadores dos distritos. 
+912 - Formatos dos Dados. Lista os formatos de dados
+753 - Dados de uma pesquisa do ibge. Agregados - Obtém o conjunto de agregados, agrupados pelas respectivas pesquisas. 
+754 - Obtém a localidade geográfica de uma pesquisa. Localidades por agregado- Obtém as localidades associadas ao agregado de acordo com um ou mais níveis geográficos. 
+755 - Obtém os metados de uma pesquisa. Metadados - Obtém os metadados associados ao agregado. 
+756 - Obtém os períodos de uma pesquisa. Períodos por agregado - Obtém os períodos associados ao agregado. 
+757 - Dados de variáveis de uma pesquisa agregada, por período. Variáveis por agregado, períodos pesquisados e identificador da variável - Obtém o conjunto de variáveis a partir do identificador do agregado, períodos pesquisados e identificador das variáveis
+758 - Dados de variáveis de uma pesquisa agregada, por identificador . Variáveis por agregado e identificador da variável - Funcionalmente equivalente à /agregados/{agregado}/periodos/-6/variaveis/{variavel}, na qual se obtém os resultados das variáveis nos últimos seis períodos pesquisados

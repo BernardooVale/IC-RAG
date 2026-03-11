@@ -114,6 +114,21 @@ Agora, para testar o projeto execute essa linha de comando no terminal e siga as
 py mvp.py
 ```
 
+---
+
+### 6️⃣ ATENÇÃO
+
+Caso você tenha instalado a versão antiga do banco de dados (pré 11/03/2025), não é nescessário executar tudo novamente. Apenas rodes os seguintes comandos:
+
+```bash
+cd IC-RAG
+cd prod
+py atualiza_embeddings_endpoint.py
+py conversao_faiss.py
+```
+
+---
+
 ## 💬 O que o sistema faz
 
 O **IC-RAG** é um sistema de conversação inteligente com **acesso aumentado a dados**.  
