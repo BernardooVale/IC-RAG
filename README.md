@@ -73,7 +73,7 @@ ollama pull phi3:3.8b
 
 ### 3️⃣ Prepare o banco de dados
 
-O sistema depende de um banco de dados **SQLServer** já populado.  
+O sistema depende de um banco de dados **SQLServer** já populado. Desse modo, garanta que você tenha instalado o SQLServer com Driver 17 na sua máquina.
 Para criar e popular o banco você tem duas opções, via .sql ou .bak:
 
 Via terminal entre no diretório do projeto `IC-RAG` e depois em `prod`, depois execute na linha de comando
@@ -97,8 +97,8 @@ Execute esses scripts para criar as tabelas e carregar os dados necessários. Ca
 Antes de iniciar o sistema, rode o script responsável por criar os embeddings e armazená-los no banco:
 
 ```bash
-py init_api_embedding.py
-py init_embedding.py
+py init_api_embeddings.py
+py init_embeddings.py
 py conversao_faiss.py
 ```
 
@@ -113,6 +113,8 @@ Agora, para testar o projeto execute essa linha de comando no terminal e siga as
 ```bash
 py mvp.py
 ```
+
+Tenha em mente que o chatbot irá buscar endpoints compatíveis com o contexto da sua mensagem, desse modo, a sua pergunta deve ter o contexto de **"Onde posso achar dado X"** para funcionar corretamente.
 
 ---
 

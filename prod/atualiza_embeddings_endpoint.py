@@ -60,8 +60,6 @@ class AtualizadorEmbeddings:
         # Cache para otimização
         self.cache_tuplas: Optional[Dict[Tuple, int]] = None
         self.cache_navegadores: Optional[Dict[int, str]] = None
-        
-    
     
     def carregar_endpoint_map(self) -> Dict[str, List[str]]:
         """
@@ -264,8 +262,6 @@ class AtualizadorEmbeddings:
         
         # 5. Executar função navegadora
         try:
-            # IMPORTANTE: Aqui você precisa ter as funções navegadoras disponíveis
-            # Vou criar uma versão que importa dinamicamente
             colunas = self.executar_navegador(nome_funcao, json_str, endpoint_id)
             return colunas
             
@@ -472,7 +468,6 @@ class AtualizadorEmbeddings:
         
         # 3. Processar cada endpoint
         total = len(endpoints)
-        sucesso = 0
         falhas = 0
         
         for i, endpoint in enumerate(endpoints, 1):
@@ -489,12 +484,14 @@ class AtualizadorEmbeddings:
                     # 4. Atualizar no banco
                     self.bd.atualizaEmbeddingEndpoint(dados_atualizacao)
                     print(dados_atualizacao)
-                    sucesso += 1
                 else:
                     falhas += 1
                     
             except Exception as e:
                 falhas += 1
+        
+        if falhas > 0:
+            print(f"Erros: {falhas} | {falhas/total}")
 
 
 # ============================================================================
@@ -502,14 +499,14 @@ class AtualizadorEmbeddings:
 # ============================================================================
 
 if __name__ == "__main__":
-    # Configuração
+    
     bd = integracaoBD()
     
     # Criar atualizador
     atualizador = AtualizadorEmbeddings(
         bd=bd,
         modelo_embedding="embeddinggemma:latest",
-        caminho_med="med"  # Ajuste conforme seu caminho real
+        caminho_med="med"
     )
     
     try:

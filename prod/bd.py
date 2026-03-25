@@ -293,6 +293,17 @@ class integracaoBD:
             print(f"❌ Erro ao atualizar embedding do endpoint {dados.get('Id')}: {e}")
             raise
     
+    def retApis(self):
+        
+        query = """
+        
+        select Id, Name, Description
+        from APIs
+        
+        """
+        
+        return self.cur.execute(query).fetchall()
+    
     def fecharConexao(self): # fecha a conexao
         self.cur.close()
         self.conexao.close()

@@ -1,20 +1,22 @@
-# Inicializa o banco com os arquivos .sql em sql_original
-# Nescessário rodar init_api_embeddings.py e init_embedding.py
-
 import pyodbc
 
 DRIVER_NAME = 'ODBC Driver 17 for SQL Server'
 SERVER_NAME = '.'
-DATABASE_NAME = 'ic'
+
+CONNECTION_STRING_MASTER = (
+    f'DRIVER={{{DRIVER_NAME}}};'
+    f'SERVER={SERVER_NAME};'
+    'DATABASE=master;'
+    'Trusted_Connection=yes;'
+)
+
 CONNECTION_STRING = (
     f'DRIVER={{{DRIVER_NAME}}};'
     f'SERVER={SERVER_NAME};'
-    f'DATABASE={DATABASE_NAME};'
+    'DATABASE=ic;'
     'Trusted_Connection=yes;'
-    'CharSet=utf8;'
 )
 
-# Lista de arquivos na ordem correta
 sql_files = [
     'Institutions.sql',
     'Tags.sql',
@@ -26,16 +28,20 @@ sql_files = [
     'EndpointTags.sql'
 ]
 
-conexao = pyodbc.connect(CONNECTION_STRING, autocommit=True)
-cursor = conexao.cursor()
+with pyodbc.connect(CONNECTION_STRING_MASTER, autocommit=True) as con:
+    con.execute("IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'ic') CREATE DATABASE ic")
 
-for sql_file in sql_files:
-    print(f'Executando {sql_file}...')
-    with open(('sql_original/' + sql_file), 'r', encoding='utf-8') as file:
-        sql_script = file.read()
-        cursor.execute(sql_script)
-    print(f'{sql_file} executado com sucesso!')
+with pyodbc.connect(CONNECTION_STRING, autocommit=True) as conexao:
+    cursor = conexao.cursor()
+    for sql_file in sql_files:
+        print(f'Executando {sql_file}...')
+        with open('sql_original/' + sql_file, 'r', encoding='utf-8') as file:
+            sql_script = file.read()
 
-cursor.close()
-conexao.close()
+        blocos = [b.strip() for b in sql_script.split('GO') if b.strip()]
+        for bloco in blocos:
+            cursor.execute(bloco)
+
+        print(f'{sql_file} executado com sucesso!')
+
 print('Todos os scripts foram executados!')
