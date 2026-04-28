@@ -14,5 +14,5 @@ agente_chat = agenteChat(modeloChat, modeloClass, modeloEmbedding, bd)
 
 # teste ============================================================================
 
-agente_chat.testeExecucao(10)
+agente_chat.testeExecucao(50)
 bd.fecharConexao()

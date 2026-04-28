@@ -40,23 +40,7 @@ class agenteChat:
         
         return id
         
-    def selecionaEndpoints(self, msg, embedMsg, filtroApis:list, filtrarApis:bool):
-        
-        # pega os ids mais similares de acordo com o FAISS
-        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg, filtroApis, filtrarApis)
-        
-        if not idsEndpoints:
-            return []
-        
-        # formata o resultado para poder consultar no banco de dados
-        ids_formatados = (
-            tuple(idsEndpoints) 
-            if len(idsEndpoints) > 1 
-            else f"({idsEndpoints[0]})"
-        )
-        
-        # retorna os dados completos do banco de dados para cada id do FAISS
-        resultadosFaiss = self.integracaoBd.retEndpoints(ids_formatados)
+    def rerank(self, msg, resultadosFaiss):
         
         pares = [
             (msg, endpoint['texto'])
@@ -76,6 +60,26 @@ class agenteChat:
         
         return endpoints_ranqueados
         
+    def selecionaEndpoints(self, msg, embedMsg, filtroApis:list, filtrarApis:bool):
+        
+        # pega os ids mais similares de acordo com o FAISS
+        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg, filtroApis, filtrarApis)
+        
+        if not idsEndpoints:
+            return []
+        
+        # formata o resultado para poder consultar no banco de dados
+        ids_formatados = (
+            tuple(idsEndpoints) 
+            if len(idsEndpoints) > 1 
+            else f"({idsEndpoints[0]})"
+        )
+        
+        # retorna os dados completos do banco de dados para cada id do FAISS
+        resultadosFaiss = self.integracaoBd.retEndpoints(ids_formatados)
+        
+        return self.rerank(msg, resultadosFaiss)
+        
     def filtraEndpoints(self, endpoints_ranqueados):
         
         THRESHOLD = 0.3
@@ -93,6 +97,32 @@ class agenteChat:
 
         return indices_selecionados
         
+    def painelControleFiltrarApis(self):
+        
+        filtroAPI = input("Gostaria de filtrar por instituição? S/n")
+        filtroAPI = filtroAPI.strip().lower()
+        
+        filtrarApis = False
+        idsApis = None
+        
+        if filtroAPI in ["sim", "s"]:
+            
+            filtrarApis = True
+            selecaoManual = input("Gostaria de seleciona-las manualmente? S/n")
+            selecaoManual = selecaoManual.strip().lower()
+            
+            if selecaoManual in ["sim", "s"]:
+                apis = self.integracaoBd.retApis()
+                for api in apis:
+                    print(f"{api.Id} - {api.Name}, {api.Description}")
+                strNums = input("Digite os números das apis que você quer pesquisar, separados por vírgula (1,3,6)")
+                
+                idsApis = strNums.split(',')
+            else:
+                idsApis = [] # busca dinamica
+                
+        return filtrarApis, idsApis        
+        
     def controleResposta (self, msg:str, modoTeste:bool = False): # Centro de controle de execucao, gerencia todas as funcoes e dados nescessarios
         
         id = self.defTipoResposta(msg)
@@ -102,30 +132,11 @@ class agenteChat:
             return 0, [], [] # formato para teste (id, top5, finais)
         
         embedMsg = self.retEmbedMsg(msg) # gera o embedding da msg
-        idsApis = None
         filtrarApis = False
+        idsApis = None
         
         if not modoTeste:
-            
-            filtroAPI = input("Gostaria de filtrar por instituição? S/n")
-            filtroAPI = filtroAPI.strip().lower()
-            
-            if filtroAPI in ["sim", "s"]:
-                
-                filtrarApis = True
-                selecaoManual = input("Gostaria de seleciona-las manualmente? S/n")
-                selecaoManual = selecaoManual.strip().lower()
-                
-                if selecaoManual in ["sim", "s"]:
-                    apis = self.integracaoBd.retApis()
-                    for api in apis:
-                        print(f"{api.Id} - {api.Name}, {api.Description}")
-                    strNums = input("Digite os números das apis que você quer pesquisar, separados por vírgula (1,3,6)")
-                    
-                    idsApis = strNums.split(',')
-                else:
-                    idsApis = [] # busca dinamica
-                    
+            filtrarApis, idsApis = self.painelControleFiltrarApis()
         
         top5Endpoints = self.selecionaEndpoints(msg, embedMsg, idsApis, filtrarApis)
         endpointsFinais = self.filtraEndpoints(top5Endpoints)
@@ -194,10 +205,15 @@ class agenteChat:
         endpointsTop5 = []
         endpointsCompletos = []
         
+        mapTop5 = {}
+        mapErrados = {}
+        mapPerguntas = {}
+        
         for num in numerosSorteados:
             
-            chave = str(num)
-            pergunta = perguntas.get(chave)
+            chave = num
+            pergunta = str(perguntas.get(str(chave)))
+            mapPerguntas[chave] = pergunta
         
             id, top5, finais = self.controleResposta(pergunta, modoTeste=True)
              
@@ -213,6 +229,9 @@ class agenteChat:
             for endpoint in finais:
                 lista.append(endpoint["id"])
             
+            print(chave)
+            print(lista)
+            
             if chave in lista:
                 endpointsCompletos.append(chave)
                 acertosCompletos+=1
@@ -222,27 +241,42 @@ class agenteChat:
             lista = []
             
             for endpoint in top5:
-                lista.append(endpoint["id"]) 
+                lista.append(endpoint[0]["id"]) 
+            
+            print(lista)
             
             if chave in lista:
                 endpointsTop5.append(chave)
+                mapTop5[chave] = top5
                 acertosTop5+=1
                 continue
-                
+            
+            
             # fora do top 5
             erros+=1
             endpointsErrados.append(chave)
+            mapErrados[chave] = top5
                     
         print("Relatorio", ("="*10))
         
         print(f"Erros na classificação do tipo resposta: {erros}")
         for endpoint in endpointsErrados:
-            print(f"├───{endpoint}")
+            pergunta = mapPerguntas.get(endpoint, '')
+            print(f"├───{endpoint}, {pergunta}")
+            top5 = mapErrados.get(endpoint, 0)
+            if top5 != 0:
+               for id in top5:
+                   print(f"    ├───{id}")
         print("")
         
         print(f"Endpoints encontrados apenas no top5: {acertosTop5}")
         for endpoint in endpointsTop5:
-            print(f"├───{endpoint}")
+            pergunta = mapPerguntas.get(endpoint, '')
+            print(f"├───{endpoint}, {pergunta}")
+            top5 = mapTop5.get(endpoint, 0)
+            if top5 != 0:
+               for id in top5:
+                   print(f"    ├───{id}")
         print("")
         
         print(f"Acertos completos: {acertosCompletos}")
