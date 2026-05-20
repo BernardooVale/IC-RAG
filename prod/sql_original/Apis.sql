@@ -167,8 +167,7 @@ VALUES (
     '1.1.0',
     6,
     NULL,
-    N'Fiscalização do Estado
-'
+    N'Fiscalização do Estado'
 );
 INSERT INTO APIs 
 (Name, Description, BaseUrl, Documentation, ResponseType, CollectionDate, Authentication, Version, InstitutionId, LastApiUpdateDate, Classification)
@@ -205,9 +204,7 @@ INSERT INTO APIs
 VALUES (
     N'API de Compras Governamentais',
     N'Dados sobre compras públicas.',
-    N'http://compras.dados.gov.br/
-
-',
+    N'http://compras.dados.gov.br/',
     N'https://compras.dados.gov.br/docs/home.html',
     'HTML, XML, JSON, CSV',
     '2023-11-15',
@@ -355,8 +352,7 @@ VALUES (
 INSERT INTO APIs 
 (Name, Description, BaseUrl, Documentation, ResponseType, CollectionDate, Authentication, Version, InstitutionId, LastApiUpdateDate, Classification)
 VALUES (
-    N'API hgeoHNOR
-',
+    N'API hgeoHNOR',
     N'Modelo para conversão de altitudes geométricas (dadas pelos GNSS) em altitudes físicas (compatíveis com o Datum Vertical do SGB).',
     N'https://servicodados.ibge.gov.br/api/v1/hgeohnor',
     N'https://servicodados.ibge.gov.br/api/docs/hgeohnor?versao=1',
@@ -417,8 +413,7 @@ INSERT INTO APIs
 (Name, Description, BaseUrl, Documentation, ResponseType, CollectionDate, Authentication, Version, InstitutionId, LastApiUpdateDate, Classification)
 VALUES (
     N'API Nomes',
-    N'Coletados pela primeira vez no Censo 2010, informa a frequência dos nomes por década de nascimento.
-',
+    N'Coletados pela primeira vez no Censo 2010, informa a frequência dos nomes por década de nascimento.',
     N'https://servicodados.ibge.gov.br/api/v2/censos/nomes',
     N'https://servicodados.ibge.gov.br/api/docs/nomes?versao=2',
     'JSON',
@@ -462,8 +457,7 @@ VALUES (
 INSERT INTO APIs 
 (Name, Description, BaseUrl, Documentation, ResponseType, CollectionDate, Authentication, Version, InstitutionId, LastApiUpdateDate, Classification)
 VALUES (
-    N'API de Pesquisas
-',
+    N'API de Pesquisas',
     N'As pesquisas providas por este serviço são um subconjunto da API de Agregados e de outras fontes externas ao IBGE, continuamente enriquecidas e validadas.',
     N'https://servicodados.ibge.gov.br/api/v1/pesquisas',
     N'https://servicodados.ibge.gov.br/api/docs/pesquisas',
@@ -493,8 +487,7 @@ VALUES (
 INSERT INTO APIs 
 (Name, Description, BaseUrl, Documentation, ResponseType, CollectionDate, Authentication, Version, InstitutionId, LastApiUpdateDate, Classification)
 VALUES (
-    N'API Produtos
-',
+    N'API Produtos',
     N'Produtos de estatísticas e geociências do IBGE. Útil para realizar consultas por um produto específico nas APIs de calendário e de notícias.',
     N'https://servicodados.ibge.gov.br/api/v1/produtos',
     N'https://servicodados.ibge.gov.br/api/docs/produtos?versao=1',

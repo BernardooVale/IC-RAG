@@ -7,28 +7,14 @@ import time
 
 # config inicial ================================================================================
 
-modeloChat = ChatOllama(model="qwen2:7b", base_url="http://localhost:11434")        # LLM de conversa
-modeloClass = "phi3:3.8b"                                                           # LLM para classificacao da conversa
+modeloChat = ChatOllama(model="gemma4:e2b", base_url="http://localhost:11434")        # LLM de conversa
 modeloEmbedding = "embeddinggemma:latest"                                           # LLM para gerar embeddings
 
 integracaoBd = integracaoBD()
-agente_chat = agenteChat(modeloChat, modeloClass, modeloEmbedding, integracaoBd)
+agente_chat = agenteChat(modeloChat, modeloEmbedding, integracaoBd)
 
-# sistema ============================================================================
+agente_chat.initExecucao()
 
-entrada = input("Escreva sua pergunta: ")
-
-while not entrada.strip().lower().startswith("sair"):
-    
-    entrada = re.sub(r"[^a-zA-Z0-9\s]", "", entrada)
-    
-    t1 = time.time()
-    agente_chat.controleResposta(entrada)
-    print(f"Tempo total: {time.time()  - t1}")
-    
-    entrada = input("Escreva sua pergunta: ")
-    
-print("Fim")
 # finalizacao do sistema ==========================================================================================
 
 integracaoBd.fecharConexao()

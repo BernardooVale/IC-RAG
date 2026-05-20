@@ -6,39 +6,18 @@ import json
 import ollama
 from langchain_ollama import ChatOllama
 from sentence_transformers import CrossEncoder
+import re
 
 class agenteChat:
     
-    def __init__(self, modelo: ChatOllama, modeloClass: str, modeloEmbedding: str, integracaoBd: integracaoBD):
-        self.modeloClass: str = modeloClass
+    def __init__(self, modelo: ChatOllama, modeloEmbedding: str, integracaoBd: integracaoBD):
         self.modelo: ChatOllama = modelo
         self.modeloEmbedding = modeloEmbedding
         self.integracaoBd = integracaoBd
         self.ollamaClient = ollama.Client()
         self.cross_encoder = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
         self.faiss = Faiss()
-    
-    def defTipoResposta(self, msg:str): # Verifica que tipo de resposta deve ser feita
-        
-        #t1 = time.time()
-        
-        promptClass = f"0=conversa normal 1=consulta sobre dados de endpoints e APIs\n\n{msg}\n\nResposta:"
-        
-        classificacao = ollama.generate(
-            model=self.modeloClass,
-            prompt=promptClass,
-            options={
-                'num_predict': 5, 
-                'temperature': 0,
-                'num_ctx': 512
-            }
-        )['response'].strip()
-        
-        id = "0" if "0" in classificacao else "1"
-        
-        #print(f"Tempo funcao defTipoResposta: {time.time() - t1}")
-        
-        return id
+        self.historicoMsgs = []
         
     def rerank(self, msg, resultadosFaiss):
         
@@ -125,12 +104,6 @@ class agenteChat:
         
     def controleResposta (self, msg:str, modoTeste:bool = False): # Centro de controle de execucao, gerencia todas as funcoes e dados nescessarios
         
-        id = self.defTipoResposta(msg)
-
-        if id == "0":
-            self.respostaNatural(msg)
-            return 0, [], [] # formato para teste (id, top5, finais)
-        
         embedMsg = self.retEmbedMsg(msg) # gera o embedding da msg
         filtrarApis = False
         idsApis = None
@@ -185,8 +158,62 @@ class agenteChat:
                     
                 resposta += "\n"
                 
+        msgAtual = len(self.historicoMsgs) - 1
+        self.historicoMsgs[msgAtual]["resposta"] = resposta
+        
         print(resposta)
         
+    def esclarecimento(self, msg):
+        
+        print("Qual dessas respostas você quer um esclarecimento")
+        
+        for i, msg in enumerate(self.historicoMsgs):
+            print(f"({i}) - {msg["resposta"]}")
+    
+        resposta = input("\n")
+        duvida = input("Qual a sua dúvida sobre essa resposta?\n")
+        info = self.retInformaceosEndpoint()
+        
+        msg = f"""
+        
+        O usuário possuí essa dúvida: {duvida}
+        
+        Para essa informação: {resposta}
+        """
+        
+        resposta = self.modelo.invoke(msg).content
+        
+        print(resposta)
+        print("\n")
+        
+    def loopPerguntas(self, entrada):
+        
+        while entrada != 0:
+            
+            if entrada == 1:
+                msg = input("Qual dado você esta procurando\n")
+                msg = re.sub(r"[^a-zA-Z0-9\s]", "", msg)
+                self.controleResposta(msg)
+            else:
+                self.esclarecimento(msg)
+            
+            entrada = input("O que você quer fazer: \n (1) Nova consulta \n (2) Esclarecimento de uma resposta \n (0) Sair \n")
+        
+    def initExecucao(self):
+        
+        entrada = input("O que você quer fazer: \n (1) Nova consulta \n (0) Sair \n")
+
+        if entrada == 0:
+            print("Fim")
+            return
+        
+        entrada = re.sub(r"[^a-zA-Z0-9\s]", "", entrada)
+        self.controleResposta(entrada)
+        self.historicoMsgs.append({"entrada": entrada, "saida": ""})
+        
+        entrada = input("O que você quer fazer: \n (1) Nova consulta \n (2) Esclarecimento de uma resposta \n (0) Sair \n")
+        self.loopPerguntas(entrada)
+                
     def testeExecucao(self, quantidade:int):
         
         with open("med/teste_claude.json", mode="r", encoding="utf-8") as f:
