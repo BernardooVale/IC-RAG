@@ -121,39 +121,35 @@ class Faiss:
         # Se retornar -1, significa que não encontrou nada
         return int(id_resultado) if id_resultado != -1 else None
 
-    def ret_top_endpoints(self, vetor_query, listaFiltroApis:list, filtrarApis:bool, k=5):              
-        
-        # 1. Carregar índice
-        index = faiss.read_index(
-            os.path.join(self.caminhoPasta, "endpoints.index")
-        )
+    def ret_top_endpoints(self, vetor_query, listaFiltroApis: list, filtrarApis: bool, k=5):
+
         index = faiss.read_index(os.path.join(self.caminhoPasta, "endpoints.index"))
 
-        # 2. Preparar query
         query_np = np.array([vetor_query]).astype('float32')
         faiss.normalize_L2(query_np)
 
         params = faiss.SearchParameters()
 
         if filtrarApis:
-            
             with open(self.caminhoMapa, "r") as f:
                 mapa = json.load(f)
-                
+
             if listaFiltroApis == []:
-                
                 idApi = self.ret_api_mais_similar(vetor_query)
                 print(idApi)
                 listaFiltroApis = [idApi] if idApi else []
-                
+
             ids_permitidos = []
             for id_api in listaFiltroApis:
                 ids_permitidos.extend(mapa.get(str(id_api), []))
-            
+
             if ids_permitidos:
                 params.sel = faiss.IDSelectorArray(ids_permitidos)
 
-        # 3. Buscar diretamente no índice inteiro
         distancias, indices = index.search(query_np, k, params=params)
 
-        return [int(i) for i in indices[0] if i != -1]
+        return [
+            (int(i), float(d))
+            for i, d in zip(indices[0], distancias[0])
+            if i != -1
+        ]

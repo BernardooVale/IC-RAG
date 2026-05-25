@@ -1,11 +1,13 @@
 from bd import integracaoBD
 from classe_faiss import Faiss
+from modoTeste import modoTeste
 
 import random
 import json
 import ollama
 from langchain_ollama import ChatOllama
 from sentence_transformers import CrossEncoder
+import pandas as pd
 
 class agenteChat:
     
@@ -60,25 +62,36 @@ class agenteChat:
         
         return endpoints_ranqueados
         
-    def selecionaEndpoints(self, msg, embedMsg, filtroApis:list, filtrarApis:bool):
+    def selecionaEndpoints(self, msg, embedMsg, listaFiltroApis:list, filtrarApis:bool, modoTeste:modoTeste = None):
+                
+        idsEndpoints = None
         
         # pega os ids mais similares de acordo com o FAISS
-        idsEndpoints = self.faiss.ret_top_endpoints(embedMsg, filtroApis, filtrarApis)
+        if modoTeste is not None:
+            idsEndpoints = self.faiss.ret_top_endpoints(embedMsg, modoTeste.listaFiltroApis, modoTeste.filtroApi)
+        else:
+            idsEndpoints = self.faiss.ret_top_endpoints(embedMsg, listaFiltroApis, filtrarApis)
         
         if not idsEndpoints:
             return []
         
         # formata o resultado para poder consultar no banco de dados
-        ids_formatados = (
-            tuple(idsEndpoints) 
-            if len(idsEndpoints) > 1 
-            else f"({idsEndpoints[0]})"
-        )
+        ids_apenas = [id for id, _ in idsEndpoints]
         
         # retorna os dados completos do banco de dados para cada id do FAISS
-        resultadosFaiss = self.integracaoBd.retEndpoints(ids_formatados)
+        resultadosFaiss = self.integracaoBd.retEndpoints(ids_apenas)
         
-        return self.rerank(msg, resultadosFaiss)
+        if modoTeste is not None and modoTeste.rerank:
+            return self.rerank(msg, resultadosFaiss)
+        
+        # Sem rerank: ordena pelo score FAISS e empacota no mesmo formato (endpoint, score)
+        score_por_id = {id: score for id, score in idsEndpoints}
+        resultadosFaiss_ordenados = sorted(
+            resultadosFaiss,
+            key=lambda e: score_por_id.get(e["id"], 0.0),
+            reverse=True
+        )
+        return [(endpoint, score_por_id.get(endpoint["id"], 0.0)) for endpoint in resultadosFaiss_ordenados]
         
     def filtraEndpoints(self, endpoints_ranqueados):
         
@@ -123,25 +136,25 @@ class agenteChat:
                 
         return filtrarApis, idsApis        
         
-    def controleResposta (self, msg:str, modoTeste:bool = False): # Centro de controle de execucao, gerencia todas as funcoes e dados nescessarios
+    def controleResposta (self, msg: str, modoTeste: modoTeste = None): # Centro de controle de execucao, gerencia todas as funcoes e dados nescessarios
         
         id = self.defTipoResposta(msg)
 
         if id == "0":
-            self.respostaNatural(msg)
+            self.respostaNatural(msg, modoTeste)
             return 0, [], [] # formato para teste (id, top5, finais)
         
         embedMsg = self.retEmbedMsg(msg) # gera o embedding da msg
         filtrarApis = False
         idsApis = None
         
-        if not modoTeste:
+        if modoTeste is None:
             filtrarApis, idsApis = self.painelControleFiltrarApis()
         
-        top5Endpoints = self.selecionaEndpoints(msg, embedMsg, idsApis, filtrarApis)
+        top5Endpoints = self.selecionaEndpoints(msg, embedMsg, idsApis, filtrarApis, modoTeste)
         endpointsFinais = self.filtraEndpoints(top5Endpoints)
         
-        if modoTeste:
+        if modoTeste is not None:
             return id, top5Endpoints, endpointsFinais
             
         self.explicacaoConsulta(endpointsFinais)
@@ -161,10 +174,11 @@ class agenteChat:
         
         return embedMsg
     
-    def respostaNatural(self, msg:str): # resposta de um chatbot normal, sem RAG
+    def respostaNatural(self, msg:str, modoTeste:modoTeste = None): # resposta de um chatbot normal, sem RAG
         
-        resposta = self.modelo.invoke(msg).content
-        print(f"Resposta Natural gerada: {resposta}")
+        if modoTeste is None:
+            resposta = self.modelo.invoke(msg).content
+            print(f"Resposta Natural gerada: {resposta}")
     
     def explicacaoConsulta(self, resultados:list): #resposta que consulta os endpoints relevantes para a mensagem do usuario
         
@@ -187,19 +201,52 @@ class agenteChat:
                 
         print(resposta)
         
-    def testeExecucao(self, quantidade:int):
+    def printRelatorio(self, erros, endpointsErrados, mapPerguntas, mapErrados, acertosTop5, endpointsTop5, mapTop5, acertosCompletos, endpointsCompletos):
+        print("Relatorio", ("="*10))
         
-        with open("med/teste_claude.json", mode="r", encoding="utf-8") as f:
+        print(f"Erros na classificação do tipo resposta: {erros}")
+        for endpoint in endpointsErrados:
+            pergunta = mapPerguntas.get(endpoint, '')
+            print(f"├───{endpoint}, {pergunta}")
+            top5 = mapErrados.get(endpoint, 0)
+            if top5 != 0:
+               for id in top5:
+                   print(f"    ├───{id}")
+        print("")
+        
+        print(f"Endpoints encontrados apenas no top5: {acertosTop5}")
+        for endpoint in endpointsTop5:
+            pergunta = mapPerguntas.get(endpoint, '')
+            print(f"├───{endpoint}, {pergunta}")
+            top5 = mapTop5.get(endpoint, 0)
+            if top5 != 0:
+               for id in top5:
+                   print(f"    ├───{id}")
+        print("")
+        
+        print(f"Acertos completos: {acertosCompletos}")
+        for endpoint in endpointsCompletos:
+            print(f"├───{endpoint}")
+        print("")
+        
+    def testeExecucao(self, quantidade:int, df: pd.DataFrame, modoTeste: modoTeste = modoTeste(True, False, [False])):
+        
+        with open("med/output.json", mode="r", encoding="utf-8") as f:
             perguntas = json.load(f)
         
         inicio = 1
-        fim = 912
+        fim = 963
 
-        numerosSorteados = random.sample(range(inicio, fim + 1), quantidade)
+        numerosSorteados = random.sample(range(inicio, fim + 1), quantidade) if quantidade != fim else [int(k) for k in perguntas.keys()]
+        
+        filtroManual = modoTeste.listaFiltroApis[0]
         
         erros = 0
         acertosTop5 = 0
         acertosCompletos = 0
+        
+        errosNatural = 0
+        acertosNatural = 0
         
         endpointsErrados = []
         endpointsTop5 = []
@@ -212,11 +259,29 @@ class agenteChat:
         for num in numerosSorteados:
             
             chave = num
-            pergunta = str(perguntas.get(str(chave)))
+            pergunta = str(perguntas.get(str(chave), ""))
+            
+            if pergunta == "":
+                continue
+            
             mapPerguntas[chave] = pergunta
         
-            id, top5, finais = self.controleResposta(pergunta, modoTeste=True)
-             
+            if filtroManual:
+                modoTeste.listaFiltroApis = self.integracaoBd.retApiEndpoint(num)
+            else:
+                modoTeste.listaFiltroApis = []
+        
+            id, top5, finais = self.controleResposta(pergunta, modoTeste=modoTeste)
+            
+            if chave > 913: # conversa normal
+                if not id:
+                    acertosNatural+=1
+                    continue
+                
+                errosNatural+=1
+                continue
+            
+            # consulta
             # considerado conversa normal
             if not id:
                 erros+=1
@@ -257,29 +322,19 @@ class agenteChat:
             endpointsErrados.append(chave)
             mapErrados[chave] = top5
                     
-        print("Relatorio", ("="*10))
+        nova_linha = {
+            "rerank": modoTeste.rerank,
+            "filtroApi": modoTeste.filtroApi,
+            "listaFiltroApis": filtroManual,
+            "acertosCompletos": acertosCompletos,
+            "acertosTop5": acertosTop5,
+            "erros": erros,
+            "totalTestado": quantidade,
+            "acertosNatural": acertosNatural,
+            "errosNatural": errosNatural
+        }
         
-        print(f"Erros na classificação do tipo resposta: {erros}")
-        for endpoint in endpointsErrados:
-            pergunta = mapPerguntas.get(endpoint, '')
-            print(f"├───{endpoint}, {pergunta}")
-            top5 = mapErrados.get(endpoint, 0)
-            if top5 != 0:
-               for id in top5:
-                   print(f"    ├───{id}")
-        print("")
+        df = pd.concat([df, pd.DataFrame([nova_linha])], ignore_index=True)
+        # self.printRelatorio(endpointsErrados, mapPerguntas, mapErrados, acertosTop5, endpointsTop5, mapTop5, acertosCompletos, endpointsCompletos)
         
-        print(f"Endpoints encontrados apenas no top5: {acertosTop5}")
-        for endpoint in endpointsTop5:
-            pergunta = mapPerguntas.get(endpoint, '')
-            print(f"├───{endpoint}, {pergunta}")
-            top5 = mapTop5.get(endpoint, 0)
-            if top5 != 0:
-               for id in top5:
-                   print(f"    ├───{id}")
-        print("")
-        
-        print(f"Acertos completos: {acertosCompletos}")
-        for endpoint in endpointsCompletos:
-            print(f"├───{endpoint}")
-        print("")
+        return df

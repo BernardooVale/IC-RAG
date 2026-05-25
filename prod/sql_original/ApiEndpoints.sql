@@ -3662,4 +3662,3 @@ INSERT INTO [Endpoints da API] (Id, ApiResponseId, ApiId, Name, Url, Description
 INSERT INTO [Endpoints da API] (Id, ApiResponseId, ApiId, Name, Url, Description, Example, ActiveExample, ShortName) VALUES (
     913, 913, 18, 'Consulta solicitações', 'https://dados.gov.br/dados/api/solicitacoes', 'Dados de Solicitação', 'https://dados.gov.br/dados/api/solicitacoes?dataAbertura=2024-08-10&tipoSolicitacao=CONTATO_ORGANIZACAO&statusSolicitacao=ABERTA', 0, 'Dados Solicitação'
 );
-

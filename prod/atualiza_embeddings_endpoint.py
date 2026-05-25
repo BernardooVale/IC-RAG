@@ -186,7 +186,7 @@ class AtualizadorEmbeddings:
         Busca ResponseExample da tabela [Respostas da API].
         
         Args:
-            endpoint_id: ID do endpoint
+            endpoint_id: ID do ApiResponseId
         
         Returns:
             String JSON do exemplo de resposta ou None
@@ -211,6 +211,7 @@ class AtualizadorEmbeddings:
     def extrair_colunas_endpoint(
         self,
         endpoint_id: int,
+        endpointResponseId: int,
         endpoint_map: Dict[str, List[str]],
         tuplas_dict: Dict[Tuple, int],
         navegadores: Dict[int, str]
@@ -255,7 +256,7 @@ class AtualizadorEmbeddings:
             return []
         
         # 4. Buscar ResponseExample
-        json_str = self.obter_response_example(endpoint_id)
+        json_str = self.obter_response_example(endpointResponseId)
         
         if json_str is None:
             return []
@@ -387,6 +388,7 @@ class AtualizadorEmbeddings:
             Dicionário com dados para atualizar banco ou None em caso de erro
         """
         endpoint_id = endpoint["Id"]
+        endpointResponseId = endpoint["ApiResponseId"]
         
         # 1. Obter nome (prioriza ShortName)
         nome = endpoint.get("ShortName") or endpoint.get("Name")
@@ -400,6 +402,7 @@ class AtualizadorEmbeddings:
         # 3. Extrair colunas retornadas
         colunas = self.extrair_colunas_endpoint(
             endpoint_id,
+            endpointResponseId,
             endpoint_map,
             tuplas_dict,
             navegadores
@@ -456,6 +459,7 @@ class AtualizadorEmbeddings:
             E.Url, 
             E.ShortName,
             E.Description,
+            E.ApiResponseId,
             A.Documentation,
             A.ResponseType,
             A.Id as idApi
@@ -498,7 +502,7 @@ class AtualizadorEmbeddings:
 # EXECUÇÃO PRINCIPAL
 # ============================================================================
 
-if __name__ == "__main__":
+def execucaoModular():
     
     bd = integracaoBD()
     
@@ -522,3 +526,6 @@ if __name__ == "__main__":
     finally:
         # Fechar conexão
         bd.fecharConexao()
+
+if __name__ == "__main__":
+    execucaoModular()

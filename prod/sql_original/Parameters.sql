@@ -5,7 +5,7 @@ CREATE TABLE Parameters (
     Name VARCHAR(100) NOT NULL,
     Type VARCHAR(200) NOT NULL,
     Format VARCHAR(200),
-    Description VARCHAR(300)
+    Description VARCHAR(600)
 );
 
 -- Inserir registros
@@ -78,8 +78,7 @@ INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (65, 'te_fin
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (66, 'te_justificativa', 'VARCHAR(2000) CHARACTER SET UNICODE', 'Alteração e inclusão de dados', 'Justificativa de Finalidade do DAIR (Intermediário)');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (67, 'dt_posicao', 'TIMESTAMP(6)', '2021-01-31 00:00:00', 'Data de Posição da Carteira');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (68, 'te_motivo_retificacao', 'VARCHAR(100) CHARACTER SET UNICODE', 'Iniciativa Própria', 'Motivo de Retificação');
-INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (69, 'te_descricao_retificacao', 'VARCHAR(150) CHARACTER SET UNICODE', 'Correção da Data da Certificação', 'Descrição do Motivo da Retificação (Outro)
-');
+INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (69, 'te_descricao_retificacao', 'VARCHAR(150) CHARACTER SET UNICODE', 'Correção da Data da Certificação', 'Descrição do Motivo da Retificação (Outro)');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (70, 'te_justicativa_retificacao', 'VARCHAR(2000) CHARACTER SET UNICODE', 'Ajuste nas disponibilidades', 'Justificativa da Retificação');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (71, 'tp_instituicao', 'VARCHAR(50) CHARACTER SET UNICODE', '', 'Tipo instituição');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (72, 'ds_descricao', 'VARCHAR(150) CHARACTER SET UNICODE', '', 'Descrição');
@@ -174,8 +173,7 @@ INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (160, 'ds_ju
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (161, 'cd_hipotese_biometrica_fem', 'DECIMAL(4,0)', '1211', 'Código Hipóteses Biométricas (tabela interna) - Feminina');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (162, 'ds_hipotese_biometrica_fem', 'VARCHAR(100) CHARACTER SET UNICODE', 'IBGE 2016 - Ambos - Extrap MPS', 'Descrição da Tábua - População Feminina');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (163, 'tp_sexo', 'CHAR(15) CHARACTER SET UNICODE', 'Ambos', 'Sexo');
-INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (164, 'cd_tipo_tabua_fem', 'DECIMAL(4,0)', '1000', 'Código Hipóteses Biométricas (tabela interna) - Feminina
-');
+INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (164, 'cd_tipo_tabua_fem', 'DECIMAL(4,0)', '1000', 'Código Hipóteses Biométricas (tabela interna) - Feminina');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (165, 'tp_tabua_fem', 'VARCHAR(100) CHARACTER SET UNICODE', 'Tábua de Mortalidade de Válido - Fase Laborativa', 'Tipo de Tabua - Feminina');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (166, 'nr_even_prev_menos_dois_anos_f', 'DECIMAL(15,2)', '6.14', 'Numero de Eventos Previstos pela Tabua Utilizada no DRAA de "ANO DA DATA DA AVALIACAO -2" - Feminina');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (167, 'nr_even_ocor_menos_dois_anos_f', 'DECIMAL(15,2)', '0', 'Numero de Eventos Ocorridos em "ANO DA DATA DA AVALIACAO -2" - Feminina');
@@ -187,8 +185,7 @@ INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (172, 'ds_ju
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (173, 'nr_notificacao', 'VARCHAR(14)', '053811.01/2018', 'Número da Notificação');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (174, 'no_tipo_documento', 'VARCHAR(50)', 'DRAA', 'Tipo de Documento');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (175, 'no_item_analise', 'VARCHAR(100)', 'Consistência - Segregação da Massa', 'Item de Análise');
-INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (176, 'no_situacao_item_analise', 'VARCHAR(100)', 'Notificacao sem resposta. Prazo expirado. Situacao irregular', 'Situação do Item de Análise
-');
+INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (176, 'no_situacao_item_analise', 'VARCHAR(100)', 'Notificacao sem resposta. Prazo expirado. Situacao irregular', 'Situação do Item de Análise');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (177, 'dt_notificao', 'TIMESTAMP(6)', '2018-06-14 10:37:21.280000', 'Data da Notificação');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (178, 'dt_preclusao', 'TIMESTAMP(6)', '2018-07-16 00:00:00', 'Data da Preclusão');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (179, 'dt_resposta', 'TIMESTAMP(6)', '2018-07-16 00:00:00', 'Data da Resposta');
@@ -258,17 +255,14 @@ INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (242, 'perio
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (243, 'assunto', 'number', '', 'Obtém as pesquisas cujos agregados contém o assunto informado.');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (244, 'classificacao', 'number', '', 'Obtém as pesquisas cujos agregados contém a classificação informada.');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (245, 'periodicidade', 'string', '', 'Obtém as pesquisas cujos agregados contém a periodicidade de divulgação informada.');
-INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (246, 'nivel', 'string', '', 'Identificador do nível geográfico ao qual pertence as localidades. Pode conter um ou mais níveis delimitados pelo caractere | (pipe).os identificadores dos níveis geográficos abrangidos pelo agregado podem ser consultados através dos respectivos metadados, consultando a propriedade nivelTerritorial
-');
+INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (246, 'nivel', 'string', '', 'Identificador do nível geográfico ao qual pertence as localidades. Pode conter um ou mais níveis delimitados pelo caractere | (pipe).os identificadores dos níveis geográficos abrangidos pelo agregado podem ser consultados através dos respectivos metadados, consultando a propriedade nivelTerritorial');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (247, 'agregado*', 'number (int64)', '', 'Identificador do agregado.');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (248, 'periodos*', 'string', '', 'Período do qual se deseja obter os resultados. Consulte os identificadores dos períodos na Base de identificadores. Informe valores negativos para obter os últimos resultados. Pode conter um ou mais períodos delimitados pelo caractere | (pipe)');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (249, 'variavel*', 'string', '', 'Um ou mais identificadores de variável separados pelo caracter | (pipe). Caso omitido, assume o valor allxp, que retorna quaisquer variáveis relacionada ao agregado. Para saber mais sobre as variáveis de cada agregado, acesse seus respectivos metadados');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (250, 'localidades*', 'string ', '', 'Uma ou mais localidades delimitadas pelo caracter | (pipe). No caso do Brasil, o identificador é BR.');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (251, 'classificacao', 'string', '', 'Além de estar relacionado à uma dada localidade e um determinado período, os resultados das variáveis podem estar relacionados à outros conjuntos de dados, que na nomenclatura do SIDRA recebe o nome de classificação. ');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (252, 'view', 'string', '', 'Modo de visualização. Caso deseje que a resposta seja renderizada usando notação OLAP, configure esse parâmetro com o valor OLAP');
-INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (253, 'registroAns
-
-', 'string', '', 'Registro operadora na ANS');
+INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (253, 'registroAns', 'string', '', 'Registro operadora na ANS');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (254, 'razao_social', 'string', '', 'Razao social');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (255, 'nome_fantasia', 'string', '', 'Nome Fantasia da operadora');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (256, 'cnpj', 'string', '', 'CNPJ da Operadora');
@@ -336,7 +330,7 @@ INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (317, 'Data'
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (318, 'Ano', 'inteiro', '', 'Ano de contratação da operação');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (319, 'Modalidade', 'texto', '', 'Código da Modalidade');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (320, 'CodigoGrupoConsolidado', 'texto', '', 'Código do grupo consolidado para o qual as instituições serão listadas.');
-INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (321, 'PessoaFisicaOuJuridica', 'texto', 'F'' para pessoa física ''J'' para pessoa jurídica', 'Pessoa física ou jurídica');
+INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (321, 'PessoaFisicaOuJuridica', 'texto', '''F'' para pessoa física ''J'' para pessoa jurídica', 'Pessoa física ou jurídica');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (322, 'CNPJ', 'texto', '', 'CNPJ da instituição para a qual as tarifas serão listadas.');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (323, 'CodigoServico', 'texto', '', 'Código do Serviço');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (324, 'dataCotacao', 'texto', ' ''MM-DD-AAAA''', 'Data da cotação - informar no padrão ''MM-DD-AAAA''');
@@ -348,8 +342,7 @@ INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (329, 'dataI
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (330, 'Data', 'texto', 'YYYY-MM-DD', 'Data base para obtenção das informações, no formato ''YYYY-MM-DD''');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (331, 'city', 'string', 'city=rio de janeiro', 'Localidade(s) a ser(em) buscada(s)');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (332, 'codigo_da_estacao', 'string', '4 letras, ex: SBBH', 'Localidade(s) a ser(em) buscada(s)');
-INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (333, 'codigo_da_localidade', 'integer ', 'id da cidade, pode ser obtido pela consulta ''busca de localidades''', 'O código do município ou localidade que são cobertos pelo CPTEC/INPE é representado por um número inteiro positivo, no qual recomendamos o uso do mecanismo de Busca de localidades para o levantamento desta informação.
-');
+INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (333, 'codigo_da_localidade', 'integer ', 'id da cidade, pode ser obtido pela consulta ''busca de localidades''', 'O código do município ou localidade que são cobertos pelo CPTEC/INPE é representado por um número inteiro positivo, no qual recomendamos o uso do mecanismo de Busca de localidades para o levantamento desta informação.');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (334, 'latitude', 'float', '(+/-)xx.xx', 'válidos para a latitude (de 0° a 90° para norte [+] ou para sul [-], tendo como ponto de referência a linha do Equador) ');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (335, 'longitude', 'float', '(+/-)xxx.xx', 'longitude(de 0° a 180° para leste [+] ou para oeste [-], tendo como ponto de referência o meridiano de Greenwich)');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (336, 'dia', 'integer ', 'x', 'O parâmetro dia também deve ser trocado, por um valor inteiro, que vai de 0 a 2; o valor do parâmetro "0" equivale ao dia atual, "1" para a previsão de ondas para amanhã e "2" para a previsão de depois de amanhã');
@@ -1081,8 +1074,7 @@ INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1040, 'id',
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1041, 'mesAno', 'integer($int32)', 'AAAAMM', 'Mês e Ano de referência (AAAAMM)');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1042, 'orgaoLotacao', 'string', '', 'Código Órgão Lotação (SIAPE)');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1043, 'orgaoExercicio', 'string', '', 'Código Órgão Exercício (SIAPE)');
-INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1044, 'tipoVinculo', 'tipoVinculo
-integer($int32)', 'Função: 1; Cargo: 2; Outros: 3; Militares: 4', 'Tipo vínculo (Função: 1; Cargo: 2; Outros: 3; Militares: 4)');
+INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1044, 'tipoVinculo', 'tipoVinculo integer($int32)', 'Função: 1; Cargo: 2; Outros: 3; Militares: 4', 'Tipo vínculo (Função: 1; Cargo: 2; Outros: 3; Militares: 4)');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1045, 'licenca', 'integer($int32)', '', 'Sim: 1; Não: 0');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1046, 'descricaoFuncao', 'string', '', 'Descrição da Função');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1047, 'dataInicioExercicioDe', 'string', 'DD/MM/AAAA', 'Data início do exercício, período inicial (DD/MM/AAAA)');
@@ -1196,8 +1188,7 @@ INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1152, 'nume
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1153, 'cpfCnpj ', 'string', '', 'CPF/CNPJ do Fornecedor');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1154, 'codigoSancionado', 'string', '', 'CNPJ ou CPF do Sancionado');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1155, 'nomeSancionado', 'string', '', 'Nome, nome fantasia ou razão social do Sancionado');
-INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1156, 'orgaoSancionador', 'string', '', 'Órgão Sancionador
-');
+INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1156, 'orgaoSancionador', 'string', '', 'Órgão Sancionador');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1157, 'dataInicialSancao', 'string', 'DD/MM/AAAA', 'Data Inicial da Sanção (DD/MM/AAAA)');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1158, 'dataFinalSancao', 'string', 'DD/MM/AAAA', 'Data Final da Sanção (DD/MM/AAAA)');
 INSERT INTO Parameters (Id, Name, Type, Format, Description) VALUES (1159, 'cnpjSancionado', 'string', '', 'CNPJ do Sancionado');

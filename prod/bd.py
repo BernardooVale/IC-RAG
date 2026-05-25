@@ -136,7 +136,9 @@ class integracaoBD:
         
     def retEndpoints(self, ids):
         
-        query = f"select id, nome, url, documentacao, tipo_resposta, texto from embeddings where id in {ids}"
+        ids_formatados = tuple(ids) if len(ids) > 1 else f"({ids[0]})"
+        
+        query = f"select id, nome, url, documentacao, tipo_resposta, texto from embeddings where id in {ids_formatados}"
         return self.executaQuery(query)
     
     def executaQuery(self, query: str) -> List[Dict[str, Any]]: # Executa uma query qlqr
@@ -303,6 +305,15 @@ class integracaoBD:
         """
         
         return self.cur.execute(query).fetchall()
+    
+    def retApiEndpoint(self, id: str):
+        
+        query = "select e.ApiId from [Endpoints da API] as e where e.Id = ?"
+        
+        self.cur.execute(query, (id,))
+        linhas = self.cur.fetchall()
+        
+        return [linhas[0][0]] if linhas else []
     
     def fecharConexao(self): # fecha a conexao
         self.cur.close()

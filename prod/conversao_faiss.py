@@ -1,9 +1,6 @@
 from classe_faiss import Faiss
 from bd import integracaoBD
 
-faiss = Faiss()
-bd = integracaoBD()
-
 def apis(faiss, bd):
 
     idMin = faiss.ret_checkpoint()
@@ -21,6 +18,11 @@ def endpoints(faiss, bd):
     resultado = bd.executaQuery(query=query)
 
     faiss.cria_documento_endpoint(resultado)
+
+if __name__ == "__main__":
     
-apis(faiss=faiss, bd=bd)
-endpoints(faiss=faiss, bd=bd)
+    faiss = Faiss()
+    bd = integracaoBD()
+    
+    apis(faiss=faiss, bd=bd)
+    endpoints(faiss=faiss, bd=bd)

@@ -3,8 +3,8 @@
 CREATE TABLE [Respostas da API] (
     Id INT NOT NULL PRIMARY KEY,
     
-    Description VARCHAR(300),
-    DataDictionary VARCHAR(500),
+    Description VARCHAR(800),
+    DataDictionary VARCHAR(700),
     ResponseExample VARCHAR(MAX)
 );
 
