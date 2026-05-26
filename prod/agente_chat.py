@@ -17,12 +17,9 @@ class agenteChat:
         self.modeloEmbedding = modeloEmbedding
         self.integracaoBd = integracaoBd
         self.ollamaClient = ollama.Client()
-        self.cross_encoder = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
         self.faiss = Faiss()
     
     def defTipoResposta(self, msg:str): # Verifica que tipo de resposta deve ser feita
-        
-        #t1 = time.time()
         
         promptClass = f"0=conversa normal 1=consulta sobre dados de endpoints e APIs\n\n{msg}\n\nResposta:"
         
@@ -38,29 +35,7 @@ class agenteChat:
         
         id = "0" if "0" in classificacao else "1"
         
-        #print(f"Tempo funcao defTipoResposta: {time.time() - t1}")
-        
         return id
-        
-    def rerank(self, msg, resultadosFaiss):
-        
-        pares = [
-            (msg, endpoint['texto'])
-            for endpoint in resultadosFaiss
-        ]
-            
-        # Calcular scores
-        scores = self.cross_encoder.predict(pares)
-        
-        # Ranqueamento
-        endpoints_com_score = list(zip(resultadosFaiss, scores))
-        endpoints_ranqueados = sorted(
-            endpoints_com_score,
-            key=lambda x: x[1],
-            reverse=True
-        )
-        
-        return endpoints_ranqueados
         
     def selecionaEndpoints(self, msg, embedMsg, listaFiltroApis:list, filtrarApis:bool, modoTeste:modoTeste = None):
                 
@@ -81,10 +56,6 @@ class agenteChat:
         # retorna os dados completos do banco de dados para cada id do FAISS
         resultadosFaiss = self.integracaoBd.retEndpoints(ids_apenas)
         
-        if modoTeste is not None and modoTeste.rerank:
-            return self.rerank(msg, resultadosFaiss)
-        
-        # Sem rerank: ordena pelo score FAISS e empacota no mesmo formato (endpoint, score)
         score_por_id = {id: score for id, score in idsEndpoints}
         resultadosFaiss_ordenados = sorted(
             resultadosFaiss,
@@ -161,16 +132,12 @@ class agenteChat:
         
     def retEmbedMsg(self, msg:str): # Gera o embedding da msg do usuario
         
-        #t1 = time.time()
-        
         msgUsuario = self.ollamaClient.embed(
             model=self.modeloEmbedding,
             input=msg
         )
         
         embedMsg = msgUsuario["embeddings"][0]
-        
-        #print(f"Tempo funcao retEmbedMsg: {time.time() - t1}")
         
         return embedMsg
     
