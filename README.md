@@ -64,9 +64,9 @@ O sistema utiliza o **OLLama** para execução de modelos de linguagem localment
 Verifique se o OLLama está instalado e que os modelos necessários estão disponíveis, digitando em um terminal qualquer (variáveis de ambiente já configuradas):
 
 ```bash
-ollama pull qwen2:7b
+ollama pull gemma4:e2b
 ollama pull embeddinggemma:latest
-ollama pull phi3:3.8b
+ollama pull gemma4:e4b
 ```
 
 ---
@@ -81,14 +81,6 @@ Via terminal entre no diretório do projeto `IC-RAG` e depois em `prod`, depois 
 ```
 py init_banco_via_SQL.py
 ```
-
-ou 
-
-```
-py init_banco_via_BAK.py
-```
-
-Execute esses scripts para criar as tabelas e carregar os dados necessários. Caso opte por `init_banco_via_BAK.py`, o próximo passo não precisará ser executado
 
 ---
 
@@ -115,19 +107,6 @@ py mvp.py
 ```
 
 Tenha em mente que o chatbot irá buscar endpoints compatíveis com o contexto da sua mensagem, desse modo, a sua pergunta deve ter o contexto de **"Onde posso achar dado X"** para funcionar corretamente.
-
----
-
-### 6️⃣ ATENÇÃO
-
-Caso você tenha instalado a versão antiga do banco de dados (pré 11/03/2025), não é nescessário executar tudo novamente. Apenas rodes os seguintes comandos:
-
-```bash
-cd IC-RAG
-cd prod
-py atualiza_embeddings_endpoint.py
-py conversao_faiss.py
-```
 
 ---
 
