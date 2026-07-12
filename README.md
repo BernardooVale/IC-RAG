@@ -1,7 +1,6 @@
 # 🧠 IC-RAG
 
-Este projeto implementa um sistema de **RAG (Retrieval-Augmented Generation)** voltado para consultas inteligentes sobre dados armazenados em um banco PostgreSQL.  
-A aplicação é composta por diferentes módulos que evoluíram ao longo do desenvolvimento — desde testes locais até uma versão de produção totalmente integrada ao banco de dados.
+Este projeto propõe um chatbot de recuperação de informação semântica integrado ao Catálogo de APIs de Dados Abertos, permitindo que usuários encontrem endpoints governamentais relevantes por meio de linguagem natural. A solução utiliza o modelo EmbeddingGemma 300M para gerar vetores semânticos de metadados e a biblioteca FAISS para busca eficiente por similaridade. Ao classificar intenções do usuário com o modelo gemma4, o sistema oferece uma alternativa otimizada e de baixo custo aos pipelines RAG tradicionais, demonstrando alta acurácia (Recall@N) na vinculação de consultas técnicas com fontes de dados públicas em ambientes de recursos computacionais limitados.
 
 ---
 
